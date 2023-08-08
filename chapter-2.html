@@ -310,9 +310,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excersie-2-1">Excersie 2.1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excersie-2-2">Excersie 2.2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-1">Exercise 2.1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-2">Exercise 2.2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-4">Exercise 2.4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-5">Exercise 2.5</a></li>
 </ul>
             </nav>
         </div>
@@ -326,8 +327,8 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="chapter-2">
 <h1>Chapter 2<a class="headerlink" href="#chapter-2" title="Permalink to this heading">#</a></h1>
-<section id="excersie-2-1">
-<h2>Excersie 2.1<a class="headerlink" href="#excersie-2-1" title="Permalink to this heading">#</a></h2>
+<section id="exercise-2-1">
+<h2>Exercise 2.1<a class="headerlink" href="#exercise-2-1" title="Permalink to this heading">#</a></h2>
 <p>For each one of the following sets, determine whether it is a polyhedron.</p>
 <p>(a) The set of all <span class="math notranslate nohighlight">\((x, y)\in \mathcal{R}^2\)</span> satisfying the constraints:</p>
 <div class="math notranslate nohighlight">
@@ -340,17 +341,21 @@ y&amp;\geq 0.
 \end{split}\]</div>
 <p>(b) The set of all <span class="math notranslate nohighlight">\(x\in\mathcal{R}\)</span> satisfying the constraint <span class="math notranslate nohighlight">\(x^2 - 8x + 15 \leq 0\)</span>.</p>
 <p>(c) The empty set.</p>
-<p><strong>Solution</strong></p>
+<p><strong>Solution:</strong></p>
 <p>(a) The set equals <span class="math notranslate nohighlight">\(\{ (x,y) | x \geq 0, y \geq 0, x^2 + y^2 \leq 1 \}\)</span>, which has the following image:</p>
 <p><img alt="circle.png" src="_images/2-1.png" /></p>
 <p>It is a set represented by infinite linear constraints, while a polyhedron is formed by <strong>finite</strong> linear constraints.</p>
 <p>(b) The set is <span class="math notranslate nohighlight">\(\{x\geq 3, x\leq 5\}\)</span> and is a polyhedron.</p>
 <p>(c) The empty set can be represented as <span class="math notranslate nohighlight">\(\{x\geq 0, x&lt; 0\}\)</span> and is a polyhedron.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A polyhedron is formed by finite linear constraints.</p>
+</div>
 </section>
-<section id="excersie-2-2">
-<h2>Excersie 2.2<a class="headerlink" href="#excersie-2-2" title="Permalink to this heading">#</a></h2>
+<section id="exercise-2-2">
+<h2>Exercise 2.2<a class="headerlink" href="#exercise-2-2" title="Permalink to this heading">#</a></h2>
 <p>Let <span class="math notranslate nohighlight">\(f:\mathcal{R}^n\rightarrow\mathcal{R}\)</span> be a convex function and let <span class="math notranslate nohighlight">\(c\)</span> be some constant. Show that the set <span class="math notranslate nohighlight">\(S = \{\bf{x} \in \mathcal{R}^n\mid f(\bf{x}) \leq c\}\)</span> is convex.</p>
-<p><strong>Solution</strong></p>
+<p><strong>Solution:</strong></p>
 <p>Assume two random element <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span> in the set <span class="math notranslate nohighlight">\(S\)</span>,  therefore</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -387,12 +392,66 @@ f(\theta x_1+(1-\theta)x_2)\leq c
 <section id="exercise-2-4">
 <h2>Exercise 2.4<a class="headerlink" href="#exercise-2-4" title="Permalink to this heading">#</a></h2>
 <p>We know that every linear programming problem can be converted to an equivalent problem in standard form. We also know that nonempty polyhedra in standard form have at least one extreme point. We are then tempted to conclude that every nonempty polyhedron has at least one extreme point. Explain what is wrong with this argument.</p>
-<p><strong>solution</strong></p>
+<p><strong>Solution:</strong></p>
 <p>Assume a nonempty polydron is a hyperplane <span class="math notranslate nohighlight">\({\bf a'x}=b\)</span>, for any point <span class="math notranslate nohighlight">\(x_0\)</span> in it, we can find other two points <span class="math notranslate nohighlight">\(x_1\)</span>, <span class="math notranslate nohighlight">\(x_2\)</span> that satisfies <span class="math notranslate nohighlight">\(x_0 = \lambda x_1+(1-\lambda)x_2\)</span>, so there can not be an extreme point in this polyhedron.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>A hyperplane is a polyhedron, but it does has extreme points.</p>
 </div>
+</section>
+<section id="exercise-2-5">
+<h2>Exercise 2.5<a class="headerlink" href="#exercise-2-5" title="Permalink to this heading">#</a></h2>
+<p><strong>(ExtreIne points of isoInorphic polyhedra)</strong> A mapping <span class="math notranslate nohighlight">\(f\)</span> is called affine if it is of the form <span class="math notranslate nohighlight">\(f(\bf x) = Ax + b\)</span>, where <span class="math notranslate nohighlight">\(\bf A\)</span> is a matrix and <span class="math notranslate nohighlight">\(\bf b\)</span> is a vector. Let <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> be polyhedra in <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span> and <span class="math notranslate nohighlight">\(\mathcal{R}^m\)</span> , respectively. We say that <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> are isomorphic if there exist affine mappings <span class="math notranslate nohighlight">\(f: P\rightarrow Q\)</span> and <span class="math notranslate nohighlight">\(g: Q\rightarrow P\)</span> such that <span class="math notranslate nohighlight">\(g(f(\bf x) = x\)</span> for all <span class="math notranslate nohighlight">\(\mathbf{x} \in P\)</span>, and <span class="math notranslate nohighlight">\(f(g(\bf y) = y\)</span> for all <span class="math notranslate nohighlight">\(\mathbf{y} \in Q.\)</span> (Intuitively, isomorphic polyhedra have the same shape.)</p>
+<p>(a) If <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> are isomorphic, show that there exists a one-to-one correspondence between their extreme points. In particular, if <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are as above, show that <span class="math notranslate nohighlight">\(\bf x\)</span> is an extreme point of <span class="math notranslate nohighlight">\(P\)</span> if and only if <span class="math notranslate nohighlight">\(f(\bf x)\)</span> is an extreme point of <span class="math notranslate nohighlight">\(Q\)</span>.</p>
+<p>(b) <strong>(Introducing slack variables leads to an isoInorphic polyhedron)</strong> Let <span class="math notranslate nohighlight">\(P = \{\mathbf{x} \in \mathcal{R}^n \mid \bf Ax \geq b, x\geq 0\}\)</span>, where <span class="math notranslate nohighlight">\(\bf A\)</span> is a matrix of dimensions <span class="math notranslate nohighlight">\(k\times n\)</span>. Let <span class="math notranslate nohighlight">\(Q = \{\bf (x, z) \in \mathcal{R}^{n+k} \mid Ax - z = b, x \geq 0, z \geq 0\}\)</span>. Show that <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> are isomorphic.</p>
+<p><strong>Solution:</strong></p>
+<p>(a) We first prove：if <span class="math notranslate nohighlight">\(\bf x\)</span> is the extreme point of <span class="math notranslate nohighlight">\(P\)</span>, then it is also the extreme point of <span class="math notranslate nohighlight">\(Q\)</span>.</p>
+<p>According to the definition of extreme point and Theorem 2.3 in the book, <span class="math notranslate nohighlight">\(\bf x\)</span> is also a vertex of <span class="math notranslate nohighlight">\(P\)</span>, then:
+there exists a vector <span class="math notranslate nohighlight">\(\bf c\)</span> such that <span class="math notranslate nohighlight">\(\bf c'x&lt;c'y\)</span> for all <span class="math notranslate nohighlight">\(\bf y\)</span> satisfying <span class="math notranslate nohighlight">\(\bf y\in P\)</span> and <span class="math notranslate nohighlight">\(\bf y\neq x\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(g(f(\bf x))=\bf x\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+&amp;\bf c'g(f(\mathbf x))&lt;c'g(f(y))\\
+\Rightarrow&amp;\bf c'g(Ax+b)&lt;c'g(Ay+b).
+\end{align*}
+\end{split}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(g\)</span> is an affine function, we assume <span class="math notranslate nohighlight">\(g(\bf x)=Dx+d\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\Rightarrow&amp;\bf c'(D(Ax+b)+d))&lt;c'(D(Ay+b)+d))\\
+\Rightarrow&amp;\bf c'D(Ax+b)&lt;c'D(Ay+b)
+\end{align*}
+\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(\bf Ax+b\)</span>, <span class="math notranslate nohighlight">\(\bf Ay+b\)</span> are the points in <span class="math notranslate nohighlight">\(Q\)</span>. <span class="math notranslate nohighlight">\(\bf c'D\)</span> is a vector and <span class="math notranslate nohighlight">\(\bf Ax+b \neq Ay+b\)</span>. By the definition of vertex, <span class="math notranslate nohighlight">\(\bf Ax+b\)</span> is the vertex of <span class="math notranslate nohighlight">\(Q\)</span>. Thus it is also an extreme point of <span class="math notranslate nohighlight">\(Q\)</span>.</p>
+<p>In a similar way, we can prove: if <span class="math notranslate nohighlight">\(\bf x\)</span> is the extreme point of <span class="math notranslate nohighlight">\(Q\)</span>, then it is also the extreme point of <span class="math notranslate nohighlight">\(P\)</span>。<span class="math notranslate nohighlight">\(\Box\)</span></p>
+<p>(b) By obtaining the formulas of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span>, we can prove <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> are isomorphic.</p>
+<p>The formulas of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are below:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f=\bf \left(
+\begin{aligned}
+\bf I\\
+\bf 0
+\end{aligned}
+\right)x+
+\left(
+\begin{aligned}
+\bf 0\\
+\bf z
+\end{aligned}
+\right)
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+g=\bf (I, 0)\left(
+\begin{aligned}
+\bf x\\
+\bf z
+\end{aligned}
+\right)
+\end{split}\]</div>
 </section>
 </section>
 
@@ -463,9 +522,10 @@ f(\theta x_1+(1-\theta)x_2)\leq c
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excersie-2-1">Excersie 2.1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excersie-2-2">Excersie 2.2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-1">Exercise 2.1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-2">Exercise 2.2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-4">Exercise 2.4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-5">Exercise 2.5</a></li>
 </ul>
   </nav></div>
 
