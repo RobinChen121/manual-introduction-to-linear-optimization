@@ -32,5 +32,5 @@ html:
   use_repository_button: true
 html:
   comments:
-    utterances:
-      repo: "github-org/github-repo"
+    hypothesis: true
+
