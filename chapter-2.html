@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Excersie 2.1 &#8212; Manual of Introduction to Linear Optimization</title>
+    <title>Chapter 2 &#8212; Manual of Introduction to Linear Optimization</title>
   
   
   
@@ -53,40 +53,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script kind="utterances">
-
-    var commentsRunWhenDOMLoaded = cb => {
-    if (document.readyState != 'loading') {
-        cb()
-    } else if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', cb)
-    } else {
-        document.attachEvent('onreadystatechange', function() {
-        if (document.readyState == 'complete') cb()
-        })
-    }
-}
-
-var addUtterances = () => {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://utteranc.es/client.js";
-    script.async = "async";
-
-    script.setAttribute("repo", "github-org/github-repo");
-    script.setAttribute("issue-term", "pathname");
-    script.setAttribute("theme", "github-light");
-    script.setAttribute("label", "💬 comment");
-    script.setAttribute("crossorigin", "anonymous");
-
-    sections = document.querySelectorAll("div.section");
-    if (sections !== null) {
-        section = sections[sections.length-1];
-        section.appendChild(script);
-    }
-}
-commentsRunWhenDOMLoaded(addUtterances);
-</script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -193,8 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Excersie 2.1</a></li>
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
@@ -334,7 +300,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Excersie 2.1</h1>
+    <h1>Chapter 2</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -344,10 +310,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Excersie 2.1</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#excersie-2-2">Excersie 2.2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excersie-2-1">Excersie 2.1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excersie-2-2">Excersie 2.2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-4">Exercise 2.4</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -358,57 +324,76 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="excersie-2-1">
-<h1>Excersie 2.1<a class="headerlink" href="#excersie-2-1" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="chapter-2">
+<h1>Chapter 2<a class="headerlink" href="#chapter-2" title="Permalink to this heading">#</a></h1>
+<section id="excersie-2-1">
+<h2>Excersie 2.1<a class="headerlink" href="#excersie-2-1" title="Permalink to this heading">#</a></h2>
 <p>For each one of the following sets, determine whether it is a polyhedron.</p>
-<p>(a) The set of all <span class="math notranslate nohighlight">\((x, y)\in \mathcal{R}^2\)</span> satisfying the constraints:
-$<span class="math notranslate nohighlight">\(
+<p>(a) The set of all <span class="math notranslate nohighlight">\((x, y)\in \mathcal{R}^2\)</span> satisfying the constraints:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{aligned}
 x\cos\theta+y\sin\theta&amp;\leq 1,\quad \forall~\theta \in[0, \pi/2],\\
 x&amp;\geq 0,\\
 y&amp;\geq 0.
 \end{aligned}
-\)</span>$</p>
+\end{split}\]</div>
 <p>(b) The set of all <span class="math notranslate nohighlight">\(x\in\mathcal{R}\)</span> satisfying the constraint <span class="math notranslate nohighlight">\(x^2 - 8x + 15 \leq 0\)</span>.</p>
 <p>(c) The empty set.</p>
 <p><strong>Solution</strong></p>
 <p>(a) The set equals <span class="math notranslate nohighlight">\(\{ (x,y) | x \geq 0, y \geq 0, x^2 + y^2 \leq 1 \}\)</span>, which has the following image:</p>
-<p><img alt="image.png" src="attachment:image.png" /></p>
+<p><img alt="circle.png" src="_images/2-1.png" /></p>
 <p>It is a set represented by infinite linear constraints, while a polyhedron is formed by <strong>finite</strong> linear constraints.</p>
 <p>(b) The set is <span class="math notranslate nohighlight">\(\{x\geq 3, x\leq 5\}\)</span> and is a polyhedron.</p>
 <p>(c) The empty set can be represented as <span class="math notranslate nohighlight">\(\{x\geq 0, x&lt; 0\}\)</span> and is a polyhedron.</p>
 </section>
 <section id="excersie-2-2">
-<h1>Excersie 2.2<a class="headerlink" href="#excersie-2-2" title="Permalink to this heading">#</a></h1>
+<h2>Excersie 2.2<a class="headerlink" href="#excersie-2-2" title="Permalink to this heading">#</a></h2>
 <p>Let <span class="math notranslate nohighlight">\(f:\mathcal{R}^n\rightarrow\mathcal{R}\)</span> be a convex function and let <span class="math notranslate nohighlight">\(c\)</span> be some constant. Show that the set <span class="math notranslate nohighlight">\(S = \{\bf{x} \in \mathcal{R}^n\mid f(\bf{x}) \leq c\}\)</span> is convex.</p>
 <p><strong>Solution</strong></p>
-<p>Assume two random element <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span> in the set <span class="math notranslate nohighlight">\(S\)</span>,  therefore
-$<span class="math notranslate nohighlight">\(
+<p>Assume two random element <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span> in the set <span class="math notranslate nohighlight">\(S\)</span>,  therefore</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
  \begin{aligned}
  f(x_1)\leq c\\
  f(x_2)\leq c
  \end{aligned}
- \)</span><span class="math notranslate nohighlight">\(
-For a parameter \)</span>\theta\in [0, 1]<span class="math notranslate nohighlight">\(, 
- \)</span><span class="math notranslate nohighlight">\(
+\end{split}\]</div>
+<p>For a parameter <span class="math notranslate nohighlight">\(\theta\in [0, 1]\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
  \begin{aligned}
  \theta f(x_1)&amp;\leq  \theta c\\
  (1-\theta)f(x_2)&amp;\leq  (1-\theta) c
  \end{aligned}
- \)</span><span class="math notranslate nohighlight">\(
- Thus, 
-\)</span><span class="math notranslate nohighlight">\(
+\end{split}\]</div>
+<p>Thus,</p>
+<div class="math notranslate nohighlight">
+\[
  \theta f(x_1)+ (1-\theta)f(x_2)\leq c
-\)</span>$</p>
-<p>Since <span class="math notranslate nohighlight">\(f\)</span> is a convex function,
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Since <span class="math notranslate nohighlight">\(f\)</span> is a convex function,</p>
+<div class="math notranslate nohighlight">
+\[
 f(\theta x_1+(1-\theta)x_2)\leq \theta f(x_1)+ (1-\theta)f(x_2)
-\)</span><span class="math notranslate nohighlight">\(
-And this leads to
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>And this leads to</p>
+<div class="math notranslate nohighlight">
+\[
 f(\theta x_1+(1-\theta)x_2)\leq c
-\)</span><span class="math notranslate nohighlight">\(
-Therefore, the set \)</span>S<span class="math notranslate nohighlight">\( is convex. \)</span>\Box$</p>
+\]</div>
+<p>Therefore, the set <span class="math notranslate nohighlight">\(S\)</span> is convex. <span class="math notranslate nohighlight">\(\Box\)</span></p>
+</section>
+<section id="exercise-2-4">
+<h2>Exercise 2.4<a class="headerlink" href="#exercise-2-4" title="Permalink to this heading">#</a></h2>
+<p>We know that every linear programming problem can be converted to an equivalent problem in standard form. We also know that nonempty polyhedra in standard form have at least one extreme point. We are then tempted to conclude that every nonempty polyhedron has at least one extreme point. Explain what is wrong with this argument.</p>
+<p><strong>solution</strong></p>
+<p>Assume a nonempty polydron is a hyperplane <span class="math notranslate nohighlight">\({\bf a'x}=b\)</span>, for any point <span class="math notranslate nohighlight">\(x_0\)</span> in it, we can find other two points <span class="math notranslate nohighlight">\(x_1\)</span>, <span class="math notranslate nohighlight">\(x_2\)</span> that satisfies <span class="math notranslate nohighlight">\(x_0 = \lambda x_1+(1-\lambda)x_2\)</span>, so there can not be an extreme point in this polyhedron.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A hyperplane is a polyhedron, but it does has extreme points.</p>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -478,10 +463,10 @@ Therefore, the set \)</span>S<span class="math notranslate nohighlight">\( is co
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Excersie 2.1</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#excersie-2-2">Excersie 2.2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excersie-2-1">Excersie 2.1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excersie-2-2">Excersie 2.2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-4">Exercise 2.4</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
