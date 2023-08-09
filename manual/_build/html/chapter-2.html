@@ -312,8 +312,10 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-1">Exercise 2.1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-2">Exercise 2.2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-3">Exercise 2.3</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-4">Exercise 2.4</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-5">Exercise 2.5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-10">Exercise 2.10</a></li>
 </ul>
             </nav>
         </div>
@@ -341,6 +343,7 @@ y&amp;\geq 0.
 \end{split}\]</div>
 <p>(b) The set of all <span class="math notranslate nohighlight">\(x\in\mathcal{R}\)</span> satisfying the constraint <span class="math notranslate nohighlight">\(x^2 - 8x + 15 \leq 0\)</span>.</p>
 <p>(c) The empty set.</p>
+<hr class="docutils" />
 <p><strong>Solution:</strong></p>
 <p>(a) The set equals <span class="math notranslate nohighlight">\(\{ (x,y) | x \geq 0, y \geq 0, x^2 + y^2 \leq 1 \}\)</span>, which has the following image:</p>
 <p><img alt="circle.png" src="_images/2-1.png" /></p>
@@ -355,6 +358,7 @@ y&amp;\geq 0.
 <section id="exercise-2-2">
 <h2>Exercise 2.2<a class="headerlink" href="#exercise-2-2" title="Permalink to this heading">#</a></h2>
 <p>Let <span class="math notranslate nohighlight">\(f:\mathcal{R}^n\rightarrow\mathcal{R}\)</span> be a convex function and let <span class="math notranslate nohighlight">\(c\)</span> be some constant. Show that the set <span class="math notranslate nohighlight">\(S = \{\bf{x} \in \mathcal{R}^n\mid f(\bf{x}) \leq c\}\)</span> is convex.</p>
+<hr class="docutils" />
 <p><strong>Solution:</strong></p>
 <p>Assume two random element <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span> in the set <span class="math notranslate nohighlight">\(S\)</span>,  therefore</p>
 <div class="math notranslate nohighlight">
@@ -389,14 +393,22 @@ f(\theta x_1+(1-\theta)x_2)\leq c
 \]</div>
 <p>Therefore, the set <span class="math notranslate nohighlight">\(S\)</span> is convex. <span class="math notranslate nohighlight">\(\Box\)</span></p>
 </section>
+<section id="exercise-2-3">
+<h2>Exercise 2.3<a class="headerlink" href="#exercise-2-3" title="Permalink to this heading">#</a></h2>
+<p><strong>(Basic feasible solutions in standard form polyhedra with upper bounds)</strong> Consider a polyhedron defined by the constraints <span class="math notranslate nohighlight">\(\bf Ax = b\)</span> and <span class="math notranslate nohighlight">\(\bf 0\leq x\leq u\)</span>, and assume that the matrix <span class="math notranslate nohighlight">\(\bf A\)</span> has linearly independent rows. Provide a procedure analogous to the one in Section 2.3 for constructing basic solutions, and prove an analog of Theorem 2.4.</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p>The only difference of the above statement with Theorem 2.4 is that there are upper bounds for <span class="math notranslate nohighlight">\(\bf x\)</span>.</p>
+</section>
 <section id="exercise-2-4">
 <h2>Exercise 2.4<a class="headerlink" href="#exercise-2-4" title="Permalink to this heading">#</a></h2>
 <p>We know that every linear programming problem can be converted to an equivalent problem in standard form. We also know that nonempty polyhedra in standard form have at least one extreme point. We are then tempted to conclude that every nonempty polyhedron has at least one extreme point. Explain what is wrong with this argument.</p>
+<hr class="docutils" />
 <p><strong>Solution:</strong></p>
 <p>Assume a nonempty polydron is a hyperplane <span class="math notranslate nohighlight">\({\bf a'x}=b\)</span>, for any point <span class="math notranslate nohighlight">\(x_0\)</span> in it, we can find other two points <span class="math notranslate nohighlight">\(x_1\)</span>, <span class="math notranslate nohighlight">\(x_2\)</span> that satisfies <span class="math notranslate nohighlight">\(x_0 = \lambda x_1+(1-\lambda)x_2\)</span>, so there can not be an extreme point in this polyhedron.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>A hyperplane is a polyhedron, but it does has extreme points.</p>
+<p>A hyperplane is a polyhedron, but it does not has extreme points.</p>
 </div>
 </section>
 <section id="exercise-2-5">
@@ -404,6 +416,7 @@ f(\theta x_1+(1-\theta)x_2)\leq c
 <p><strong>(ExtreIne points of isoInorphic polyhedra)</strong> A mapping <span class="math notranslate nohighlight">\(f\)</span> is called affine if it is of the form <span class="math notranslate nohighlight">\(f(\bf x) = Ax + b\)</span>, where <span class="math notranslate nohighlight">\(\bf A\)</span> is a matrix and <span class="math notranslate nohighlight">\(\bf b\)</span> is a vector. Let <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> be polyhedra in <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span> and <span class="math notranslate nohighlight">\(\mathcal{R}^m\)</span> , respectively. We say that <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> are isomorphic if there exist affine mappings <span class="math notranslate nohighlight">\(f: P\rightarrow Q\)</span> and <span class="math notranslate nohighlight">\(g: Q\rightarrow P\)</span> such that <span class="math notranslate nohighlight">\(g(f(\bf x) = x\)</span> for all <span class="math notranslate nohighlight">\(\mathbf{x} \in P\)</span>, and <span class="math notranslate nohighlight">\(f(g(\bf y) = y\)</span> for all <span class="math notranslate nohighlight">\(\mathbf{y} \in Q.\)</span> (Intuitively, isomorphic polyhedra have the same shape.)</p>
 <p>(a) If <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> are isomorphic, show that there exists a one-to-one correspondence between their extreme points. In particular, if <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are as above, show that <span class="math notranslate nohighlight">\(\bf x\)</span> is an extreme point of <span class="math notranslate nohighlight">\(P\)</span> if and only if <span class="math notranslate nohighlight">\(f(\bf x)\)</span> is an extreme point of <span class="math notranslate nohighlight">\(Q\)</span>.</p>
 <p>(b) <strong>(Introducing slack variables leads to an isoInorphic polyhedron)</strong> Let <span class="math notranslate nohighlight">\(P = \{\mathbf{x} \in \mathcal{R}^n \mid \bf Ax \geq b, x\geq 0\}\)</span>, where <span class="math notranslate nohighlight">\(\bf A\)</span> is a matrix of dimensions <span class="math notranslate nohighlight">\(k\times n\)</span>. Let <span class="math notranslate nohighlight">\(Q = \{\bf (x, z) \in \mathcal{R}^{n+k} \mid Ax - z = b, x \geq 0, z \geq 0\}\)</span>. Show that <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> are isomorphic.</p>
+<hr class="docutils" />
 <p><strong>Solution:</strong></p>
 <p>(a) We first prove：if <span class="math notranslate nohighlight">\(\bf x\)</span> is the extreme point of <span class="math notranslate nohighlight">\(P\)</span>, then it is also the extreme point of <span class="math notranslate nohighlight">\(Q\)</span>.</p>
 <p>According to the definition of extreme point and Theorem 2.3 in the book, <span class="math notranslate nohighlight">\(\bf x\)</span> is also a vertex of <span class="math notranslate nohighlight">\(P\)</span>, then:
@@ -452,6 +465,65 @@ g=\bf (I, 0)\left(
 \end{aligned}
 \right)
 \end{split}\]</div>
+</section>
+<section id="exercise-2-10">
+<h2>Exercise 2.10<a class="headerlink" href="#exercise-2-10" title="Permalink to this heading">#</a></h2>
+<p>Consider the standard form polyhedron <span class="math notranslate nohighlight">\(P = \{\bf x \mid Ax = b, x \geq 0\}\)</span>. Suppose that the matrix <span class="math notranslate nohighlight">\(\bf A\)</span> has dimensions <span class="math notranslate nohighlight">\(m \times n\)</span> and that its rows are linearly independent. For each one of the following statements, state whether it is true or false. If true, provide a proof, else, provide a counterexample.</p>
+<p>(a) If <span class="math notranslate nohighlight">\(n = m + 1\)</span>, then <span class="math notranslate nohighlight">\(P\)</span> has at most two basic feasible solutions.</p>
+<p>(b) The set of all optimal solutions is bounded.</p>
+<p>(e) At every optimal solution, no more than <span class="math notranslate nohighlight">\(m\)</span> variables can be positive.</p>
+<p>(d) If there is more than one optimal solution, then there are uncountably many optimal solutions.</p>
+<p>(e) If there are several optimal solutions, then there exist at least two basic feasible solutions that are optimal.</p>
+<p>(f) Consider the problem of minimizing <span class="math notranslate nohighlight">\(\max\{\bf c'x, d'x\}\)</span> over the set <span class="math notranslate nohighlight">\(P\)</span>. If this problem has an optimal solution, it must have an optimal solution which is an extreme point of <span class="math notranslate nohighlight">\(P\)</span>.</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p>(a) Right。The key is to prove that <span class="math notranslate nohighlight">\(P\)</span> is one-dimensional。</p>
+<p><em>Proof</em></p>
+<p>Since the rows in <span class="math notranslate nohighlight">\(\bf A\)</span> are linear independent, rank(<span class="math notranslate nohighlight">\(\bf A\)</span>) <span class="math notranslate nohighlight">\(=m\)</span>. Accodering to the knowledge in linear algebra,</p>
+<div class="math notranslate nohighlight">
+\[
+        \text{dim~} \text{NUL}(\bf A) + \text{rank}(\bf A) = n 
+\]</div>
+<p>Therefore, the dimensiion of the null space of <span class="math notranslate nohighlight">\(\bf A\)</span> is 1, i.e.,  the solution space of equations <span class="math notranslate nohighlight">\(\bf Ax=0\)</span> is 1. Accordering to linear algebra, the dimension of the solutio space is <span class="math notranslate nohighlight">\(\bf Ax=b\)</span> is equal to that in <span class="math notranslate nohighlight">\(\bf Ax=0\)</span> (becaause the general solution of <span class="math notranslate nohighlight">\(\bf Ax=b\)</span> equals to any feasible solution plus the solution of 的 <span class="math notranslate nohighlight">\(\bf Ax=0\)</span>).</p>
+<p>Since the solution of <span class="math notranslate nohighlight">\(P\)</span> is the subset of the solutions in <span class="math notranslate nohighlight">\(\bf Ax=b\)</span>, <span class="math notranslate nohighlight">\(P\)</span> is the subset of a line, i.e., <span class="math notranslate nohighlight">\(P\)</span> is a line segemen, point or empty space, all of which has at most two vertices. So, there are at most 2 basice feasible solutions for <span class="math notranslate nohighlight">\(P\)</span>. <span class="math notranslate nohighlight">\(\Box\)</span></p>
+<p>(b) Wrong. A counter example：</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\min\quad &amp;0\\
+\text{s.t.}\quad&amp;x\geq 0\\
+\end{aligned}
+\end{split}\]</div>
+<p>The optimal solution set is <span class="math notranslate nohighlight">\([0, +\infty]\)</span>, which is unbounded.</p>
+<p>(c) Wrong. If the coefficients <span class="math notranslate nohighlight">\(\bf c\)</span> in the objective function are <span class="math notranslate nohighlight">\(\bf 0\)</span>, any feasible solution are optimal and there can be more than <span class="math notranslate nohighlight">\(m\)</span> variables that are positive.</p>
+<p>(d) Right. It is easy to verify the points on the line segment of two optimal soulutions are also optimal.</p>
+<p>(e) Wrong. A counter example:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\min\quad &amp;x_1\\
+\text{s.t.}\quad &amp; x_2\geq 0\\
+&amp;x_1\geq 0
+\end{aligned}
+\end{split}\]</div>
+<p>(0, 1) and (0, 2) are both optimal solutions, but there is only one basic feasible solution (0, 0).</p>
+<p>(f) wrong. A counter example:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\min\quad &amp;\max\{x_1-1, -x_1+1\}\\
+\text{s.t.}\quad &amp; x_2= 1\\
+&amp;x_1\geq 0
+\end{aligned}
+\end{split}\]</div>
+<p>The objective of the above problem equals <span class="math notranslate nohighlight">\(|x_1-1|\)</span>. The unique optimal solution is (1, 1), which is not an extreme point.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>For this nonlinear objetive function in a polyhron, the optimal solution may not be the extrem point.</p></li>
+<li><p>The solution of <span class="math notranslate nohighlight">\(n\)</span> linear independent active constraints is basic solution (<span class="math notranslate nohighlight">\(n\)</span> is the number of variables).</p></li>
+</ul>
+</div>
 </section>
 </section>
 
@@ -524,8 +596,10 @@ g=\bf (I, 0)\left(
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-1">Exercise 2.1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-2">Exercise 2.2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-3">Exercise 2.3</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-4">Exercise 2.4</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-5">Exercise 2.5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-10">Exercise 2.10</a></li>
 </ul>
   </nav></div>
 
