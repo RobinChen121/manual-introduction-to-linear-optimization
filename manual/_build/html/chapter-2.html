@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter-2';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Content with notebooks" href="notebooks.html" />
+    <link rel="next" title="Chapter 3" href="chapter-3.html" />
     <link rel="prev" title="Overview" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -161,8 +161,7 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter-3.html">Chapter 3</a></li>
 </ul>
 
     </div>
@@ -403,7 +402,7 @@ f(\theta x_1+(1-\theta)x_2)\leq c
 <p>For a polyhedron defined by the constraints <span class="math notranslate nohighlight">\(\bf Ax = b\)</span>, <span class="math notranslate nohighlight">\(\bf A\)</span> has dimensions <span class="math notranslate nohighlight">\(m\times n\)</span>, <span class="math notranslate nohighlight">\(\bf 0\leq x\leq u\)</span> and <span class="math notranslate nohighlight">\(m\)</span> independent rows. <span class="math notranslate nohighlight">\(\bf x\)</span> is a baisic solutions if and only if there exists indices <span class="math notranslate nohighlight">\(B(1), B(2),\dots, B(m)\)</span> such that:</p>
 <p>(a) the columns <span class="math notranslate nohighlight">\(\mathbf{A}_{B(1)},\dots, \mathbf{A}_{B(m)}\)</span> are linear independent.</p>
 <p>(b) if <span class="math notranslate nohighlight">\(i\neq B(1),\dots, B(m)\)</span>, <span class="math notranslate nohighlight">\(x_i=0\)</span> or <font color=red><span class="math notranslate nohighlight">\(x_i=u_i\)</span></font>.</p>
-<p><em>Proof</em></p>
+<p><em>Proof.</em></p>
 <p>Assume a solution <span class="math notranslate nohighlight">\(x\)</span> satsifying (a) and (b), and <span class="math notranslate nohighlight">\(U\)</span> is the set of indecies that <span class="math notranslate nohighlight">\(x_i=u_i\)</span>, then</p>
 <div class="math notranslate nohighlight">
 \[
@@ -417,6 +416,7 @@ f(\theta x_1+(1-\theta)x_2)\leq c
 \]</div>
 <p>According to Theorem 2.2, the above equations has <span class="math notranslate nohighlight">\(n\)</span> linear independent column vectors and thus has a unique solution. Assume <span class="math notranslate nohighlight">\(\bf x\)</span> has <span class="math notranslate nohighlight">\(k\)</span> components that <span class="math notranslate nohighlight">\(x_i\neq 0, x_i\neq u_i\)</span>. Equivalently, <span class="math notranslate nohighlight">\(\sum_{i=1}^k x_i\mathbf{A}_{B(i)}=b-\sum_{i\in U}x_iA_{B(i)}\)</span> has unique solution and therefore its columns <span class="math notranslate nohighlight">\(\mathbf{A}_{B(1)},\dots, \mathbf{A}_{B(k)}\)</span> are linear independent.</p>
 <p>We have shown that there are <span class="math notranslate nohighlight">\(k\)</span> independent columns in <span class="math notranslate nohighlight">\(\bf A\)</span> and this implies <span class="math notranslate nohighlight">\(k\leq m\)</span>. Since <span class="math notranslate nohighlight">\(\bf A\)</span> has <span class="math notranslate nohighlight">\(m\)</span> independent rows, it also has <span class="math notranslate nohighlight">\(m\)</span> independent columns. Now (a) is proved and we prove (b) next. If <span class="math notranslate nohighlight">\(i\neq B(1), \dots, B(m)\)</span>, <span class="math notranslate nohighlight">\(i\neq B(1), \dots B(k)\)</span> and <span class="math notranslate nohighlight">\(x_i=0\)</span> or <span class="math notranslate nohighlight">\(x_i=u_i\)</span>, (b) is also satisfied.</p>
+<p><span class="math notranslate nohighlight">\(\Box\)</span></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Theorem: if equations <span class="math notranslate nohighlight">\(Ax=b\)</span> are consistent (has feasible solution), the columns of <span class="math notranslate nohighlight">\(\bf A\)</span> are linearly independent if and only if <span class="math notranslate nohighlight">\(\bf Ax = b\)</span> has a unique solution. (similar to Theorem 1.2)</p>
@@ -491,7 +491,7 @@ g=\bf (I, 0)\left(
 </section>
 <section id="exercise-2-6">
 <h2>Exercise 2.6<a class="headerlink" href="#exercise-2-6" title="Permalink to this heading">#</a></h2>
-<p><strong>(Carathe\acuteodory’s theorem)</strong> Let <span class="math notranslate nohighlight">\(\bf A_1,\dots,A_n\)</span> be a collection of vectors in <span class="math notranslate nohighlight">\(\mathcal{R}^m\)</span>.</p>
+<p><strong>(Carath<span class="math notranslate nohighlight">\(\acute{\bf e}\)</span>odory’s theorem)</strong> Let <span class="math notranslate nohighlight">\(\bf A_1,\dots,A_n\)</span> be a collection of vectors in <span class="math notranslate nohighlight">\(\mathcal{R}^m\)</span>.</p>
 <p>(a) Let</p>
 <div class="math notranslate nohighlight">
 \[
@@ -502,6 +502,7 @@ C =\{\sum \lambda_i\mathbf{A}_i\mid \lambda_1,\dots,\lambda_n\geq 0\}.
 \[
 \Lambda =\{(\lambda_1,\dots,\lambda_n)\in \mathcal{R}^n\mid\sum \lambda_i\mathbf{A}_i=\bf y\mid \lambda_1,\dots,\lambda_n\geq 0\}.
 \]</div>
+<p>(b)</p>
 </section>
 <section id="exercise-2-10">
 <h2>Exercise 2.10<a class="headerlink" href="#exercise-2-10" title="Permalink to this heading">#</a></h2>
@@ -515,14 +516,15 @@ C =\{\sum \lambda_i\mathbf{A}_i\mid \lambda_1,\dots,\lambda_n\geq 0\}.
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
 <p>(a) Right. The key is to prove that <span class="math notranslate nohighlight">\(P\)</span> is one-dimensional。</p>
-<p><em>Proof</em></p>
+<p><em>Proof.</em></p>
 <p>Since the rows in <span class="math notranslate nohighlight">\(\bf A\)</span> are linear independent, rank(<span class="math notranslate nohighlight">\(\bf A\)</span>) <span class="math notranslate nohighlight">\(=m\)</span>. Accodering to the knowledge in linear algebra,</p>
 <div class="math notranslate nohighlight">
 \[
         \text{dim}~ \text{NUL}(\mathbf{A}) + \text{rank}(\bf A) = n 
 \]</div>
 <p>Therefore, the dimensiion of the null space of <span class="math notranslate nohighlight">\(\bf A\)</span> is 1, i.e.,  the solution space of equations <span class="math notranslate nohighlight">\(\bf Ax=0\)</span> is 1. Accordering to linear algebra, the dimension of the solutio space is <span class="math notranslate nohighlight">\(\bf Ax=b\)</span> is equal to that in <span class="math notranslate nohighlight">\(\bf Ax=0\)</span> (becaause the general solution of <span class="math notranslate nohighlight">\(\bf Ax=b\)</span> equals to any feasible solution plus the solution of 的 <span class="math notranslate nohighlight">\(\bf Ax=0\)</span>).</p>
-<p>Since the solution of <span class="math notranslate nohighlight">\(P\)</span> is the subset of the solutions in <span class="math notranslate nohighlight">\(\bf Ax=b\)</span>, <span class="math notranslate nohighlight">\(P\)</span> is the subset of a line, i.e., <span class="math notranslate nohighlight">\(P\)</span> is a line segemen, point or empty space, all of which has at most two vertices. So, there are at most 2 basice feasible solutions for <span class="math notranslate nohighlight">\(P\)</span>. <span class="math notranslate nohighlight">\(\Box\)</span></p>
+<p>Since the solution of <span class="math notranslate nohighlight">\(P\)</span> is the subset of the solutions in <span class="math notranslate nohighlight">\(\bf Ax=b\)</span>, <span class="math notranslate nohighlight">\(P\)</span> is the subset of a line, i.e., <span class="math notranslate nohighlight">\(P\)</span> is a line segemen, point or empty space, all of which has at most two vertices. So, there are at most 2 basice feasible solutions for <span class="math notranslate nohighlight">\(P\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(\Box\)</span></p>
 <p>(b) Wrong. A counter example：</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -605,11 +607,11 @@ C =\{\sum \lambda_i\mathbf{A}_i\mid \lambda_1,\dots,\lambda_n\geq 0\}.
       </div>
     </a>
     <a class="right-next"
-       href="notebooks.html"
+       href="chapter-3.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Content with notebooks</p>
+        <p class="prev-next-title">Chapter 3</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
