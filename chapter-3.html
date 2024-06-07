@@ -7,8 +7,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; Manual of Introduction to Linear Optimization</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Chapter 3 &#8212; Manual of Introduction to Linear Optimization</title>
   
   
   
@@ -61,9 +62,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
-    <link rel="index" title="Index" href="#" />
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapter-3';</script>
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Chapter 2" href="chapter-2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -154,9 +158,9 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="chapter-2.html">Chapter 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter-3.html">Chapter 3</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 3</a></li>
 </ul>
 
     </div>
@@ -201,6 +205,54 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/chapter-3.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
 <button onclick="toggleFullScreen()"
   class="btn btn-sm btn-fullscreen-button"
   title="Fullscreen mode"
@@ -232,7 +284,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -243,11 +297,19 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1></h1>
+    <h1>Chapter 3</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-1-local-minimum-of-convex-functions">Exercise 3.1 (Local minimum of convex functions)</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -257,13 +319,62 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
+  <section class="tex2jax_ignore mathjax_ignore" id="chapter-3">
+<h1>Chapter 3<a class="headerlink" href="#chapter-3" title="Permalink to this heading">#</a></h1>
+<section id="exercise-3-1-local-minimum-of-convex-functions">
+<h2>Exercise 3.1 (Local minimum of convex functions)<a class="headerlink" href="#exercise-3-1-local-minimum-of-convex-functions" title="Permalink to this heading">#</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(f: \mathcal{R}^n \rightarrow \mathcal{R}\)</span> be a convex function and let <span class="math notranslate nohighlight">\(S \in \mathcal{R}^n\)</span> be a convex set. Let <span class="math notranslate nohighlight">\(x^\ast\)</span> be an element of <span class="math notranslate nohighlight">\(S\)</span>. Suppose that <span class="math notranslate nohighlight">\(x^\ast\)</span> is a local optimum for the problem of minimizing <span class="math notranslate nohighlight">\(f(x)\)</span> over <span class="math notranslate nohighlight">\(S\)</span>; that is, there exists some <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span> such that <span class="math notranslate nohighlight">\(f(x^\ast)\leq f(x)\)</span> for all <span class="math notranslate nohighlight">\(x\in S\)</span> for which <span class="math notranslate nohighlight">\(|x - x^\ast|\leq \epsilon\)</span>. Prove that <span class="math notranslate nohighlight">\(x^\ast\)</span> is globally optimal; that is, <span class="math notranslate nohighlight">\(f(x^\ast)\leq f(x)\)</span> for all <span class="math notranslate nohighlight">\(x\in S\)</span>.</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p>We prove this problem by contradiction.</p>
+<p><em>Proof.</em></p>
+<p>Suppose that there exists a point <span class="math notranslate nohighlight">\(x_0\in S\)</span> in which <span class="math notranslate nohighlight">\(f(x_0)&lt;f(x^\ast)\)</span>. Since <span class="math notranslate nohighlight">\(f(x)\)</span> is a convex function, for any <span class="math notranslate nohighlight">\(\lambda\in [0,1]\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+f(\lambda x^\ast + (1-\lambda)x_0)\leq \lambda f(x^\ast) + (1-\lambda )f(x_0).
+\]</div>
+<p>Since <span class="math notranslate nohighlight">\(f(x_0)&lt;f(x^\ast)\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+f(\lambda x^\ast + (1-\lambda)x_0)&lt; \lambda f(x^\ast) + (1-\lambda )f(x^\ast)=f(x^\ast).
+\]</div>
+<p>We can find a <span class="math notranslate nohighlight">\(\lambda\)</span> that makes <span class="math notranslate nohighlight">\(\lambda x^\ast + (1-\lambda)x_0\)</span> locates at the neighbourhood of <span class="math notranslate nohighlight">\(x^\ast\)</span>, i.e.,
+$<span class="math notranslate nohighlight">\(
+x^\ast-\epsilon\leq\lambda x^\ast + (1-\lambda)x_0\leq x^\ast+\epsilon;
+\)</span>$</p>
+<p>i.e., we can make <span class="math notranslate nohighlight">\(\lambda\)</span> satisfies:</p>
+<div class="math notranslate nohighlight">
+\[
+-\epsilon\leq(1-\lambda)(x^\ast-x^0)\leq \epsilon;
+\]</div>
+<p>i.e., we can make <span class="math notranslate nohighlight">\(\lambda\)</span> satisfies:
+$<span class="math notranslate nohighlight">\(
+1-\lambda\leq \frac{\epsilon}{|x_0-x^\ast|}.
+\)</span>$</p>
+<p>This <span class="math notranslate nohighlight">\(\lambda\)</span> does exist, so there will exists a point in the neigourhood of <span class="math notranslate nohighlight">\(x^\ast\)</span> but its function value is smaller than <span class="math notranslate nohighlight">\(f(x^\ast)\)</span>, which contradicts that <span class="math notranslate nohighlight">\(x^\ast\)</span> is a local minimum.</p>
+<p><span class="math notranslate nohighlight">\(\Box\)</span></p>
+</section>
+</section>
 
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
-</div>
-
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
@@ -276,6 +387,15 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="chapter-2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Chapter 2</p>
+      </div>
+    </a>
 </div></div>
   
 </div>
@@ -285,6 +405,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-1-local-minimum-of-convex-functions">Exercise 3.1 (Local minimum of convex functions)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

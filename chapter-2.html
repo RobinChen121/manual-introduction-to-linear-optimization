@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter-2';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Markdown Files" href="markdown.html" />
+    <link rel="next" title="Chapter 3" href="chapter-3.html" />
     <link rel="prev" title="Overview" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -161,9 +161,7 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter-3.html">Chapter 3</a></li>
 </ul>
 
     </div>
@@ -315,6 +313,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-3">Exercise 2.3</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-4">Exercise 2.4</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-5">Exercise 2.5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-6">Exercise 2.6</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-10">Exercise 2.10</a></li>
 </ul>
             </nav>
@@ -352,7 +351,7 @@ y&amp;\geq 0.
 <p>(c) The empty set can be represented as <span class="math notranslate nohighlight">\(\{x\geq 0, x&lt; 0\}\)</span> and is a polyhedron.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>A polyhedron is formed by finite linear constraints.</p>
+<p>A polyhedron is formed by finite <strong>linear</strong> constraints.</p>
 </div>
 </section>
 <section id="exercise-2-2">
@@ -398,7 +397,31 @@ f(\theta x_1+(1-\theta)x_2)\leq c
 <p><strong>(Basic feasible solutions in standard form polyhedra with upper bounds)</strong> Consider a polyhedron defined by the constraints <span class="math notranslate nohighlight">\(\bf Ax = b\)</span> and <span class="math notranslate nohighlight">\(\bf 0\leq x\leq u\)</span>, and assume that the matrix <span class="math notranslate nohighlight">\(\bf A\)</span> has linearly independent rows. Provide a procedure analogous to the one in Section 2.3 for constructing basic solutions, and prove an analog of Theorem 2.4.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
-<p>The only difference of the above statement with Theorem 2.4 is that there are upper bounds for <span class="math notranslate nohighlight">\(\bf x\)</span>.</p>
+<p>The only difference of the above statement with Theorem 2.4 is that there are upper bounds for <span class="math notranslate nohighlight">\(\bf x\)</span>. An analogous theorem is below:</p>
+<p><em>Theoreom</em></p>
+<p>For a polyhedron defined by the constraints <span class="math notranslate nohighlight">\(\bf Ax = b\)</span>, <span class="math notranslate nohighlight">\(\bf A\)</span> has dimensions <span class="math notranslate nohighlight">\(m\times n\)</span>, <span class="math notranslate nohighlight">\(\bf 0\leq x\leq u\)</span> and <span class="math notranslate nohighlight">\(m\)</span> independent rows. <span class="math notranslate nohighlight">\(\bf x\)</span> is a baisic solutions if and only if there exists indices <span class="math notranslate nohighlight">\(B(1), B(2),\dots, B(m)\)</span> such that:</p>
+<p>(a) the columns <span class="math notranslate nohighlight">\(\mathbf{A}_{B(1)},\dots, \mathbf{A}_{B(m)}\)</span> are linear independent.</p>
+<p>(b) if <span class="math notranslate nohighlight">\(i\neq B(1),\dots, B(m)\)</span>, <span class="math notranslate nohighlight">\(x_i=0\)</span> or <font color=red><span class="math notranslate nohighlight">\(x_i=u_i\)</span></font>.</p>
+<p><em>Proof.</em></p>
+<p>Assume a solution <span class="math notranslate nohighlight">\(x\)</span> satsifying (a) and (b), and <span class="math notranslate nohighlight">\(U\)</span> is the set of indecies that <span class="math notranslate nohighlight">\(x_i=u_i\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{x}_{B(1)}\mathbf{A}_{B(1)}+\dots+\mathbf{x}_{B(m)}\mathbf{A}_{B(m)}=b-\sum_{i\in U}x_iA_{B(i)}.
+\]</div>
+<p>Because the columns <span class="math notranslate nohighlight">\(\mathbf{A}_{B(1)},\dots, \mathbf{A}_{B(m)}\)</span> are linear independent and <span class="math notranslate nohighlight">\(x\)</span> is a feasible solution, the above equations have a unique solution. And thus <span class="math notranslate nohighlight">\(\bf Ax=b\)</span> has a unique solution. From Theorem 2.2, the <span class="math notranslate nohighlight">\(n\)</span> active constraints are independent and thus <span class="math notranslate nohighlight">\(\bf x\)</span> is a basic solution.</p>
+<p>For the converse, we assume that <span class="math notranslate nohighlight">\(\bf x\)</span> is a basic solution and we will show that conditions (a) and (b) are true.  Since <span class="math notranslate nohighlight">\(x\)</span> is a basice solution, it is the solution of <span class="math notranslate nohighlight">\(n\)</span> linear independent constraints. Therefore, the <span class="math notranslate nohighlight">\(n\)</span> columns of <span class="math notranslate nohighlight">\(\bf A\)</span> and all the components in <span class="math notranslate nohighlight">\(\bf x\)</span> form the equations:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{x}_{B(1)}\mathbf{A}_{B(1)}+\dots+\mathbf{x}_{B(n)}\mathbf{A}_{B(n)}=b.
+\]</div>
+<p>According to Theorem 2.2, the above equations has <span class="math notranslate nohighlight">\(n\)</span> linear independent column vectors and thus has a unique solution. Assume <span class="math notranslate nohighlight">\(\bf x\)</span> has <span class="math notranslate nohighlight">\(k\)</span> components that <span class="math notranslate nohighlight">\(x_i\neq 0, x_i\neq u_i\)</span>. Equivalently, <span class="math notranslate nohighlight">\(\sum_{i=1}^k x_i\mathbf{A}_{B(i)}=b-\sum_{i\in U}x_iA_{B(i)}\)</span> has unique solution and therefore its columns <span class="math notranslate nohighlight">\(\mathbf{A}_{B(1)},\dots, \mathbf{A}_{B(k)}\)</span> are linear independent.</p>
+<p>We have shown that there are <span class="math notranslate nohighlight">\(k\)</span> independent columns in <span class="math notranslate nohighlight">\(\bf A\)</span> and this implies <span class="math notranslate nohighlight">\(k\leq m\)</span>. Since <span class="math notranslate nohighlight">\(\bf A\)</span> has <span class="math notranslate nohighlight">\(m\)</span> independent rows, it also has <span class="math notranslate nohighlight">\(m\)</span> independent columns. Now (a) is proved and we prove (b) next. If <span class="math notranslate nohighlight">\(i\neq B(1), \dots, B(m)\)</span>, <span class="math notranslate nohighlight">\(i\neq B(1), \dots B(k)\)</span> and <span class="math notranslate nohighlight">\(x_i=0\)</span> or <span class="math notranslate nohighlight">\(x_i=u_i\)</span>, (b) is also satisfied.</p>
+<p><span class="math notranslate nohighlight">\(\Box\)</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Theorem: if equations <span class="math notranslate nohighlight">\(Ax=b\)</span> are consistent (has feasible solution), the columns of <span class="math notranslate nohighlight">\(\bf A\)</span> are linearly independent if and only if <span class="math notranslate nohighlight">\(\bf Ax = b\)</span> has a unique solution. (similar to Theorem 1.2)</p>
+<p>For <span class="math notranslate nohighlight">\(n\)</span> decision variables, <span class="math notranslate nohighlight">\(n\)</span> independent row constraints results in a unique solution and also results in <span class="math notranslate nohighlight">\(n\)</span> independent column vectors</p>
+</div>
 </section>
 <section id="exercise-2-4">
 <h2>Exercise 2.4<a class="headerlink" href="#exercise-2-4" title="Permalink to this heading">#</a></h2>
@@ -413,7 +436,7 @@ f(\theta x_1+(1-\theta)x_2)\leq c
 </section>
 <section id="exercise-2-5">
 <h2>Exercise 2.5<a class="headerlink" href="#exercise-2-5" title="Permalink to this heading">#</a></h2>
-<p><strong>(ExtreIne points of isoInorphic polyhedra)</strong> A mapping <span class="math notranslate nohighlight">\(f\)</span> is called affine if it is of the form <span class="math notranslate nohighlight">\(f(\bf x) = Ax + b\)</span>, where <span class="math notranslate nohighlight">\(\bf A\)</span> is a matrix and <span class="math notranslate nohighlight">\(\bf b\)</span> is a vector. Let <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> be polyhedra in <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span> and <span class="math notranslate nohighlight">\(\mathcal{R}^m\)</span> , respectively. We say that <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> are isomorphic if there exist affine mappings <span class="math notranslate nohighlight">\(f: P\rightarrow Q\)</span> and <span class="math notranslate nohighlight">\(g: Q\rightarrow P\)</span> such that <span class="math notranslate nohighlight">\(g(f(\bf x) = x\)</span> for all <span class="math notranslate nohighlight">\(\mathbf{x} \in P\)</span>, and <span class="math notranslate nohighlight">\(f(g(\bf y) = y\)</span> for all <span class="math notranslate nohighlight">\(\mathbf{y} \in Q.\)</span> (Intuitively, isomorphic polyhedra have the same shape.)</p>
+<p><strong>(ExtreIne points of isoInorphic polyhedra)</strong> A mapping <span class="math notranslate nohighlight">\(f\)</span> is called affine if it is of the form <span class="math notranslate nohighlight">\(f(\bf x) = Ax + b\)</span>, where <span class="math notranslate nohighlight">\(\bf A\)</span> is a matrix and <span class="math notranslate nohighlight">\(\bf b\)</span> is a vector. Let <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> be polyhedra in <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span> and <span class="math notranslate nohighlight">\(\mathcal{R}^m\)</span> , respectively. We say that <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> are isomorphic if there exist affine mappings <span class="math notranslate nohighlight">\(f: P\rightarrow Q\)</span> and <span class="math notranslate nohighlight">\(g: Q\rightarrow P\)</span> such that <span class="math notranslate nohighlight">\(g(f(\bf x) = x\)</span> for all <span class="math notranslate nohighlight">\(\mathbf{x} \in P\)</span>, and <span class="math notranslate nohighlight">\(f(g(\bf y)) = y\)</span> for all <span class="math notranslate nohighlight">\(\mathbf{y} \in Q.\)</span> (Intuitively, isomorphic polyhedra have the same shape.)</p>
 <p>(a) If <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> are isomorphic, show that there exists a one-to-one correspondence between their extreme points. In particular, if <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are as above, show that <span class="math notranslate nohighlight">\(\bf x\)</span> is an extreme point of <span class="math notranslate nohighlight">\(P\)</span> if and only if <span class="math notranslate nohighlight">\(f(\bf x)\)</span> is an extreme point of <span class="math notranslate nohighlight">\(Q\)</span>.</p>
 <p>(b) <strong>(Introducing slack variables leads to an isoInorphic polyhedron)</strong> Let <span class="math notranslate nohighlight">\(P = \{\mathbf{x} \in \mathcal{R}^n \mid \bf Ax \geq b, x\geq 0\}\)</span>, where <span class="math notranslate nohighlight">\(\bf A\)</span> is a matrix of dimensions <span class="math notranslate nohighlight">\(k\times n\)</span>. Let <span class="math notranslate nohighlight">\(Q = \{\bf (x, z) \in \mathcal{R}^{n+k} \mid Ax - z = b, x \geq 0, z \geq 0\}\)</span>. Show that <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> are isomorphic.</p>
 <hr class="docutils" />
@@ -466,6 +489,21 @@ g=\bf (I, 0)\left(
 \right)
 \end{split}\]</div>
 </section>
+<section id="exercise-2-6">
+<h2>Exercise 2.6<a class="headerlink" href="#exercise-2-6" title="Permalink to this heading">#</a></h2>
+<p><strong>(Carath<span class="math notranslate nohighlight">\(\acute{\bf e}\)</span>odory’s theorem)</strong> Let <span class="math notranslate nohighlight">\(\bf A_1,\dots,A_n\)</span> be a collection of vectors in <span class="math notranslate nohighlight">\(\mathcal{R}^m\)</span>.</p>
+<p>(a) Let</p>
+<div class="math notranslate nohighlight">
+\[
+C =\{\sum \lambda_i\mathbf{A}_i\mid \lambda_1,\dots,\lambda_n\geq 0\}.
+\]</div>
+<p>Show that any element of <span class="math notranslate nohighlight">\(C\)</span> can be expressed in the form <span class="math notranslate nohighlight">\(\sum_{i=1}^n \lambda_i\mathbf{A}_i\)</span>, with <span class="math notranslate nohighlight">\(\lambda_i\geq 0\)</span>, and with at most <span class="math notranslate nohighlight">\(m\)</span> of the coefficients <span class="math notranslate nohighlight">\(\lambda_i\)</span> being nonzero. <em>Hint</em>: Consider the polyhedron</p>
+<div class="math notranslate nohighlight">
+\[
+\Lambda =\{(\lambda_1,\dots,\lambda_n)\in \mathcal{R}^n\mid\sum \lambda_i\mathbf{A}_i=\bf y\mid \lambda_1,\dots,\lambda_n\geq 0\}.
+\]</div>
+<p>(b)</p>
+</section>
 <section id="exercise-2-10">
 <h2>Exercise 2.10<a class="headerlink" href="#exercise-2-10" title="Permalink to this heading">#</a></h2>
 <p>Consider the standard form polyhedron <span class="math notranslate nohighlight">\(P = \{\bf x \mid Ax = b, x \geq 0\}\)</span>. Suppose that the matrix <span class="math notranslate nohighlight">\(\bf A\)</span> has dimensions <span class="math notranslate nohighlight">\(m \times n\)</span> and that its rows are linearly independent. For each one of the following statements, state whether it is true or false. If true, provide a proof, else, provide a counterexample.</p>
@@ -477,15 +515,16 @@ g=\bf (I, 0)\left(
 <p>(f) Consider the problem of minimizing <span class="math notranslate nohighlight">\(\max\{\bf c'x, d'x\}\)</span> over the set <span class="math notranslate nohighlight">\(P\)</span>. If this problem has an optimal solution, it must have an optimal solution which is an extreme point of <span class="math notranslate nohighlight">\(P\)</span>.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
-<p>(a) Right。The key is to prove that <span class="math notranslate nohighlight">\(P\)</span> is one-dimensional。</p>
-<p><em>Proof</em></p>
+<p>(a) Right. The key is to prove that <span class="math notranslate nohighlight">\(P\)</span> is one-dimensional。</p>
+<p><em>Proof.</em></p>
 <p>Since the rows in <span class="math notranslate nohighlight">\(\bf A\)</span> are linear independent, rank(<span class="math notranslate nohighlight">\(\bf A\)</span>) <span class="math notranslate nohighlight">\(=m\)</span>. Accodering to the knowledge in linear algebra,</p>
 <div class="math notranslate nohighlight">
 \[
-        \text{dim~} \text{NUL}(\bf A) + \text{rank}(\bf A) = n 
+        \text{dim}~ \text{NUL}(\mathbf{A}) + \text{rank}(\bf A) = n 
 \]</div>
 <p>Therefore, the dimensiion of the null space of <span class="math notranslate nohighlight">\(\bf A\)</span> is 1, i.e.,  the solution space of equations <span class="math notranslate nohighlight">\(\bf Ax=0\)</span> is 1. Accordering to linear algebra, the dimension of the solutio space is <span class="math notranslate nohighlight">\(\bf Ax=b\)</span> is equal to that in <span class="math notranslate nohighlight">\(\bf Ax=0\)</span> (becaause the general solution of <span class="math notranslate nohighlight">\(\bf Ax=b\)</span> equals to any feasible solution plus the solution of 的 <span class="math notranslate nohighlight">\(\bf Ax=0\)</span>).</p>
-<p>Since the solution of <span class="math notranslate nohighlight">\(P\)</span> is the subset of the solutions in <span class="math notranslate nohighlight">\(\bf Ax=b\)</span>, <span class="math notranslate nohighlight">\(P\)</span> is the subset of a line, i.e., <span class="math notranslate nohighlight">\(P\)</span> is a line segemen, point or empty space, all of which has at most two vertices. So, there are at most 2 basice feasible solutions for <span class="math notranslate nohighlight">\(P\)</span>. <span class="math notranslate nohighlight">\(\Box\)</span></p>
+<p>Since the solution of <span class="math notranslate nohighlight">\(P\)</span> is the subset of the solutions in <span class="math notranslate nohighlight">\(\bf Ax=b\)</span>, <span class="math notranslate nohighlight">\(P\)</span> is the subset of a line, i.e., <span class="math notranslate nohighlight">\(P\)</span> is a line segemen, point or empty space, all of which has at most two vertices. So, there are at most 2 basice feasible solutions for <span class="math notranslate nohighlight">\(P\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(\Box\)</span></p>
 <p>(b) Wrong. A counter example：</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -568,11 +607,11 @@ g=\bf (I, 0)\left(
       </div>
     </a>
     <a class="right-next"
-       href="markdown.html"
+       href="chapter-3.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Markdown Files</p>
+        <p class="prev-next-title">Chapter 3</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -599,6 +638,7 @@ g=\bf (I, 0)\left(
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-3">Exercise 2.3</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-4">Exercise 2.4</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-5">Exercise 2.5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-6">Exercise 2.6</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-10">Exercise 2.10</a></li>
 </ul>
   </nav></div>
