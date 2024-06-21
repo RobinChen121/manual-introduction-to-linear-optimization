@@ -321,6 +321,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-11">Exercise 2.11</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-12">Exercise 2.12</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-13">Exercise 2.13</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-14">Exercise 2.14</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-15">Exercise 2.15</a></li>
 </ul>
             </nav>
         </div>
@@ -649,7 +651,7 @@ P = \left\{
 </section>
 <section id="exercise-2-11">
 <h2>Exercise 2.11<a class="headerlink" href="#exercise-2-11" title="Permalink to this heading">#</a></h2>
-<p>Let <span class="math notranslate nohighlight">\(P ={x \in \mathcal{R}^n \mid \mathbf{Ax\geq b}}\)</span>. Suppose that at a particular basic feasible solution, there are <span class="math notranslate nohighlight">\(k\)</span> active constraints, with <span class="math notranslate nohighlight">\(k &gt; n\)</span>. Is it true that there exist exactly <span class="math notranslate nohighlight">\(k\choose n\)</span> bases that lead to this basic feasible solution? Here <span class="math notranslate nohighlight">\({k\choose k} = k! / (n! (k - n) !)\)</span> is the number of ways that we can choose <span class="math notranslate nohighlight">\(n\)</span> out of <span class="math notranslate nohighlight">\(k\)</span> given items.</p>
+<p>Let <span class="math notranslate nohighlight">\(P =\{x \in \mathcal{R}^n \mid \mathbf{Ax\geq b}\}\)</span>. Suppose that at a particular basic feasible solution, there are <span class="math notranslate nohighlight">\(k\)</span> active constraints, with <span class="math notranslate nohighlight">\(k &gt; n\)</span>. Is it true that there exist exactly <span class="math notranslate nohighlight">\(k\choose n\)</span> bases that lead to this basic feasible solution? Here <span class="math notranslate nohighlight">\({k\choose k} = k! / (n! (k - n) !)\)</span> is the number of ways that we can choose <span class="math notranslate nohighlight">\(n\)</span> out of <span class="math notranslate nohighlight">\(k\)</span> given items.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
 <p>No.There may be dependent constrains in the <span class="math notranslate nohighlight">\(k\)</span> active constraints. We can find a counter example:</p>
@@ -670,7 +672,7 @@ x\geq 1\\
 <p>Yes. For all the constraints <span class="math notranslate nohighlight">\(x_i\geq 0\)</span> or the constraint <span class="math notranslate nohighlight">\(x_i\leq 0\)</span>, there are <span class="math notranslate nohighlight">\(n\)</span> of them that are independent. According to Theorem 2.6 (c), there exists a basic feasible solution for this nonempty polyhedron.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>According to Theorem 2.6, there must exist a basic fesible solution in a non-empty polyhedron if there are <span class="math notranslate nohighlight">\(n\)</span> linear independent row coefficients constraints.</p>
+<p>According to Theorem 2.6, there must exist a basic fesible solution in a non-empty polyhedron if there are <span class="math notranslate nohighlight">\(m\)</span> linear independent row coefficients constraints.</p>
 </div>
 </section>
 <section id="exercise-2-13">
@@ -680,6 +682,86 @@ x\geq 1\\
 <p>(b) Show that the result of part (a) is false if the nondegeneracy assumption is removed.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
+<p>(a) <em>Proof.</em></p>
+<p>We apply Theorem 2.4 to prove it. Since <span class="math notranslate nohighlight">\(\mathbf x\)</span> has <span class="math notranslate nohighlight">\(m\)</span> positive components, let <span class="math notranslate nohighlight">\(B(1), \dots, B(m)\)</span> be its correponding indices. This already satifies Theorem 2.4 (b) that if <span class="math notranslate nohighlight">\(i\neq B(1),\dots,B(m)\)</span>, <span class="math notranslate nohighlight">\(x_i=0\)</span>. Now we need to prove Theorem 2.4 (a) that the columns <span class="math notranslate nohighlight">\(\mathbf{A}_{B(1)},\dots,\mathbf{A}_{B(m)}\)</span> are linear independent. We prove it by contradiction.</p>
+<p>If the columns <span class="math notranslate nohighlight">\(\mathbf{A}_{B(1)},\dots,\mathbf{A}_{B(m)}\)</span> are linear dependent, there exists one columnn that can be the linear combination of others. We suppose this column be <span class="math notranslate nohighlight">\(\mathbf{A}_{B(m)}\)</span>, i.e.,</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{A}_{B(m)}=\alpha_1\mathbf{A}_{B(1)}+\dots+\alpha_{m-1}\mathbf{A}_{B(m-1)}.\tag{1}
+\]</div>
+<p>Since</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{Ax}=\sum_{i=1}^n\mathbf{A}_ix_i=b,\tag{2}
+\]</div>
+<p>by putting (2) to (1), we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+&amp;\mathbf{A}_{B(1)}x_{B(1)}+\dots+\mathbf{A}_{B(m-1)}x_{B(m-1)}+\mathbf{A}_{B(m-1)}x_{B(m-1)}+(\alpha_1\mathbf{A}_{B(1)}+\dots+\alpha_{m-1}\mathbf{A}_{B(m-1)})x_{B(m)}=b\\
+\Rightarrow &amp;\mathbf{A}_{B(1)}(x_{B(1)}+\alpha_1x_{B(m)})+\dots+\mathbf{A}_{B(m-1)}(x_{B(m-1)}+\alpha_{m-1}x_{B(m)})=b.
+\end{align}
+\end{split}\]</div>
+<p>Since the matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> has <span class="math notranslate nohighlight">\(m\)</span> independent rows, it must also have <span class="math notranslate nohighlight">\(m\)</span> independent columns. We can find another column <span class="math notranslate nohighlight">\(\mathbf{A}_{B(k)}\)</span>, <span class="math notranslate nohighlight">\(k\neq B(1),\dots, B(m)\)</span> that is independent with <span class="math notranslate nohighlight">\(\mathbf{A}_{B(1)},\dots, \mathbf{A}_{B(m-1)}\)</span>. And because <span class="math notranslate nohighlight">\(\mathbf{Ax=b}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{A}_{B(1)}(x_{B(1)}+\alpha_1x_{B(m)})+\dots+\mathbf{A}_{B(m-1)}(x_{B(m-1)}+\alpha_{m-1}x_{B(m-1)})+0\mathbf{A}_k=b.\tag(3)
+\]</div>
+<p>if <span class="math notranslate nohighlight">\(\mathbf{A}_{B(1)},\dots, \mathbf{A}_{B(m-1)}\)</span> are independent, this will result in a basic feasible solution <span class="math notranslate nohighlight">\(\left(x_{B(1)}+\alpha_1 x_{B(m)},\dots, x_{B(m-1)}+\alpha_{m-1}x_{B(m-1)}, 0\right)\)</span>, which is degenerate and contradicts with the fact all basic solutions are nondegenerate.</p>
+<p>if <span class="math notranslate nohighlight">\(\mathbf{A}_{B(1)},\dots, \mathbf{A}_{B(m-1)}\)</span> are dependent, find the independent columns from them, and replenish with some remaining columns from the matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> to get <span class="math notranslate nohighlight">\(m\)</span> independent columns. Repeat a similar procedure as above from (1) to (3), this will also lead to a degenerate basic feasible solution, which contradicts the nondegerate fact.</p>
+<p><span class="math notranslate nohighlight">\(\Box\)</span></p>
+<p>(b) An counter example.</p>
+<p>A standard polyhedron:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+x_2+x_3=4\\
+x_2=4\\
+x_1,x_2,x_3\geq 0
+\end{align}
+\end{split}\]</div>
+<p>One solution (1,4,0) is not a basic feasible solution.</p>
+</section>
+<section id="exercise-2-14">
+<h2>Exercise 2.14<a class="headerlink" href="#exercise-2-14" title="Permalink to this heading">#</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(P\)</span> be a bounded polyhedron in <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span> , let <span class="math notranslate nohighlight">\(\mathbf a\)</span> be a vector in <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span> ,and let <span class="math notranslate nohighlight">\(b\)</span> be some scalar. We define</p>
+<div class="math notranslate nohighlight">
+\[
+Q = \{\mathbf{x}\in P \mid \mathbf{a'x} = b\} .
+\]</div>
+<p>Show that every extreme point of <span class="math notranslate nohighlight">\(Q\)</span> is either an extreme point of <span class="math notranslate nohighlight">\(P\)</span> or a convex combination of two adjacent extreme points of <span class="math notranslate nohighlight">\(P\)</span>.</p>
+<hr class="docutils" />
+<html>
+</html><p><img alt="" src="_images/2-14-1.png" /></p>
+<p><img alt="" src="_images/2-14-2.png" /></p>
+<p><em>Proof.</em></p>
+<p>Assume the polyhedron <span class="math notranslate nohighlight">\(P\)</span> is <span class="math notranslate nohighlight">\(\{\mathbf{x}\in \mathcal{R}^n\mid\mathbf{A_1x=b_1}, \mathbf{x}\geq 0\}\)</span>, then <span class="math notranslate nohighlight">\(Q\)</span> can be written as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\mathbf{A_1x}&amp;=\mathbf{b_1}\\
+a'x&amp;=b\\
+\mathbf{x}&amp;\geq \mathbf{0}
+\end{align}
+\end{split}\]</div>
+<p>Assume <span class="math notranslate nohighlight">\(x^{\ast}\)</span> is an extreme point of <span class="math notranslate nohighlight">\(Q\)</span>. Since the extreme point is also a basic feasible solution (Theorem 2.3), from the definition of 2.9, there are <span class="math notranslate nohighlight">\(n\)</span> independent active constraints at <span class="math notranslate nohighlight">\(\mathbf{x^{\ast}}\)</span>. Thre are two scenarios:</p>
+<p>(1) if the <span class="math notranslate nohighlight">\(n\)</span> independent active constraints are all in <span class="math notranslate nohighlight">\(\mathbf{A_1x=b_1}\)</span>, then <span class="math notranslate nohighlight">\(\mathbf{x^{\ast}}\)</span> is the basic feasible solution of <span class="math notranslate nohighlight">\(P\)</span> by definition 2.9 and also an extreme point of it.</p>
+<p>(2) if <span class="math notranslate nohighlight">\(\mathbf{a'x}=b\)</span> is also an active constraint in them, then there are <span class="math notranslate nohighlight">\(n-1\)</span> independent active constraints in <span class="math notranslate nohighlight">\(\mathbf{A_1x=b_1}\)</span>. Let <span class="math notranslate nohighlight">\(I\)</span> represent the row index in <span class="math notranslate nohighlight">\(\mathbf{A_1x=b_1}\)</span>that are active consraints, i.e., <span class="math notranslate nohighlight">\(I=\{i\mid \mathbf{a'^i_1x}=b^i_1\}\)</span>. Then all the <span class="math notranslate nohighlight">\(\mathbf{a'}_1^i (i\in I)\)</span> lie in a proper subspace of <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span>. There exists a non-zero vector <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> that are orthogonal to every <span class="math notranslate nohighlight">\(\mathbf{a'}_1^i (i\in I)\)</span>, i.e., <span class="math notranslate nohighlight">\(\mathbf{a'}_1^i\mathbf{d}=0\)</span>. Let us consider a line:</p>
+<div class="math notranslate nohighlight">
+\[
+y=\mathbf{x}^\ast+\lambda\mathbf{d},
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\lambda\)</span> is an arbitrary scalar. For all <span class="math notranslate nohighlight">\(i\in I\)</span>, <span class="math notranslate nohighlight">\(\mathbf{a'}_i^1(\mathbf{x}^\ast+\lambda\mathbf{d})=0\)</span>, thus the active constraints remain active at all points on this line.  If we vary the values of <span class="math notranslate nohighlight">\(\lambda\)</span>, some of the original active constraints will eventually be violated. Bus since <span class="math notranslate nohighlight">\(P\)</span> is a bounded polyhedron,it does not contain a line. At the point where the orginal active constraints is about to be violated, there will be a new active constraint: <span class="math notranslate nohighlight">\(\mathbf{a'_j}(\mathbf{x}^\ast+\lambda\mathbf{d})=b_j\)</span>. <span class="math notranslate nohighlight">\(\mathbf{a'_2}\)</span> is independent with <span class="math notranslate nohighlight">\(\mathbf{a'}_1^i (i\in I)\)</span> because if not so, it will be a linear combination of <span class="math notranslate nohighlight">\(\mathbf{a'}_1^i (i\in I)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{a'}_j\mathbf{x}^\ast=b_j\)</span>, which contradicts the definiton of <span class="math notranslate nohighlight">\(I\)</span> (<span class="math notranslate nohighlight">\(j\)</span> should also be in <span class="math notranslate nohighlight">\(I\)</span> but it not). Hence, <span class="math notranslate nohighlight">\(\mathbf{a'_jx^\ast}\neq b_j\)</span> and <span class="math notranslate nohighlight">\(\mathbf{a'_jd}\neq 0\)</span>. By moving from <span class="math notranslate nohighlight">\(\mathbf{x^\ast}\)</span> to <span class="math notranslate nohighlight">\(\mathbf{x^\ast}+\lambda\mathbf{d}\)</span>, we now have <span class="math notranslate nohighlight">\(n\)</span> active constraints and the point is an extreme point of <span class="math notranslate nohighlight">\(P\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(\lambda\)</span> can be both positive and negative, we have two directions along the line <span class="math notranslate nohighlight">\(y=\mathbf{x}^\ast+\lambda\mathbf{d}\)</span> and will reach two extreme points of <span class="math notranslate nohighlight">\(P\)</span>, which have <span class="math notranslate nohighlight">\(n-1\)</span> same indepedent active constraints and are adjacent. The point <span class="math notranslate nohighlight">\(\mathbf{x^\ast}\)</span> lies in the line segment between the two extreme points and it is a convex combination of them.</p>
+<p><span class="math notranslate nohighlight">\(\Box\)</span></p>
+<p>The above two figures shows the situation when <span class="math notranslate nohighlight">\(P\)</span> is a rectangular and <span class="math notranslate nohighlight">\(Q\)</span> is a line.</p>
+</section>
+<section id="exercise-2-15">
+<h2>Exercise 2.15<a class="headerlink" href="#exercise-2-15" title="Permalink to this heading">#</a></h2>
+<p><strong>(Edges joining adjacent vertices)</strong> Consider the polyhedron <span class="math notranslate nohighlight">\(P = \{\mathbf{x} \in \mathcal{R}^n \mid \mathbf{a'_ix} \geq b_i, i = 1,\dots,  m\}\)</span> . Suppose that <span class="math notranslate nohighlight">\(\mathbf u\)</span> and <span class="math notranslate nohighlight">\(\mathbf v\)</span> are distinct basic feasible solutions that satisfy <span class="math notranslate nohighlight">\(\mathbf{a'_iu} = \mathbf{a'_iv} = b_i , i = 1, \dots, n - 1\)</span>, and that the vectors <span class="math notranslate nohighlight">\(\mathbf{a}_l,\dots, \mathbf{a}_{n- 1}\)</span> are linearly independent. (In particular, <span class="math notranslate nohighlight">\(\mathbf u\)</span> and <span class="math notranslate nohighlight">\(\mathbf v\)</span> are adjacent.) Let <span class="math notranslate nohighlight">\(L = \{\lambda\mathbf{u} + (1 - \lambda)\mathbf{v}\mid 0\leq\lambda\leq 1\}\)</span> be the segment that joins <span class="math notranslate nohighlight">\(\mathbf u\)</span> and <span class="math notranslate nohighlight">\(\mathbf v\)</span>. Prove that <span class="math notranslate nohighlight">\(L = \{\mathbf{z}\in P \mid \mathbf{a'}_iz = b_i , i = 1, \dots, n - 1\}\)</span> .</p>
+<hr class="docutils" />
+<p><em>Proof.</em></p>
+<p>In the polyhedron <span class="math notranslate nohighlight">\(\{\mathbf{z}\in P  \mid \mathbf{a'_iz} = b_i, i = 1,\dots,  n-1\}\)</span>, there are <span class="math notranslate nohighlight">\(n-1\)</span> independent rows and <span class="math notranslate nohighlight">\(n\)</span> columns. From Exercise 2.10 (a), there are at most 2 basic feasible solutions. Since <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> are two of them, <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> are exactly the 2 extreme points in it and it is a line segment. And it is bounded for this line segment..  According to Theorem 2.9, a bounded polyhedron is the convex hull of its extreme points. <span class="math notranslate nohighlight">\(L = \{\lambda\mathbf{u} + (1 - \lambda)\mathbf{v}\mid 0\leq\lambda\leq 1\}\)</span>  is just the convex hull of extreme points <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>.So it equals to the polyhedron <span class="math notranslate nohighlight">\(\{\mathbf{z}\in P  \mid \mathbf{a'_iz} = b_i, i = 1,\dots,  n-1\}\)</span>.</p>
 </section>
 </section>
 
@@ -763,6 +845,8 @@ x\geq 1\\
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-11">Exercise 2.11</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-12">Exercise 2.12</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-13">Exercise 2.13</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-14">Exercise 2.14</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-15">Exercise 2.15</a></li>
 </ul>
   </nav></div>
 
