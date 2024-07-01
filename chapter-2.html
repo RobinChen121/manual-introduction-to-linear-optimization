@@ -407,7 +407,7 @@ f(\theta x_1+(1-\theta)x_2)\leq c
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
 <p>The only difference of the above statement with Theorem 2.4 is that there are upper bounds for <span class="math notranslate nohighlight">\(\bf x\)</span>. An analogous theorem is below:</p>
-<p><em>Theoreom</em></p>
+<p><em>Theorem</em></p>
 <p>For a polyhedron defined by the constraints <span class="math notranslate nohighlight">\(\bf Ax = b\)</span>, <span class="math notranslate nohighlight">\(\bf A\)</span> has dimensions <span class="math notranslate nohighlight">\(m\times n\)</span>, <span class="math notranslate nohighlight">\(\bf 0\leq x\leq u\)</span> and <span class="math notranslate nohighlight">\(m\)</span> independent rows. <span class="math notranslate nohighlight">\(\bf x\)</span> is a baisic solutions if and only if there exists indices <span class="math notranslate nohighlight">\(B(1), B(2),\dots, B(m)\)</span> such that:</p>
 <p>(a) the columns <span class="math notranslate nohighlight">\(\mathbf{A}_{B(1)},\dots, \mathbf{A}_{B(m)}\)</span> are linear independent.</p>
 <p>(b) if <span class="math notranslate nohighlight">\(i\neq B(1),\dots, B(m)\)</span>, <span class="math notranslate nohighlight">\(x_i=0\)</span> or <font color=red><span class="math notranslate nohighlight">\(x_i=u_i\)</span></font>.</p>
@@ -578,7 +578,7 @@ P = \left\{
 <p><strong>Solution:</strong></p>
 <p>(a) Consider a matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> with <span class="math notranslate nohighlight">\(m\)</span> rows and <span class="math notranslate nohighlight">\(n\)</span> columns, and two bases <span class="math notranslate nohighlight">\(\mathbf{B}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{B}_2\)</span>. Assume that both basic solutions are non-degenerate, meaning that all <span class="math notranslate nohighlight">\(m\)</span> variables in the basic solution corresponding to basis <span class="math notranslate nohighlight">\(\mathbf{B}_1\)</span> are non-zero, and all <span class="math notranslate nohighlight">\(m\)</span> variables in the basic solution corresponding to basis <span class="math notranslate nohighlight">\(\mathbf{B}_2\)</span> are also non-zero. Since the two bases are different, there is at least one variable that is in <span class="math notranslate nohighlight">\(\mathbf{B}_1\)</span> but not in <span class="math notranslate nohighlight">\(\mathbf{B}_2\)</span>, which leads to <span class="math notranslate nohighlight">\(m+1\)</span> non-zero variables in the solution <span class="math notranslate nohighlight">\(\mathbf{x}\)</span>. This contradicts the fact that <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> is a basic solution. Therefore, the basic solution <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> must be degenerate.</p>
 <p>(b) No. The simple counter example is <span class="math notranslate nohighlight">\(\{x=0, x\geq 0\}\)</span>. The degenerate basic solution is <span class="math notranslate nohighlight">\(x=0\)</span>, but it corresponds to only one base.</p>
-<p>(c) NO. An counter example:</p>
+<p>(c) No. An counter example:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
@@ -735,6 +735,7 @@ Q = \{\mathbf{x}\in P \mid \mathbf{a'x} = b\} .
 <html>
 </html><p><img alt="" src="_images/2-14-1.png" /></p>
 <p><img alt="" src="_images/2-14-2.png" /></p>
+<p><strong>Solution:</strong></p>
 <p><em>Proof.</em></p>
 <p>Assume the polyhedron <span class="math notranslate nohighlight">\(P\)</span> is <span class="math notranslate nohighlight">\(\{\mathbf{x}\in \mathcal{R}^n\mid\mathbf{A_1x=b_1}, \mathbf{x}\geq 0\}\)</span>, then <span class="math notranslate nohighlight">\(Q\)</span> can be written as:</p>
 <div class="math notranslate nohighlight">
@@ -745,10 +746,7 @@ a'x&amp;=b\\
 \mathbf{x}&amp;\geq \mathbf{0}
 \end{align}
 \end{split}\]</div>
-<p style='text-align: justify'>
-Assume $x^{\ast}$ is an extreme point of $Q$. Since the extreme point is also a basic feasible solution (Theorem 2.3), from the definition of 2.9, there are $n$ independent active constraints at $\mathbf{x^{\ast}}$. Thre are two scenarios:
-</p>
-<p>Assume <span class="math notranslate nohighlight">\(x^{\ast}\)</span> is an extreme point of <span class="math notranslate nohighlight">\(Q\)</span>. Since the extreme point is also a basic feasible solution (Theorem 2.3), from the definition of 2.9, there are <span class="math notranslate nohighlight">\(n\)</span> independent active constraints at <span class="math notranslate nohighlight">\(\mathbf{x^{\ast}}\)</span>. Thre are two scenarios:</p>
+<p>Assume <span class="math notranslate nohighlight">\(\mathbf{x}^{\ast}\)</span> is an extreme point of <span class="math notranslate nohighlight">\(Q\)</span>. Since the extreme point is also a basic feasible solution (Theorem 2.3), from the definition of 2.9, there are <span class="math notranslate nohighlight">\(n\)</span> independent active constraints at <span class="math notranslate nohighlight">\(\mathbf{x}^{\ast}\)</span>. Thre are two scenarios:</p>
 <p>(1) if the <span class="math notranslate nohighlight">\(n\)</span> independent active constraints are all in <span class="math notranslate nohighlight">\(\mathbf{A_1x=b_1}\)</span>, then <span class="math notranslate nohighlight">\(\mathbf{x^{\ast}}\)</span> is the basic feasible solution of <span class="math notranslate nohighlight">\(P\)</span> by definition 2.9 and also an extreme point of it.</p>
 <p>(2) if <span class="math notranslate nohighlight">\(\mathbf{a'x}=b\)</span> is also an active constraint in them, then there are <span class="math notranslate nohighlight">\(n-1\)</span> independent active constraints in <span class="math notranslate nohighlight">\(\mathbf{A_1x=b_1}\)</span>. Let <span class="math notranslate nohighlight">\(I\)</span> represent the row index in <span class="math notranslate nohighlight">\(\mathbf{A_1x=b_1}\)</span>that are active consraints, i.e., <span class="math notranslate nohighlight">\(I=\{i\mid \mathbf{a'^i_1x}=b^i_1\}\)</span>. Then all the <span class="math notranslate nohighlight">\(\mathbf{a'}_1^i (i\in I)\)</span> lie in a proper subspace of <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span>. There exists a non-zero vector <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> that are orthogonal to every <span class="math notranslate nohighlight">\(\mathbf{a'}_1^i (i\in I)\)</span>, i.e., <span class="math notranslate nohighlight">\(\mathbf{a'}_1^i\mathbf{d}=0\)</span>. Let us consider a line:</p>
 <div class="math notranslate nohighlight">
@@ -764,10 +762,25 @@ y=\mathbf{x}^\ast+\lambda\mathbf{d},
 <h2>Exercise 2.15<a class="headerlink" href="#exercise-2-15" title="Permalink to this heading">#</a></h2>
 <p><strong>(Edges joining adjacent vertices)</strong> Consider the polyhedron <span class="math notranslate nohighlight">\(P = \{\mathbf{x} \in \mathcal{R}^n \mid \mathbf{a'_ix} \geq b_i, i = 1,\dots,  m\}\)</span> . Suppose that <span class="math notranslate nohighlight">\(\mathbf u\)</span> and <span class="math notranslate nohighlight">\(\mathbf v\)</span> are distinct basic feasible solutions that satisfy <span class="math notranslate nohighlight">\(\mathbf{a'_iu} = \mathbf{a'_iv} = b_i , i = 1, \dots, n - 1\)</span>, and that the vectors <span class="math notranslate nohighlight">\(\mathbf{a}_l,\dots, \mathbf{a}_{n- 1}\)</span> are linearly independent. (In particular, <span class="math notranslate nohighlight">\(\mathbf u\)</span> and <span class="math notranslate nohighlight">\(\mathbf v\)</span> are adjacent.) Let <span class="math notranslate nohighlight">\(L = \{\lambda\mathbf{u} + (1 - \lambda)\mathbf{v}\mid 0\leq\lambda\leq 1\}\)</span> be the segment that joins <span class="math notranslate nohighlight">\(\mathbf u\)</span> and <span class="math notranslate nohighlight">\(\mathbf v\)</span>. Prove that <span class="math notranslate nohighlight">\(L = \{\mathbf{z}\in P \mid \mathbf{a'}_iz = b_i , i = 1, \dots, n - 1\}\)</span> .</p>
 <hr class="docutils" />
+<p><strong>Solution:</strong></p>
 <p><em>Proof.</em></p>
 <p>In the polyhedron <span class="math notranslate nohighlight">\(\{\mathbf{z}\in P  \mid \mathbf{a'_iz} = b_i, i = 1,\dots,  n-1\}\)</span>, there are <span class="math notranslate nohighlight">\(n-1\)</span> independent rows and <span class="math notranslate nohighlight">\(n\)</span> columns. From Exercise 2.10 (a), there are at most 2 basic feasible solutions. Since <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> are two of them, <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> are exactly the 2 extreme points in it and it is a line segment. And it is bounded for this line segment..  According to Theorem 2.9, a bounded polyhedron is the convex hull of its extreme points. <span class="math notranslate nohighlight">\(L = \{\lambda\mathbf{u} + (1 - \lambda)\mathbf{v}\mid 0\leq\lambda\leq 1\}\)</span>  is just the convex hull of extreme points <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>.So it equals to the polyhedron <span class="math notranslate nohighlight">\(\{\mathbf{z}\in P  \mid \mathbf{a'_iz} = b_i, i = 1,\dots,  n-1\}\)</span>.</p>
 <p><span class="math notranslate nohighlight">\(\Box\)</span></p>
-</section>
+<script src="https://giscus.app/client.js"
+        data-repo="robinchen121/book-Python-Data-Science"
+        data-repo-id="R_kgDOKFdyOw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOKFdyO84CgWHi"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script></section>
 </section>
 
     <script type="text/x-thebe-config">
