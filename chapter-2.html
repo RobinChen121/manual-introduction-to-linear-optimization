@@ -69,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Chapter 3" href="chapter-3.html" />
-    <link rel="prev" title="Overview" href="intro.html" />
+    <link rel="prev" title="Chapter 1" href="chapter-1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -161,6 +161,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="chapter-1.html">Chapter 1</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter-3.html">Chapter 3</a></li>
 </ul>
@@ -324,6 +325,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-13">Exercise 2.13</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-14">Exercise 2.14</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-15">Exercise 2.15</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-16">Exercise 2.16</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-17">Exercise 2.17</a></li>
 </ul>
             </nav>
         </div>
@@ -815,6 +818,109 @@ y=\mathbf{x}^\ast+\lambda\mathbf{d},
 <p><em>Proof.</em></p>
 <p>In the polyhedron <span class="math notranslate nohighlight">\(\{\mathbf{z}\in P  \mid \mathbf{a'_iz} = b_i, i = 1,\dots,  n-1\}\)</span>, there are <span class="math notranslate nohighlight">\(n-1\)</span> independent rows and <span class="math notranslate nohighlight">\(n\)</span> columns. From Exercise 2.10 (a), there are at most 2 basic feasible solutions. Since <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> are two of them, <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> are exactly the 2 extreme points in it and it is a line segment. And it is bounded for this line segment..  According to Theorem 2.9, a bounded polyhedron is the convex hull of its extreme points. <span class="math notranslate nohighlight">\(L = \{\lambda\mathbf{u} + (1 - \lambda)\mathbf{v}\mid 0\leq\lambda\leq 1\}\)</span>  is just the convex hull of extreme points <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>.So it equals to the polyhedron <span class="math notranslate nohighlight">\(\{\mathbf{z}\in P  \mid \mathbf{a'_iz} = b_i, i = 1,\dots,  n-1\}\)</span>.</p>
 <p><span class="math notranslate nohighlight">\(\Box\)</span></p>
+</section>
+<section id="exercise-2-16">
+<h2>Exercise 2.16<a class="headerlink" href="#exercise-2-16" title="Permalink to this heading">#</a></h2>
+<p>Consider the set <span class="math notranslate nohighlight">\(\{\mathbf{x} \in \mathcal{R}^n \mid x_l = \dots = x_{n- l} = 0, 0\leq x_n\leq 1\}\)</span> .Could this be the feasible set of a problem in standard form?.</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p>No, we prove it by contradiction. From the given feasible set, we can see that <span class="math notranslate nohighlight">\(x_1=\dots,=x_n=0\)</span> is a feasible solution to the problem. For the polehedron in standard form <span class="math notranslate nohighlight">\(\{\mathbf{Ax=b, x\geq 0}\}\)</span>, we get <span class="math notranslate nohighlight">\(\mathbf{A0=0}\)</span>, i.e., <span class="math notranslate nohighlight">\(\mathbf{b=0}\)</span>.</p>
+<p>From the given feasible set, we can also see that <span class="math notranslate nohighlight">\(x_1=\dots,=x_{n-1}=0,x_n=1\)</span> is also a feasbile solution, i.e.,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A\begin{bmatrix}
+0\\
+\vdots\\
+1
+\end{bmatrix}
+=\begin{bmatrix}
+0\\
+\vdots\\
+0
+\end{bmatrix}.
+\end{split}\]</div>
+<p>But</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A\begin{bmatrix}
+0\\
+\vdots\\
+2
+\end{bmatrix}
+=2A\begin{bmatrix}
+0\\
+\vdots\\
+1
+\end{bmatrix}
+=\begin{bmatrix}
+0\\
+\vdots\\
+0
+\end{bmatrix}.
+\end{split}\]</div>
+<p>Therefore, <span class="math notranslate nohighlight">\(x_1=\dots=x_{n-1}=0,x_n={2}\)</span> is also a feasible solution, which contradicts with the given feasible set. So the set can not be the feasible set of problem in standard form.</p>
+<p><span class="math notranslate nohighlight">\(\Box\)</span></p>
+</section>
+<section id="exercise-2-17">
+<h2>Exercise 2.17<a class="headerlink" href="#exercise-2-17" title="Permalink to this heading">#</a></h2>
+<p>If <span class="math notranslate nohighlight">\(f\)</span> is K-convex, <span class="math notranslate nohighlight">\(\xi^x\)</span> follows a Binomial distribution <span class="math notranslate nohighlight">\(B(x, p)\)</span> and <span class="math notranslate nohighlight">\(|E[f(x-\xi^x)]|&lt;\infty\)</span>, then <span class="math notranslate nohighlight">\(g(x)=E[f(x-\xi^x)]\)</span> is also K-convex.</p>
+<hr class="docutils" />
+<p><em>Proof.</em></p>
+<p>We prove it by the induction to the domain of <span class="math notranslate nohighlight">\(g(x)\)</span>.</p>
+<p>We first prove that <span class="math notranslate nohighlight">\(g(x)\)</span> is K-convex , we first show that:</p>
+<div class="math notranslate nohighlight">
+\[
+K+g(2)-g(1)\geq g(1)-g(0),
+\]</div>
+<p>i.e.,</p>
+<div class="math notranslate nohighlight">
+\[
+K+g(2)+g(0)\geq 2g(1).
+\]</div>
+<p>Since</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+g(2)&amp;=\Pr(\xi^2=0)f(2)+\Pr(\xi^2=1)f(1)+\Pr(\xi^2=2)f(0)=\overline{p}^2f(2)+2\overline{p}pf(1)+p^2f(0),\\
+g(1)&amp;=\Pr(\xi^1=0)f(1)+\Pr(\xi^1=1)f(0)=\overline{p}f(1)+pf(0),\\
+g(0)&amp;=\Pr(\xi^0=0)f(0)=f(0),
+\end{align}
+\end{split}\]</div>
+<p>we can get:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+K+g(2)+g(0)-2g(1)&amp;=K+\overline{p}^2f(2)+2(\overline{p}p-\overline{p})f(1)+(p^2-2p+1)f(0)\\
+&amp;=K+\overline{p}^2f(2)+2\overline{p}(p-1)f(1)+(p-1)^2f(0)\\
+&amp;=K+\overline{p}^2f(2)+\overline{p}^2f(0)-2\overline{p}^2f(1)\geq 0.
+\end{align}
+\end{split}\]</div>
+<p>The above formula holds because of the K-convexity of <span class="math notranslate nohighlight">\(f(x)\)</span>. We then must also show that:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{K+g(3)-g(1)}{2}\geq g(1)-g(0),
+\]</div>
+<p>for any <span class="math notranslate nohighlight">\(a\in\mathbb{Z^+}\)</span>.</p>
+<p>Since</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+g(3)&amp;=\Pr(\xi^{1+a}=0)f(3)+\Pr(\xi^{1+a}=1)f(2)+\Pr(\xi^{1+a}=1)f(1)+\Pr(\xi^{1+a}=1+a)f(0)\\
+&amp;=\overline{p}^{3}f(3)+3\overline{p}^2pf(2)+3\overline{p}p^2f(1)+p^{3}f(0),
+\end{align}
+\end{split}\]</div>
+<p>then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+&amp;K+g(3)+2g(0)-3g(1)\\
+=&amp;K+\overline{p}^{3}f(3)+3\overline{p}^2pf(2)+3\overline{p}p^2f(1)+(p^{3}+2)f(0)-3\overline{p}f(1)-3pf(0)\\
+=&amp;K+\overline{p}^{3}f(3)+3\overline{p}^2pf(2)+3\overline{p}(p^2-1)f(1)+(p^{3}-3p+2)f(0)\\
+=&amp;K+\overline{p}^{3}f(3)+3\overline{p}^2pf(2)+3\overline{p}(p^2-1)f(1)+(p+2)(p-1)^2f(0)\\
+=&amp;K+\overline{p}^{3}f(3)+3\overline{p}^2pf(2)-3\overline{p}^2(p+1)f(1)+(p+2)\overline{p}^2f(0)\\
+\end{align}
+\end{split}\]</div>
+<p>Now assume <span class="math notranslate nohighlight">\(g(x)\)</span> is K-convex for the dormain 0, 1,<span class="math notranslate nohighlight">\(\dots\)</span>, <span class="math notranslate nohighlight">\(n-1\)</span>, we now prove it is also K-convex for <span class="math notranslate nohighlight">\(x=n\)</span>.</p>
 <script src="https://giscus.app/client.js"
         data-repo="robinchen121/book-Python-Data-Science"
         data-repo-id="R_kgDOKFdyOw"
@@ -864,12 +970,12 @@ y=\mathbf{x}^\ast+\lambda\mathbf{d},
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="chapter-1.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Overview</p>
+        <p class="prev-next-title">Chapter 1</p>
       </div>
     </a>
     <a class="right-next"
@@ -914,6 +1020,8 @@ y=\mathbf{x}^\ast+\lambda\mathbf{d},
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-13">Exercise 2.13</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-14">Exercise 2.14</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-15">Exercise 2.15</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-16">Exercise 2.16</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-17">Exercise 2.17</a></li>
 </ul>
   </nav></div>
 
