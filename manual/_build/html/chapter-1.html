@@ -311,6 +311,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-1">Exercise 1.1*</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-2">Exercise 1.2</a></li>
 </ul>
             </nav>
         </div>
@@ -442,6 +443,42 @@ g(ax)=g\big(-a(-x)\big)&amp;=-ag(-x)\\
 <p class="admonition-title">Note</p>
 <p>The first exercise in this book is non-trival at all!</p>
 </div>
+</section>
+<section id="exercise-1-2">
+<h2>Exercise 1.2<a class="headerlink" href="#exercise-1-2" title="Permalink to this heading">#</a></h2>
+<p>Suppose that <span class="math notranslate nohighlight">\(f_1 , \dots, f_m\)</span> are convex functions from <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span> into <span class="math notranslate nohighlight">\(\mathcal{R}\)</span> and let <span class="math notranslate nohighlight">\(f(x) = \sum_{i=1}^m f_i(\mathbf{x})\)</span>.</p>
+<p>(a) Show that if each <span class="math notranslate nohighlight">\(f_i\)</span> is convex, so is <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<p>(b) Show that if each <span class="math notranslate nohighlight">\(f_i\)</span> is piecewise linear and convex, so is <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p><em>Proof.</em></p>
+<p>(a) for any two <span class="math notranslate nohighlight">\(\mathbf{x},\mathbf{y}\in \mathcal{R}^n\)</span> and <span class="math notranslate nohighlight">\(\lambda \in [0, 1]\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+f\big(\lambda \mathbf{x}+(1-\lambda)\mathbf{y}\big)&amp;=\sum_{i=1}^mf_i\big(\lambda \mathbf{x}+(1-\lambda)\mathbf{y}\big) \\
+&amp;\leq \sum_{i=1}^m\big(\lambda f_i(\mathbf{x}) +(1-\lambda)f_i(\mathbf{y})\big)\\
+&amp;= \sum_{i=1}^m\lambda f_i(\mathbf{x}) + \sum_{i=1}^m(1-\lambda)f_i(\mathbf{y})\\
+&amp;=\lambda f(\mathbf{x}) +(1-\lambda)f(\mathbf{y})
+\end{align}
+\end{split}\]</div>
+<p>Therefore, <span class="math notranslate nohighlight">\(f\)</span> is convex.</p>
+<p>(b) The definition of piecewise linear convex function: a function of this form <span class="math notranslate nohighlight">\(\max_{j=1,\dots,k} (\mathbf{c_j^Tx}+d_j)\)</span>.</p>
+<p>Since each <span class="math notranslate nohighlight">\(f_i\)</span> is piecewise linear convex,</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+f=\sum_{i=1}^m f_i(\mathbf{x})=\sum_{i=1}^m\max_{j^i=1^i,\dots,k^i}(\mathbf{c_{j^i}^{T}x}+d_{j^i})
+\end{align}
+\]</div>
+<p>It is obvious that <span class="math notranslate nohighlight">\(\max\{a, b\}+\max\{c,d\}=\max\{a+c, a+d, b+c, b+d\}\)</span>, i.e., the sum of several max expressions equals the max of all possible sums of selecting one element from each max expression.</p>
+<p>Therefore, we can enumerate all the possible combinations of the sums to tranform <span class="math notranslate nohighlight">\(f\)</span> in a linear convex form:</p>
+<div class="math notranslate nohighlight">
+\[
+f=\max\{\mathbf{c_{1^1}^Tx}+d_{1^1} +\dots + \mathbf{c_{1^m}^Tx}+d_{1^m},~~ \dots, ~~\mathbf{c_{k^1}^Tx}+d_{k^1}+\dots+\mathbf{c_{k^m}^Tx}+d_{k^m}\}
+\]</div>
+<p>There are <span class="math notranslate nohighlight">\(\Pi_i k_i\)</span> combinations, in which <span class="math notranslate nohighlight">\(k_i\)</span> is the number of affine functions in the expression of <span class="math notranslate nohighlight">\(f_i\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(\Box\)</span></p>
 <script src="https://giscus.app/client.js"
         data-repo="robinchen121/book-Python-Data-Science"
         data-repo-id="R_kgDOKFdyOw"
@@ -527,6 +564,7 @@ g(ax)=g\big(-a(-x)\big)&amp;=-ag(-x)\\
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-1">Exercise 1.1*</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-2">Exercise 1.2</a></li>
 </ul>
   </nav></div>
 
