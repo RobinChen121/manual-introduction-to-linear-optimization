@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Chapter 1 &#8212; Manual of Introduction to Linear Optimization</title>
   
@@ -14,51 +15,54 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
-    <link rel="stylesheet" type="text/css" href="_static/myfile.css?v=564be945" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter-1';</script>
@@ -75,23 +79,19 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -113,20 +113,12 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -141,11 +133,9 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
   
 
 <a class="navbar-brand logo" href="intro.html">
-  
   
   
   
@@ -155,23 +145,12 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Manual of Introduction to Linear Optimization - Home"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Manual of Introduction to Linear Optimization - Home"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -200,7 +179,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
 
@@ -209,7 +188,7 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
@@ -291,22 +270,20 @@
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
 </script>
@@ -338,6 +315,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-3">Exercise 1.3</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-4">Exercise 1.4</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-5">Exercise 1.5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-6">Exercise 1.6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-7">Exercise 1.7</a></li>
 </ul>
             </nav>
         </div>
@@ -347,7 +326,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <!-- Toogle google translation -->
 <div id="google_translate_element"></div>
@@ -399,9 +378,9 @@ layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_transla
       src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
 ></script>
 <br><section class="tex2jax_ignore mathjax_ignore" id="chapter-1">
-<h1>Chapter 1<a class="headerlink" href="#chapter-1" title="Link to this heading">#</a></h1>
+<h1>Chapter 1<a class="headerlink" href="#chapter-1" title="Permalink to this heading">#</a></h1>
 <section id="exercise-1-1">
-<h2>Exercise 1.1*<a class="headerlink" href="#exercise-1-1" title="Link to this heading">#</a></h2>
+<h2>Exercise 1.1*<a class="headerlink" href="#exercise-1-1" title="Permalink to this heading">#</a></h2>
 <p>Suppose that a function <span class="math notranslate nohighlight">\(f: \mathcal{R}^n \rightarrow \mathcal{R}\)</span> is both concave and convex. Prove that <span class="math notranslate nohighlight">\(f\)</span> is an affine function.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
@@ -471,7 +450,7 @@ g(ax)=g\big(-a(-x)\big)&amp;=-ag(-x)\\
 </div>
 </section>
 <section id="exercise-1-2">
-<h2>Exercise 1.2<a class="headerlink" href="#exercise-1-2" title="Link to this heading">#</a></h2>
+<h2>Exercise 1.2<a class="headerlink" href="#exercise-1-2" title="Permalink to this heading">#</a></h2>
 <p>Suppose that <span class="math notranslate nohighlight">\(f_1 , \dots, f_m\)</span> are convex functions from <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span> into <span class="math notranslate nohighlight">\(\mathcal{R}\)</span> and let <span class="math notranslate nohighlight">\(f(x) = \sum_{i=1}^m f_i(\mathbf{x})\)</span>.</p>
 <p>(a) Show that if each <span class="math notranslate nohighlight">\(f_i\)</span> is convex, so is <span class="math notranslate nohighlight">\(f\)</span>.</p>
 <p>(b) Show that if each <span class="math notranslate nohighlight">\(f_i\)</span> is piecewise linear and convex, so is <span class="math notranslate nohighlight">\(f\)</span>.</p>
@@ -507,7 +486,7 @@ f=\max\{\mathbf{c_{1^1}^Tx}+d_{1^1} +\dots + \mathbf{c_{1^m}^Tx}+d_{1^m},~~ \dot
 <p><span class="math notranslate nohighlight">\(\Box\)</span></p>
 </section>
 <section id="exercise-1-3">
-<h2>Exercise 1.3<a class="headerlink" href="#exercise-1-3" title="Link to this heading">#</a></h2>
+<h2>Exercise 1.3<a class="headerlink" href="#exercise-1-3" title="Permalink to this heading">#</a></h2>
 <p>Consider the problem of minimizing a cost function of the form <span class="math notranslate nohighlight">\(\mathbf{c'x} + f(\mathbf{d'x})\)</span>, subject to the linear constraints <span class="math notranslate nohighlight">\(Ax\geq  b\)</span>. Here, <span class="math notranslate nohighlight">\(d\)</span> is a given vector and the function <span class="math notranslate nohighlight">\(f : \mathcal{R}\rightarrow\mathcal{R}\)</span> is as specified in the following figure. Provide a linear programming formulation of this problem.</p>
 <p><img alt="image.png" src="_images/1-3.png" /></p>
 <hr class="docutils" />
@@ -538,7 +517,7 @@ f(x)=\max\{-x+1, 0, 2x+2\}
 \end{split}\]</div>
 </section>
 <section id="exercise-1-4">
-<h2>Exercise 1.4<a class="headerlink" href="#exercise-1-4" title="Link to this heading">#</a></h2>
+<h2>Exercise 1.4<a class="headerlink" href="#exercise-1-4" title="Permalink to this heading">#</a></h2>
 <p>Consider the problem</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -563,7 +542,7 @@ f(x)=\max\{-x+1, 0, 2x+2\}
 \end{split}\]</div>
 </section>
 <section id="exercise-1-5">
-<h2>Exercise 1.5<a class="headerlink" href="#exercise-1-5" title="Link to this heading">#</a></h2>
+<h2>Exercise 1.5<a class="headerlink" href="#exercise-1-5" title="Permalink to this heading">#</a></h2>
 <p>Consider a linear optimization problem, with absolute values, of the following form:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -653,6 +632,60 @@ f(x)=\max\{-x+1, 0, 2x+2\}
 </div>
 </div>
 <p>Apparently, (2, 2) is local minimum of the problem, but it is not a global minimum.</p>
+</section>
+<section id="exercise-1-6">
+<h2>Exercise 1.6<a class="headerlink" href="#exercise-1-6" title="Permalink to this heading">#</a></h2>
+<p>Provide linear programming formulations of the two variants of the rocket control problem discussed at the end of Section 1.3.</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p>Minimize the total fuel:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\min\quad &amp; \sum_{t=0}^{T-1}z_t\\
+\text{s.t.}\quad &amp; x_{t+1}=x_t+v_t \quad t=0,\dots,T-1\\
+&amp;v_{t+1}=v_t+a_t\quad t=0,\dots,T-1\\
+&amp;z_t\geq a_t\quad \forall t\\
+&amp;z_t\geq -a_t\quad \forall t\\
+&amp;x_0=0\\
+&amp;x_T=1\\
+&amp;v_0=0\\
+&amp;v_T=0
+\end{align}
+\end{split}\]</div>
+<p>Minimize the maximum thrust required:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\min\quad &amp; z\\
+\text{s.t.}\quad &amp; x_{t+1}=x_t+v_t \quad t=0,\dots,T-1\\
+&amp;v_{t+1}=v_t+a_t\quad t=0,\dots,T-1\\
+&amp;z\geq a_t\quad \forall t\\
+&amp;z\geq -a_t\quad \forall t\\
+&amp;x_0=0\\
+&amp;x_T=1\\
+&amp;v_0=0\\
+&amp;v_T=0
+\end{align}
+\end{split}\]</div>
+</section>
+<section id="exercise-1-7">
+<h2>Exercise 1.7<a class="headerlink" href="#exercise-1-7" title="Permalink to this heading">#</a></h2>
+<p>(The moment problem) Suppose that <span class="math notranslate nohighlight">\(Z\)</span> is a random variable taking values in the set <span class="math notranslate nohighlight">\(0, 1 , \dots, K\)</span>, with probabilities <span class="math notranslate nohighlight">\(p_0, p_1,\dots, p_k\)</span>, respectively. We are given the values of the first two moments <span class="math notranslate nohighlight">\(E[Z] = \sum_{k=0}^K kp_k\)</span> and <span class="math notranslate nohighlight">\(E[Z^2]=\sum_{k=0}^Kk^2p_k \)</span> of <span class="math notranslate nohighlight">\(Z\)</span> and we would like to obtain upper and lower bounds on the value of the fourth moment <span class="math notranslate nohighlight">\(E[Z^4]=\sum_{k=0}^Kk^4p_k\)</span> of <span class="math notranslate nohighlight">\(Z\)</span>. Show how linear programming can be used to approach this problem.</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p>The decision variables are <span class="math notranslate nohighlight">\(p_0,\dots,p_K\)</span>. Build the linear programming model below to get the upper bound:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\max\quad&amp; \sum_{k=0}^{K}k^4p_k\\
+\text{s.t.}\quad&amp; \sum_{k=0}^K kp_k=E[Z]\\
+&amp; \sum_{k=0}^K k^2p_k=E[Z^2]\\
+&amp; \sum_{k=0}^Kp_k=1\\
+&amp; p_k\geq 0\quad\forall k
+\end{align}
+\end{split}\]</div>
+<p>Replace <span class="math notranslate nohighlight">\(\max\)</span> with <span class="math notranslate nohighlight">\(\min\)</span> in the upper objective to get the lower bound.</p>
 <script src="https://giscus.app/client.js"
         data-repo="robinchen121/book-Python-Data-Science"
         data-repo-id="R_kgDOKFdyOw"
@@ -695,10 +728,11 @@ f(x)=\max\{-x+1, 0, 2x+2\}
 
               
               
-              
-              
-                <footer class="prev-next-footer d-print-none">
+                <footer class="bd-footer-article">
                   
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="intro.html"
@@ -718,7 +752,10 @@ f(x)=\max\{-x+1, 0, 2x+2\}
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -726,7 +763,6 @@ f(x)=\max\{-x+1, 0, 2x+2\}
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -739,6 +775,8 @@ f(x)=\max\{-x+1, 0, 2x+2\}
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-3">Exercise 1.3</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-4">Exercise 1.4</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-5">Exercise 1.5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-6">Exercise 1.6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-7">Exercise 1.7</a></li>
 </ul>
   </nav></div>
 
@@ -760,7 +798,6 @@ By Zhen Chen
   
   <div class="footer-item">
     
-
   <p class="copyright">
     
       © Copyright 2023.
@@ -787,8 +824,8 @@ By Zhen Chen
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>
