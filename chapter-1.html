@@ -312,6 +312,11 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-1">Exercise 1.1*</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-2">Exercise 1.2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-3">Exercise 1.3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-4">Exercise 1.4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-5">Exercise 1.5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-6">Exercise 1.6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-7">Exercise 1.7</a></li>
 </ul>
             </nav>
         </div>
@@ -479,6 +484,208 @@ f=\max\{\mathbf{c_{1^1}^Tx}+d_{1^1} +\dots + \mathbf{c_{1^m}^Tx}+d_{1^m},~~ \dot
 \]</div>
 <p>There are <span class="math notranslate nohighlight">\(\Pi_i k_i\)</span> combinations, in which <span class="math notranslate nohighlight">\(k_i\)</span> is the number of affine functions in the expression of <span class="math notranslate nohighlight">\(f_i\)</span>.</p>
 <p><span class="math notranslate nohighlight">\(\Box\)</span></p>
+</section>
+<section id="exercise-1-3">
+<h2>Exercise 1.3<a class="headerlink" href="#exercise-1-3" title="Permalink to this heading">#</a></h2>
+<p>Consider the problem of minimizing a cost function of the form <span class="math notranslate nohighlight">\(\mathbf{c'x} + f(\mathbf{d'x})\)</span>, subject to the linear constraints <span class="math notranslate nohighlight">\(Ax\geq  b\)</span>. Here, <span class="math notranslate nohighlight">\(d\)</span> is a given vector and the function <span class="math notranslate nohighlight">\(f : \mathcal{R}\rightarrow\mathcal{R}\)</span> is as specified in the following figure. Provide a linear programming formulation of this problem.</p>
+<p><img alt="image.png" src="_images/1-3.png" /></p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p>From the picture, function <span class="math notranslate nohighlight">\(f\)</span> can be exressed as:</p>
+<p>\begin{align}
+f(x)=\begin{cases}
+-x+1\quad &amp;x\leq 1\
+0\quad &amp;1&lt;x\leq 2\
+2(x-2)\quad &amp;x&gt;2
+\end{cases}
+\end{align}</p>
+<p><span class="math notranslate nohighlight">\(f\)</span> is apparently a piecewise linear convex function and can also be exressed as:</p>
+<div class="math notranslate nohighlight">
+\[
+f(x)=\max\{-x+1, 0, 2x+2\}
+\]</div>
+<p>By adding another variable <span class="math notranslate nohighlight">\(z\)</span>, the linear programming formulation of this problem is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\min\quad &amp;\mathbf{c'x}+z\\
+\text{s.t.}\quad &amp; \mathbf{Ax\geq b}\\
+&amp;z\geq -x+1\\
+&amp;z\geq 0\\
+&amp;z\geq 2x-4
+\end{align}
+\end{split}\]</div>
+</section>
+<section id="exercise-1-4">
+<h2>Exercise 1.4<a class="headerlink" href="#exercise-1-4" title="Permalink to this heading">#</a></h2>
+<p>Consider the problem</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+&amp;\min\quad &amp;&amp;2x_1 + 3|x_2 - 10|\\
+&amp;\text{s.t.} &amp;&amp;|x_1 + 2| + |x_2| \leq 5,
+\end{align}
+\end{split}\]</div>
+<p>and reformulate it as a linear programming problem.</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p>With additional variables <span class="math notranslate nohighlight">\(z_1\)</span>, <span class="math notranslate nohighlight">\(z_2\)</span>, <span class="math notranslate nohighlight">\(z_3\)</span>, we can formulate the linear programming problem below:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+&amp;\min\quad &amp;&amp;2x_1 + 3z_1\\
+&amp;\text{s.t.} &amp;&amp; z_1\geq x_2-10\\
+&amp;&amp;&amp; z_2\geq x_1+2\\
+&amp;&amp;&amp; z_3\geq x_2\\
+&amp;&amp;&amp; z_1 + z_2 \leq 5.
+\end{align}
+\end{split}\]</div>
+</section>
+<section id="exercise-1-5">
+<h2>Exercise 1.5<a class="headerlink" href="#exercise-1-5" title="Permalink to this heading">#</a></h2>
+<p>Consider a linear optimization problem, with absolute values, of the following form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+&amp;\min &amp;&amp; \mathbf{c'x} + \mathbf{d'y}\\
+&amp;\text{s.t.} &amp;&amp; \mathbf{Ax + By} \leq b\\
+&amp;&amp;&amp;     y_i = |x_i|, \quad \forall i.
+\end{align}
+\end{split}\]</div>
+<p>Assume that all entries of <span class="math notranslate nohighlight">\(\mathbf{B}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> are nonnegative.</p>
+<p>(a) Provide two different linear programming formulations, along the lines discussed in Section 1.3.</p>
+<p>(b) Show that the original problem and the two reformulations are equivalent in the sense that either all three are infeasible, or all three have the same optimal cost.</p>
+<p>(c) Provide an example to show that if <span class="math notranslate nohighlight">\(\mathbf{B}\)</span> has negative entries, the problem may have a local minimum that is not a global minimum. (It will be seen in Chapter 2 that this is never the case in linear programming problems. Hence, in the presence of such negative entries, a linear programming reformulation is implausible.)</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p>(a) The first formulation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+&amp;\min &amp;&amp; \mathbf{c'x} + \mathbf{d'y}\\
+&amp;\text{s.t.} &amp;&amp; \mathbf{Ax + By \leq b}\\
+&amp;&amp;&amp; y_i&gt;x_i \quad \forall i\\
+&amp;&amp;&amp; y_i&gt;-x_i. \quad \forall i
+\end{align}
+\end{split}\]</div>
+<p>The second formulation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+&amp;\min &amp;&amp; \mathbf{c'(x^+-x^-)} + \mathbf{d'(x^++x^-)}\\
+&amp;\text{s.t.} &amp;&amp; \mathbf{A(x^+-x^-) + B(x^++x^-) \leq b}\\
+&amp;&amp;&amp; x_i^+\geq 0 \quad \forall i\\
+&amp;&amp;&amp; x_i^-\geq 0. \quad \forall i
+\end{align}
+\end{split}\]</div>
+<p>(b)  <em>Proof</em></p>
+<p>We prove the equivalence by pairs.</p>
+<p><strong>original formulation <span class="math notranslate nohighlight">\(\Longleftrightarrow\)</span> the first formulation</strong></p>
+<p>Assume one feasible solution for original formulation is <span class="math notranslate nohighlight">\(\mathbf{x}^0\)</span>, <span class="math notranslate nohighlight">\(\mathbf{y}^0\)</span>. Let <span class="math notranslate nohighlight">\(\mathbf{x}^1=\mathbf{x}^0\)</span>, <span class="math notranslate nohighlight">\(\mathbf{y}^1=\mathbf{y}^0\)</span>. Apparently, <span class="math notranslate nohighlight">\(\mathbf{x}^1, \mathbf{y}^1\)</span> is feasible for the first formulation.</p>
+<p>Conversely, assume one feasible solution for the first formulation is <span class="math notranslate nohighlight">\(\mathbf{x}^1\)</span>, <span class="math notranslate nohighlight">\(\mathbf{y}^1\)</span>. Let <span class="math notranslate nohighlight">\(\mathbf{x}^0=\mathbf{x}^1\)</span>, <span class="math notranslate nohighlight">\(\mathbf{y}^0=\mathbf{y}^1\)</span>. Apparently, <span class="math notranslate nohighlight">\(\mathbf{x}^0, \mathbf{y}^0\)</span> is feasible for the original formulation.</p>
+<p>In addition, since the coefficients in the objective are same. The original formulation and the first formulation are equivalent: either have equal optimal cost or both are infeasible.</p>
+<p><strong>the second formulation <span class="math notranslate nohighlight">\(\Longleftrightarrow\)</span> original formulation</strong></p>
+<p>First we show that in the optimal solution of the second formulation, <span class="math notranslate nohighlight">\(x_i^+\)</span> and <span class="math notranslate nohighlight">\(x_i^-\)</span>, <span class="math notranslate nohighlight">\(\forall i\)</span> can not be both positive. If <span class="math notranslate nohighlight">\(x_i^+\)</span> and <span class="math notranslate nohighlight">\(x_i^-\)</span> are both positive, because the objective is to minimize and <span class="math notranslate nohighlight">\(\mathbf{d}, \mathbf{B}\)</span> are nonnegative, we can reduce some value for <span class="math notranslate nohighlight">\(x_i^+\)</span> and <span class="math notranslate nohighlight">\(x_i^-\)</span> to make one of them be zero while satisfying the constraints and reducing the objective value.</p>
+<p>For the optimal solution of the second formulation , from above we know either <span class="math notranslate nohighlight">\(x_i^+=0\)</span> or <span class="math notranslate nohighlight">\(x_i^-=0\)</span>, <span class="math notranslate nohighlight">\(\forall i\)</span>. Let <span class="math notranslate nohighlight">\(x_i^0=x_i^+-x_i^-\)</span>, <span class="math notranslate nohighlight">\(y_i^0=x_i^++x_i^-\)</span>, we get a feasible solution for the original formulation.</p>
+<p>For a feasible solution of the original formulation, letting <span class="math notranslate nohighlight">\(x_i^+=\max\{x_i^0, 0\}\)</span>, <span class="math notranslate nohighlight">\(x_i^-=\max\{-x_i^0, 0\}\)</span>, we get a feasible solution for the second formulation.</p>
+<p>Therefore, the optimal solution of the second formulation is a feasible solution of the originial formulation and any feasible solution of the original formulation is a feasible solution of the second formulation. Hence, by proof of contradiction, the optimal solution for the orignial formulation is same with the second formulation; and if one formulation is infeasible, the other formulation must also be infeasible.</p>
+<p>(3) When <span class="math notranslate nohighlight">\(\mathbf{B}\)</span> has negative entries, the feasible region for this problem may be not convex. Since entries of <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> are still nonnegative, the objective function is still piecewise convex. In this situation, the problem may have a local minimum that is not a global minimum.</p>
+<p>For example,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\min\quad &amp;|x|\\
+\text{s.t.}\quad&amp;0.5x-|x|\leq -1
+\end{align}
+\end{split}\]</div>
+<p>It can also be written as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\min\quad &amp;|x|\\
+\text{s.t.}\quad&amp;x\geq 2\quad &amp;\text{if } x\geq 0\\
+&amp;x\geq -1/1.5\quad &amp;\text{if }x&lt;0
+\end{align}
+\end{split}\]</div>
+<p>The picture of this problem is:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mf">1.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="n">y1</span> <span class="o">=</span> <span class="n">x1</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="o">-</span><span class="n">x2</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/204d6f7fa029fcbc76d181ea30c03462de925504f3680a929f4970db958a18b4.png" src="_images/204d6f7fa029fcbc76d181ea30c03462de925504f3680a929f4970db958a18b4.png" />
+</div>
+</div>
+<p>Apparently, (2, 2) is local minimum of the problem, but it is not a global minimum.</p>
+</section>
+<section id="exercise-1-6">
+<h2>Exercise 1.6<a class="headerlink" href="#exercise-1-6" title="Permalink to this heading">#</a></h2>
+<p>Provide linear programming formulations of the two variants of the rocket control problem discussed at the end of Section 1.3.</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p>Minimize the total fuel:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\min\quad &amp; \sum_{t=0}^{T-1}z_t\\
+\text{s.t.}\quad &amp; x_{t+1}=x_t+v_t \quad t=0,\dots,T-1\\
+&amp;v_{t+1}=v_t+a_t\quad t=0,\dots,T-1\\
+&amp;z_t\geq a_t\quad \forall t\\
+&amp;z_t\geq -a_t\quad \forall t\\
+&amp;x_0=0\\
+&amp;x_T=1\\
+&amp;v_0=0\\
+&amp;v_T=0
+\end{align}
+\end{split}\]</div>
+<p>Minimize the maximum thrust required:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\min\quad &amp; z\\
+\text{s.t.}\quad &amp; x_{t+1}=x_t+v_t \quad t=0,\dots,T-1\\
+&amp;v_{t+1}=v_t+a_t\quad t=0,\dots,T-1\\
+&amp;z\geq a_t\quad \forall t\\
+&amp;z\geq -a_t\quad \forall t\\
+&amp;x_0=0\\
+&amp;x_T=1\\
+&amp;v_0=0\\
+&amp;v_T=0
+\end{align}
+\end{split}\]</div>
+</section>
+<section id="exercise-1-7">
+<h2>Exercise 1.7<a class="headerlink" href="#exercise-1-7" title="Permalink to this heading">#</a></h2>
+<p>(The moment problem) Suppose that <span class="math notranslate nohighlight">\(Z\)</span> is a random variable taking values in the set <span class="math notranslate nohighlight">\(0, 1 , \dots, K\)</span>, with probabilities <span class="math notranslate nohighlight">\(p_0, p_1,\dots, p_k\)</span>, respectively. We are given the values of the first two moments <span class="math notranslate nohighlight">\(E[Z] = \sum_{k=0}^K kp_k\)</span> and <span class="math notranslate nohighlight">\(E[Z^2]=\sum_{k=0}^Kk^2p_k \)</span> of <span class="math notranslate nohighlight">\(Z\)</span> and we would like to obtain upper and lower bounds on the value of the fourth moment <span class="math notranslate nohighlight">\(E[Z^4]=\sum_{k=0}^Kk^4p_k\)</span> of <span class="math notranslate nohighlight">\(Z\)</span>. Show how linear programming can be used to approach this problem.</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p>The decision variables are <span class="math notranslate nohighlight">\(p_0,\dots,p_K\)</span>. Build the linear programming model below to get the upper bound:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\max\quad&amp; \sum_{k=0}^{K}k^4p_k\\
+\text{s.t.}\quad&amp; \sum_{k=0}^K kp_k=E[Z]\\
+&amp; \sum_{k=0}^K k^2p_k=E[Z^2]\\
+&amp; \sum_{k=0}^Kp_k=1\\
+&amp; p_k\geq 0\quad\forall k
+\end{align}
+\end{split}\]</div>
+<p>Replace <span class="math notranslate nohighlight">\(\max\)</span> with <span class="math notranslate nohighlight">\(\min\)</span> in the upper objective to get the lower bound.</p>
 <script src="https://giscus.app/client.js"
         data-repo="robinchen121/book-Python-Data-Science"
         data-repo-id="R_kgDOKFdyOw"
@@ -565,6 +772,11 @@ f=\max\{\mathbf{c_{1^1}^Tx}+d_{1^1} +\dots + \mathbf{c_{1^m}^Tx}+d_{1^m},~~ \dot
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-1">Exercise 1.1*</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-2">Exercise 1.2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-3">Exercise 1.3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-4">Exercise 1.4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-5">Exercise 1.5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-6">Exercise 1.6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-7">Exercise 1.7</a></li>
 </ul>
   </nav></div>
 

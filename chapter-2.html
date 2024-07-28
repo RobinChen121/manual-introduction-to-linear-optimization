@@ -863,7 +863,7 @@ A\begin{bmatrix}
 </section>
 <section id="exercise-2-17">
 <h2>Exercise 2.17<a class="headerlink" href="#exercise-2-17" title="Permalink to this heading">#</a></h2>
-<p>If <span class="math notranslate nohighlight">\(f\)</span> is K-convex, <span class="math notranslate nohighlight">\(\xi^x\)</span> follows a Binomial distribution <span class="math notranslate nohighlight">\(B(x, p)\)</span> and <span class="math notranslate nohighlight">\(|E[f(x-\xi^x)]|&lt;\infty\)</span>, then <span class="math notranslate nohighlight">\(g(x)=E[f(x-\xi^x)]\)</span> is also K-convex.</p>
+<p>If <span class="math notranslate nohighlight">\(f\)</span> is K-convex, <span class="math notranslate nohighlight">\(\xi^x\)</span> follows a Binomial distribution <span class="math notranslate nohighlight">\(B(x, p)\)</span> and <span class="math notranslate nohighlight">\(|\mathbb{E}[f(x-\xi^x)]|&lt;\infty\)</span>, then <span class="math notranslate nohighlight">\(g(x)=\mathbb{E}[f(x-\xi^x)]\)</span> is also K-convex.</p>
 <hr class="docutils" />
 <p><em>Proof.</em></p>
 <p>We prove it by the induction to the domain of <span class="math notranslate nohighlight">\(g(x)\)</span>.</p>
@@ -920,6 +920,49 @@ g(3)&amp;=\Pr(\xi^{1+a}=0)f(3)+\Pr(\xi^{1+a}=1)f(2)+\Pr(\xi^{1+a}=1)f(1)+\Pr(\xi
 =&amp;K+\overline{p}^{3}f(3)+3\overline{p}^2pf(2)-3\overline{p}^2(p+1)f(1)+(p+2)\overline{p}^2f(0)\\
 \end{align}
 \end{split}\]</div>
+<p>Let <span class="math notranslate nohighlight">\(d(y) = \mathbb{E}[g(y+1-\omega^y)]\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+&amp;K+d(2)+d(0)-2d(1)\\
+=&amp; K+p^2f(1)+\overline{p}^2f(3)+2p\overline{p}f(2)+f(1)-2\overline{p}f(2)-2pf(1)\\
+=&amp;K+\overline{p}^2f(3)+\overline{p}^2f(1)-2\overline{p}^2f(2)\geq 0
+\end{align}
+\end{split}\]</div>
+<p>According to the law of total expectation,</p>
+<div class="math notranslate nohighlight">
+\[
+g(y) = \overline{p}d(y-1)+pg(y-1)
+\]</div>
+<p>So,</p>
+<div class="math notranslate nohighlight">
+\[
+g(3)=\overline{p}d(2)+pg(2)
+\]</div>
+<p>We must show</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{K+g(3)-g(1)}{2}=\frac{K+\overline{p}d(2)+pg(2)-g(1)}{2}\geq g(1)-g(0)
+\]</div>
+<p>Since <span class="math notranslate nohighlight">\(g(1)=\overline{p}d(0)+pg(0)\)</span> and <span class="math notranslate nohighlight">\(g(2)=\overline{p}d(1)+pg(1)\)</span>,</p>
+<p>We must show</p>
+<div class="math notranslate nohighlight">
+\[
+K+\overline{p}d(2)-\overline{p}g(2)+g(2)-g(1)\geq 2\overline{p}\left[d(0)-g(0)\right]
+\]</div>
+<p>We must show</p>
+<div class="math notranslate nohighlight">
+\[
+K+\overline{p}\left[d(2)-g(2)\right]+\overline{p}\left[d(1)-g(1)\right]\geq 2\overline{p}\left[f(1)-f(0)\right]
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+f(1)-f(0)\leq K+f(2)-f(1)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+f(1)-f(0)\leq \frac{K+f(3)-f(1)}{2}
+\]</div>
 <p>Now assume <span class="math notranslate nohighlight">\(g(x)\)</span> is K-convex for the dormain 0, 1,<span class="math notranslate nohighlight">\(\dots\)</span>, <span class="math notranslate nohighlight">\(n-1\)</span>, we now prove it is also K-convex for <span class="math notranslate nohighlight">\(x=n\)</span>.</p>
 <script src="https://giscus.app/client.js"
         data-repo="robinchen121/book-Python-Data-Science"
