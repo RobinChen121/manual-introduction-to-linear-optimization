@@ -316,7 +316,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-4">Exercise 1.4</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-5">Exercise 1.5</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-6">Exercise 1.6</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-7">Exercise 1.7</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-7-the-moment-problem">Exercise 1.7 (The moment problem)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-8-road-lighting">Exercise 1.8 (Road lighting)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-9">Exercise 1.9</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-10-production-and-inventory-planning">Exercise 1.10 (Production and inventory planning)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-11-optimal-currency-conversion">Exercise 1.11 (Optimal currency conversion)</a></li>
 </ul>
             </nav>
         </div>
@@ -669,9 +673,9 @@ f(x)=\max\{-x+1, 0, 2x+2\}
 \end{align}
 \end{split}\]</div>
 </section>
-<section id="exercise-1-7">
-<h2>Exercise 1.7<a class="headerlink" href="#exercise-1-7" title="Permalink to this heading">#</a></h2>
-<p>(The moment problem) Suppose that <span class="math notranslate nohighlight">\(Z\)</span> is a random variable taking values in the set <span class="math notranslate nohighlight">\(0, 1 , \dots, K\)</span>, with probabilities <span class="math notranslate nohighlight">\(p_0, p_1,\dots, p_k\)</span>, respectively. We are given the values of the first two moments <span class="math notranslate nohighlight">\(E[Z] = \sum_{k=0}^K kp_k\)</span> and <span class="math notranslate nohighlight">\(E[Z^2]=\sum_{k=0}^Kk^2p_k \)</span> of <span class="math notranslate nohighlight">\(Z\)</span> and we would like to obtain upper and lower bounds on the value of the fourth moment <span class="math notranslate nohighlight">\(E[Z^4]=\sum_{k=0}^Kk^4p_k\)</span> of <span class="math notranslate nohighlight">\(Z\)</span>. Show how linear programming can be used to approach this problem.</p>
+<section id="exercise-1-7-the-moment-problem">
+<h2>Exercise 1.7 (The moment problem)<a class="headerlink" href="#exercise-1-7-the-moment-problem" title="Permalink to this heading">#</a></h2>
+<p>Suppose that <span class="math notranslate nohighlight">\(Z\)</span> is a random variable taking values in the set <span class="math notranslate nohighlight">\(0, 1 , \dots, K\)</span>, with probabilities <span class="math notranslate nohighlight">\(p_0, p_1,\dots, p_k\)</span>, respectively. We are given the values of the first two moments <span class="math notranslate nohighlight">\(E[Z] = \sum_{k=0}^K kp_k\)</span> and <span class="math notranslate nohighlight">\(E[Z^2]=\sum_{k=0}^Kk^2p_k \)</span> of <span class="math notranslate nohighlight">\(Z\)</span> and we would like to obtain upper and lower bounds on the value of the fourth moment <span class="math notranslate nohighlight">\(E[Z^4]=\sum_{k=0}^Kk^4p_k\)</span> of <span class="math notranslate nohighlight">\(Z\)</span>. Show how linear programming can be used to approach this problem.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
 <p>The decision variables are <span class="math notranslate nohighlight">\(p_0,\dots,p_K\)</span>. Build the linear programming model below to get the upper bound:</p>
@@ -686,6 +690,63 @@ f(x)=\max\{-x+1, 0, 2x+2\}
 \end{align}
 \end{split}\]</div>
 <p>Replace <span class="math notranslate nohighlight">\(\max\)</span> with <span class="math notranslate nohighlight">\(\min\)</span> in the upper objective to get the lower bound.</p>
+</section>
+<section id="exercise-1-8-road-lighting">
+<h2>Exercise 1.8 (Road lighting)<a class="headerlink" href="#exercise-1-8-road-lighting" title="Permalink to this heading">#</a></h2>
+<p>Consider a road divided into <span class="math notranslate nohighlight">\(n\)</span> segments that is illuminated by <span class="math notranslate nohighlight">\(m\)</span> lamps. Let <span class="math notranslate nohighlight">\(p_j\)</span> be the power of the <span class="math notranslate nohighlight">\(j_{th}\)</span> lamp. The illumination <span class="math notranslate nohighlight">\(I_i\)</span> of the <span class="math notranslate nohighlight">\(i_{th}\)</span> segment is assumed to be <span class="math notranslate nohighlight">\(\sum_{j=1}^m a_{ij}p_j\)</span> , where <span class="math notranslate nohighlight">\(a_{ij}\)</span> are known coefficients. Let <span class="math notranslate nohighlight">\(I_i\)</span> be the desired illumination of road <span class="math notranslate nohighlight">\(i\)</span>. We are interested in choosing the lamp powers <span class="math notranslate nohighlight">\(p_j\)</span> so that the illuminations <span class="math notranslate nohighlight">\(I_i\)</span> are close to the desired illuminations <span class="math notranslate nohighlight">\(I_i^\ast\)</span> . Provide a reasonable linear programming formulation of this problem. Note that the wording of the problem is loose and there is more than one possible formulation.</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\min\quad&amp;\sum_{i=1}^n z_i\\
+\text{s.t.}\quad&amp;z_i\geq I_i^\ast-\sum_{j=1}^m a_{ij}p_j\quad\forall i\\
+&amp; z_i\geq -I_i^\ast+\sum_{j=1}^m a_{ij}p_j\quad\forall i\\
+&amp;p_j\geq 0\quad\forall j
+\end{align}
+\end{split}\]</div>
+</section>
+<section id="exercise-1-9">
+<h2>Exercise 1.9<a class="headerlink" href="#exercise-1-9" title="Permalink to this heading">#</a></h2>
+<p>Consider a school district with <span class="math notranslate nohighlight">\(I\)</span> neighborhoods, <span class="math notranslate nohighlight">\(J\)</span> schools, and <span class="math notranslate nohighlight">\(G\)</span> grades at each school. Each school <span class="math notranslate nohighlight">\(j\)</span> has a capacity of <span class="math notranslate nohighlight">\(C_{jg}\)</span> for grade <span class="math notranslate nohighlight">\(g\)</span>. In each neighborhood <span class="math notranslate nohighlight">\(i\)</span>, the student population of grade <span class="math notranslate nohighlight">\(g\)</span> is <span class="math notranslate nohighlight">\(S_{ig}\)</span> . Finally, the distance of school <span class="math notranslate nohighlight">\(j\)</span> from neighborhood <span class="math notranslate nohighlight">\(i\)</span> is <span class="math notranslate nohighlight">\(d_{ij}\)</span> . Formulate a linear programming problem whose objective is to assign all students to schools, while minimizing the total distance traveled by all students. (You may ignore the fact that numbers of students must be integer.)</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p>Let <span class="math notranslate nohighlight">\(x_{igj}\)</span> be the number of students in neighborhood <span class="math notranslate nohighlight">\(i\)</span> of grade <span class="math notranslate nohighlight">\(g\)</span> that is alligned to the school <span class="math notranslate nohighlight">\(j\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\min\quad &amp;\sum_{i}\sum_g\sum_j x_{igj}d_{ij}\\
+\text{s.t.}\quad &amp; \sum_i x_{igj}\leq C_{jg}\quad \forall g,\forall j\\
+&amp; \sum_j x_{igj}=S_{ig}\quad \forall i,\forall g\\
+&amp;x_{igj}\geq 0\quad\forall i,\forall g,\forall j
+\end{align}
+\end{split}\]</div>
+</section>
+<section id="exercise-1-10-production-and-inventory-planning">
+<h2>Exercise 1.10 (Production and inventory planning)<a class="headerlink" href="#exercise-1-10-production-and-inventory-planning" title="Permalink to this heading">#</a></h2>
+<p>A company must deliver <span class="math notranslate nohighlight">\(d_i\)</span> units of its product at the end of the <span class="math notranslate nohighlight">\(i_{th}\)</span> month. Material produced during a month can be delivered either at the end of the same month or can be stored as inventory and delivered at the end of a subsequent month; however, there is
+a storage cost of <span class="math notranslate nohighlight">\(c_1\)</span> dollars per month for each unit of product held in inventory. The year begins with zero inventory. If the company produces <span class="math notranslate nohighlight">\(x_i\)</span> units in month <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(x_{i+1}\)</span> units in month <span class="math notranslate nohighlight">\(i + 1\)</span>, it incurs a cost of <span class="math notranslate nohighlight">\(c_2|x_{i+1} - x_i|\)</span> dollars, reflecting
+the cost of switching to a new production level. Formulate a linear programming problem whose objective is to minimize the total cost of the production and inventory schedule over a period of twelve months. Assume that inventory left at the end of the year has no value and does not incur any storage costs.</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p>Let <span class="math notranslate nohighlight">\(I_i\)</span> be the end-of-period inventory at the <span class="math notranslate nohighlight">\(i_{th}\)</span> month.<span class="math notranslate nohighlight">\(I_0=0,x_0=0\)</span>. We build the liner programming model below:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\min\quad &amp; \sum_{i=1}^{12}(c_1I_i+c_2z_i)\\
+\text{s.t.}\quad&amp; z_i\geq x_{i}-x_{i-1}\quad\forall i\\
+&amp; z_i\geq x_{i-1}-x_i\quad\forall i\\
+&amp; I_i=I_{i-1}+x_i-d_i\quad\forall i\\
+&amp; I_{i-1}\leq d_{i}\quad\forall i \quad\text{(inventory should be delivered at the end of a subsequent month)}\\
+&amp;I_i\geq 0\quad\forall i\\
+&amp;x_i\geq 0\quad\forall i
+\end{align}
+\end{split}\]</div>
+</section>
+<section id="exercise-1-11-optimal-currency-conversion">
+<h2>Exercise 1.11 (Optimal currency conversion)<a class="headerlink" href="#exercise-1-11-optimal-currency-conversion" title="Permalink to this heading">#</a></h2>
+<p>Suppose that there are <span class="math notranslate nohighlight">\(N\)</span> available currencies, and assume that one unit of currency <span class="math notranslate nohighlight">\(i\)</span> can be exchanged for <span class="math notranslate nohighlight">\(r_{ij}\)</span> units of currency <span class="math notranslate nohighlight">\(j\)</span>. (Naturally, we assume that <span class="math notranslate nohighlight">\(r_{ij} &gt; 0\)</span>.) There also certain regulations that impose a limit <span class="math notranslate nohighlight">\(U_i\)</span> on the total amount of currency <span class="math notranslate nohighlight">\(i\)</span> that can be exchanged on any given day. Suppose that we start with <span class="math notranslate nohighlight">\(B\)</span> units of currency 1 and that we would like to maximize the number of units of currency <span class="math notranslate nohighlight">\(N\)</span> that we end up with at the end of the day, through a sequence of currency transactions. Provide a linear programming formulation of this problem. Assume that for any sequence <span class="math notranslate nohighlight">\(i_1, \dots, i_k\)</span> of currencies, we have <span class="math notranslate nohighlight">\(r_{i_1i_2}r_{i_2i_3}\dots r_{i_{k - 1}i_k}r_{i_ki_1} \leq 1\)</span>, which means that wealth cannot be multiplied by going through a cycle of currencies.</p>
+<hr class="docutils" />
 <script src="https://giscus.app/client.js"
         data-repo="robinchen121/book-Python-Data-Science"
         data-repo-id="R_kgDOKFdyOw"
@@ -776,7 +837,11 @@ f(x)=\max\{-x+1, 0, 2x+2\}
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-4">Exercise 1.4</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-5">Exercise 1.5</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-6">Exercise 1.6</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-7">Exercise 1.7</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-7-the-moment-problem">Exercise 1.7 (The moment problem)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-8-road-lighting">Exercise 1.8 (Road lighting)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-9">Exercise 1.9</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-10-production-and-inventory-planning">Exercise 1.10 (Production and inventory planning)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-11-optimal-currency-conversion">Exercise 1.11 (Optimal currency conversion)</a></li>
 </ul>
   </nav></div>
 
