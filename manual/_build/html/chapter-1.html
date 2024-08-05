@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Chapter 1 &#8212; Manual of Introduction to Linear Optimization</title>
   
@@ -15,54 +14,51 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/myfile.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="_static/myfile.css?v=564be945" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter-1';</script>
@@ -79,19 +75,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -113,12 +113,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -133,9 +141,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="intro.html">
+  
   
   
   
@@ -145,12 +155,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Manual of Introduction to Linear Optimization - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Manual of Introduction to Linear Optimization - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -179,7 +200,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -188,7 +209,7 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
@@ -270,20 +291,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -321,6 +344,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-9">Exercise 1.9</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-10-production-and-inventory-planning">Exercise 1.10 (Production and inventory planning)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-11-optimal-currency-conversion">Exercise 1.11 (Optimal currency conversion)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-12-chebychev-center">Exercise 1.12 (Chebychev center)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-13-linear-fractional-programming">Exercise 1.13 (Linear fractional programming)</a></li>
 </ul>
             </nav>
         </div>
@@ -330,7 +355,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <!-- Toogle google translation -->
 <div id="google_translate_element"></div>
@@ -382,9 +407,9 @@ layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_transla
       src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
 ></script>
 <br><section class="tex2jax_ignore mathjax_ignore" id="chapter-1">
-<h1>Chapter 1<a class="headerlink" href="#chapter-1" title="Permalink to this heading">#</a></h1>
+<h1>Chapter 1<a class="headerlink" href="#chapter-1" title="Link to this heading">#</a></h1>
 <section id="exercise-1-1">
-<h2>Exercise 1.1*<a class="headerlink" href="#exercise-1-1" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 1.1*<a class="headerlink" href="#exercise-1-1" title="Link to this heading">#</a></h2>
 <p>Suppose that a function <span class="math notranslate nohighlight">\(f: \mathcal{R}^n \rightarrow \mathcal{R}\)</span> is both concave and convex. Prove that <span class="math notranslate nohighlight">\(f\)</span> is an affine function.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
@@ -454,7 +479,7 @@ g(ax)=g\big(-a(-x)\big)&amp;=-ag(-x)\\
 </div>
 </section>
 <section id="exercise-1-2">
-<h2>Exercise 1.2<a class="headerlink" href="#exercise-1-2" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 1.2<a class="headerlink" href="#exercise-1-2" title="Link to this heading">#</a></h2>
 <p>Suppose that <span class="math notranslate nohighlight">\(f_1 , \dots, f_m\)</span> are convex functions from <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span> into <span class="math notranslate nohighlight">\(\mathcal{R}\)</span> and let <span class="math notranslate nohighlight">\(f(x) = \sum_{i=1}^m f_i(\mathbf{x})\)</span>.</p>
 <p>(a) Show that if each <span class="math notranslate nohighlight">\(f_i\)</span> is convex, so is <span class="math notranslate nohighlight">\(f\)</span>.</p>
 <p>(b) Show that if each <span class="math notranslate nohighlight">\(f_i\)</span> is piecewise linear and convex, so is <span class="math notranslate nohighlight">\(f\)</span>.</p>
@@ -468,7 +493,7 @@ g(ax)=g\big(-a(-x)\big)&amp;=-ag(-x)\\
 f\big(\lambda \mathbf{x}+(1-\lambda)\mathbf{y}\big)&amp;=\sum_{i=1}^mf_i\big(\lambda \mathbf{x}+(1-\lambda)\mathbf{y}\big) \\
 &amp;\leq \sum_{i=1}^m\big(\lambda f_i(\mathbf{x}) +(1-\lambda)f_i(\mathbf{y})\big)\\
 &amp;= \sum_{i=1}^m\lambda f_i(\mathbf{x}) + \sum_{i=1}^m(1-\lambda)f_i(\mathbf{y})\\
-&amp;=\lambda f(\mathbf{x}) +(1-\lambda)f(\mathbf{y})
+&amp;=\lambda f(\mathbf{x}) +(1-\lambda)f(\mathbf{y}).
 \end{align}
 \end{split}\]</div>
 <p>Therefore, <span class="math notranslate nohighlight">\(f\)</span> is convex.</p>
@@ -477,20 +502,20 @@ f\big(\lambda \mathbf{x}+(1-\lambda)\mathbf{y}\big)&amp;=\sum_{i=1}^mf_i\big(\la
 <div class="math notranslate nohighlight">
 \[
 \begin{align}
-f=\sum_{i=1}^m f_i(\mathbf{x})=\sum_{i=1}^m\max_{j^i=1^i,\dots,k^i}(\mathbf{c_{j^i}^{T}x}+d_{j^i})
+f=\sum_{i=1}^m f_i(\mathbf{x})=\sum_{i=1}^m\max_{j^i=1^i,\dots,k^i}(\mathbf{c_{j^i}^{T}x}+d_{j^i}).
 \end{align}
 \]</div>
 <p>It is obvious that <span class="math notranslate nohighlight">\(\max\{a, b\}+\max\{c,d\}=\max\{a+c, a+d, b+c, b+d\}\)</span>, i.e., the sum of several max expressions equals the max of all possible sums of selecting one element from each max expression.</p>
 <p>Therefore, we can enumerate all the possible combinations of the sums to tranform <span class="math notranslate nohighlight">\(f\)</span> in a linear convex form:</p>
 <div class="math notranslate nohighlight">
 \[
-f=\max\{\mathbf{c_{1^1}^Tx}+d_{1^1} +\dots + \mathbf{c_{1^m}^Tx}+d_{1^m},~~ \dots, ~~\mathbf{c_{k^1}^Tx}+d_{k^1}+\dots+\mathbf{c_{k^m}^Tx}+d_{k^m}\}
+f=\max\{\mathbf{c_{1^1}^Tx}+d_{1^1} +\dots + \mathbf{c_{1^m}^Tx}+d_{1^m},~~ \dots, ~~\mathbf{c_{k^1}^Tx}+d_{k^1}+\dots+\mathbf{c_{k^m}^Tx}+d_{k^m}\}.
 \]</div>
 <p>There are <span class="math notranslate nohighlight">\(\Pi_i k_i\)</span> combinations, in which <span class="math notranslate nohighlight">\(k_i\)</span> is the number of affine functions in the expression of <span class="math notranslate nohighlight">\(f_i\)</span>.</p>
 <p><span class="math notranslate nohighlight">\(\Box\)</span></p>
 </section>
 <section id="exercise-1-3">
-<h2>Exercise 1.3<a class="headerlink" href="#exercise-1-3" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 1.3<a class="headerlink" href="#exercise-1-3" title="Link to this heading">#</a></h2>
 <p>Consider the problem of minimizing a cost function of the form <span class="math notranslate nohighlight">\(\mathbf{c'x} + f(\mathbf{d'x})\)</span>, subject to the linear constraints <span class="math notranslate nohighlight">\(Ax\geq  b\)</span>. Here, <span class="math notranslate nohighlight">\(d\)</span> is a given vector and the function <span class="math notranslate nohighlight">\(f : \mathcal{R}\rightarrow\mathcal{R}\)</span> is as specified in the following figure. Provide a linear programming formulation of this problem.</p>
 <p><img alt="image.png" src="_images/1-3.png" /></p>
 <hr class="docutils" />
@@ -500,13 +525,13 @@ f=\max\{\mathbf{c_{1^1}^Tx}+d_{1^1} +\dots + \mathbf{c_{1^m}^Tx}+d_{1^m},~~ \dot
 f(x)=\begin{cases}
 -x+1\quad &amp;x\leq 1\
 0\quad &amp;1&lt;x\leq 2\
-2(x-2)\quad &amp;x&gt;2
+2(x-2)\quad &amp;x&gt;2.
 \end{cases}
 \end{align}</p>
 <p><span class="math notranslate nohighlight">\(f\)</span> is apparently a piecewise linear convex function and can also be exressed as:</p>
 <div class="math notranslate nohighlight">
 \[
-f(x)=\max\{-x+1, 0, 2x+2\}
+f(x)=\max\{-x+1, 0, 2x+2\}.
 \]</div>
 <p>By adding another variable <span class="math notranslate nohighlight">\(z\)</span>, the linear programming formulation of this problem is:</p>
 <div class="math notranslate nohighlight">
@@ -516,12 +541,12 @@ f(x)=\max\{-x+1, 0, 2x+2\}
 \text{s.t.}\quad &amp; \mathbf{Ax\geq b}\\
 &amp;z\geq -x+1\\
 &amp;z\geq 0\\
-&amp;z\geq 2x-4
+&amp;z\geq 2x-4.
 \end{align}
 \end{split}\]</div>
 </section>
 <section id="exercise-1-4">
-<h2>Exercise 1.4<a class="headerlink" href="#exercise-1-4" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 1.4<a class="headerlink" href="#exercise-1-4" title="Link to this heading">#</a></h2>
 <p>Consider the problem</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -546,7 +571,7 @@ f(x)=\max\{-x+1, 0, 2x+2\}
 \end{split}\]</div>
 </section>
 <section id="exercise-1-5">
-<h2>Exercise 1.5<a class="headerlink" href="#exercise-1-5" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 1.5<a class="headerlink" href="#exercise-1-5" title="Link to this heading">#</a></h2>
 <p>Consider a linear optimization problem, with absolute values, of the following form:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -599,7 +624,7 @@ f(x)=\max\{-x+1, 0, 2x+2\}
 \[\begin{split}
 \begin{align}
 \min\quad &amp;|x|\\
-\text{s.t.}\quad&amp;0.5x-|x|\leq -1
+\text{s.t.}\quad&amp;0.5x-|x|\leq -1.
 \end{align}
 \end{split}\]</div>
 <p>It can also be written as:</p>
@@ -608,7 +633,7 @@ f(x)=\max\{-x+1, 0, 2x+2\}
 \begin{align}
 \min\quad &amp;|x|\\
 \text{s.t.}\quad&amp;x\geq 2\quad &amp;\text{if } x\geq 0\\
-&amp;x\geq -1/1.5\quad &amp;\text{if }x&lt;0
+&amp;x\geq -1/1.5\quad &amp;\text{if }x&lt;0.
 \end{align}
 \end{split}\]</div>
 <p>The picture of this problem is:</p>
@@ -638,7 +663,7 @@ f(x)=\max\{-x+1, 0, 2x+2\}
 <p>Apparently, (2, 2) is local minimum of the problem, but it is not a global minimum.</p>
 </section>
 <section id="exercise-1-6">
-<h2>Exercise 1.6<a class="headerlink" href="#exercise-1-6" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 1.6<a class="headerlink" href="#exercise-1-6" title="Link to this heading">#</a></h2>
 <p>Provide linear programming formulations of the two variants of the rocket control problem discussed at the end of Section 1.3.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
@@ -654,7 +679,7 @@ f(x)=\max\{-x+1, 0, 2x+2\}
 &amp;x_0=0\\
 &amp;x_T=1\\
 &amp;v_0=0\\
-&amp;v_T=0
+&amp;v_T=0.
 \end{align}
 \end{split}\]</div>
 <p>Minimize the maximum thrust required:</p>
@@ -669,12 +694,12 @@ f(x)=\max\{-x+1, 0, 2x+2\}
 &amp;x_0=0\\
 &amp;x_T=1\\
 &amp;v_0=0\\
-&amp;v_T=0
+&amp;v_T=0.
 \end{align}
 \end{split}\]</div>
 </section>
 <section id="exercise-1-7-the-moment-problem">
-<h2>Exercise 1.7 (The moment problem)<a class="headerlink" href="#exercise-1-7-the-moment-problem" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 1.7 (The moment problem)<a class="headerlink" href="#exercise-1-7-the-moment-problem" title="Link to this heading">#</a></h2>
 <p>Suppose that <span class="math notranslate nohighlight">\(Z\)</span> is a random variable taking values in the set <span class="math notranslate nohighlight">\(0, 1 , \dots, K\)</span>, with probabilities <span class="math notranslate nohighlight">\(p_0, p_1,\dots, p_k\)</span>, respectively. We are given the values of the first two moments <span class="math notranslate nohighlight">\(E[Z] = \sum_{k=0}^K kp_k\)</span> and <span class="math notranslate nohighlight">\(E[Z^2]=\sum_{k=0}^Kk^2p_k \)</span> of <span class="math notranslate nohighlight">\(Z\)</span> and we would like to obtain upper and lower bounds on the value of the fourth moment <span class="math notranslate nohighlight">\(E[Z^4]=\sum_{k=0}^Kk^4p_k\)</span> of <span class="math notranslate nohighlight">\(Z\)</span>. Show how linear programming can be used to approach this problem.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
@@ -686,13 +711,13 @@ f(x)=\max\{-x+1, 0, 2x+2\}
 \text{s.t.}\quad&amp; \sum_{k=0}^K kp_k=E[Z]\\
 &amp; \sum_{k=0}^K k^2p_k=E[Z^2]\\
 &amp; \sum_{k=0}^Kp_k=1\\
-&amp; p_k\geq 0\quad\forall k
+&amp; p_k\geq 0\quad\forall k.
 \end{align}
 \end{split}\]</div>
 <p>Replace <span class="math notranslate nohighlight">\(\max\)</span> with <span class="math notranslate nohighlight">\(\min\)</span> in the upper objective to get the lower bound.</p>
 </section>
 <section id="exercise-1-8-road-lighting">
-<h2>Exercise 1.8 (Road lighting)<a class="headerlink" href="#exercise-1-8-road-lighting" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 1.8 (Road lighting)<a class="headerlink" href="#exercise-1-8-road-lighting" title="Link to this heading">#</a></h2>
 <p>Consider a road divided into <span class="math notranslate nohighlight">\(n\)</span> segments that is illuminated by <span class="math notranslate nohighlight">\(m\)</span> lamps. Let <span class="math notranslate nohighlight">\(p_j\)</span> be the power of the <span class="math notranslate nohighlight">\(j_{th}\)</span> lamp. The illumination <span class="math notranslate nohighlight">\(I_i\)</span> of the <span class="math notranslate nohighlight">\(i_{th}\)</span> segment is assumed to be <span class="math notranslate nohighlight">\(\sum_{j=1}^m a_{ij}p_j\)</span> , where <span class="math notranslate nohighlight">\(a_{ij}\)</span> are known coefficients. Let <span class="math notranslate nohighlight">\(I_i\)</span> be the desired illumination of road <span class="math notranslate nohighlight">\(i\)</span>. We are interested in choosing the lamp powers <span class="math notranslate nohighlight">\(p_j\)</span> so that the illuminations <span class="math notranslate nohighlight">\(I_i\)</span> are close to the desired illuminations <span class="math notranslate nohighlight">\(I_i^\ast\)</span> . Provide a reasonable linear programming formulation of this problem. Note that the wording of the problem is loose and there is more than one possible formulation.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
@@ -702,12 +727,12 @@ f(x)=\max\{-x+1, 0, 2x+2\}
 \min\quad&amp;\sum_{i=1}^n z_i\\
 \text{s.t.}\quad&amp;z_i\geq I_i^\ast-\sum_{j=1}^m a_{ij}p_j\quad\forall i\\
 &amp; z_i\geq -I_i^\ast+\sum_{j=1}^m a_{ij}p_j\quad\forall i\\
-&amp;p_j\geq 0\quad\forall j
+&amp;p_j\geq 0\quad\forall j.
 \end{align}
 \end{split}\]</div>
 </section>
 <section id="exercise-1-9">
-<h2>Exercise 1.9<a class="headerlink" href="#exercise-1-9" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 1.9<a class="headerlink" href="#exercise-1-9" title="Link to this heading">#</a></h2>
 <p>Consider a school district with <span class="math notranslate nohighlight">\(I\)</span> neighborhoods, <span class="math notranslate nohighlight">\(J\)</span> schools, and <span class="math notranslate nohighlight">\(G\)</span> grades at each school. Each school <span class="math notranslate nohighlight">\(j\)</span> has a capacity of <span class="math notranslate nohighlight">\(C_{jg}\)</span> for grade <span class="math notranslate nohighlight">\(g\)</span>. In each neighborhood <span class="math notranslate nohighlight">\(i\)</span>, the student population of grade <span class="math notranslate nohighlight">\(g\)</span> is <span class="math notranslate nohighlight">\(S_{ig}\)</span> . Finally, the distance of school <span class="math notranslate nohighlight">\(j\)</span> from neighborhood <span class="math notranslate nohighlight">\(i\)</span> is <span class="math notranslate nohighlight">\(d_{ij}\)</span> . Formulate a linear programming problem whose objective is to assign all students to schools, while minimizing the total distance traveled by all students. (You may ignore the fact that numbers of students must be integer.)</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
@@ -718,12 +743,12 @@ f(x)=\max\{-x+1, 0, 2x+2\}
 \min\quad &amp;\sum_{i}\sum_g\sum_j x_{igj}d_{ij}\\
 \text{s.t.}\quad &amp; \sum_i x_{igj}\leq C_{jg}\quad \forall g,\forall j\\
 &amp; \sum_j x_{igj}=S_{ig}\quad \forall i,\forall g\\
-&amp;x_{igj}\geq 0\quad\forall i,\forall g,\forall j
+&amp;x_{igj}\geq 0\quad\forall i,\forall g,\forall j.
 \end{align}
 \end{split}\]</div>
 </section>
 <section id="exercise-1-10-production-and-inventory-planning">
-<h2>Exercise 1.10 (Production and inventory planning)<a class="headerlink" href="#exercise-1-10-production-and-inventory-planning" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 1.10 (Production and inventory planning)<a class="headerlink" href="#exercise-1-10-production-and-inventory-planning" title="Link to this heading">#</a></h2>
 <p>A company must deliver <span class="math notranslate nohighlight">\(d_i\)</span> units of its product at the end of the <span class="math notranslate nohighlight">\(i_{th}\)</span> month. Material produced during a month can be delivered either at the end of the same month or can be stored as inventory and delivered at the end of a subsequent month; however, there is
 a storage cost of <span class="math notranslate nohighlight">\(c_1\)</span> dollars per month for each unit of product held in inventory. The year begins with zero inventory. If the company produces <span class="math notranslate nohighlight">\(x_i\)</span> units in month <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(x_{i+1}\)</span> units in month <span class="math notranslate nohighlight">\(i + 1\)</span>, it incurs a cost of <span class="math notranslate nohighlight">\(c_2|x_{i+1} - x_i|\)</span> dollars, reflecting
 the cost of switching to a new production level. Formulate a linear programming problem whose objective is to minimize the total cost of the production and inventory schedule over a period of twelve months. Assume that inventory left at the end of the year has no value and does not incur any storage costs.</p>
@@ -739,13 +764,89 @@ the cost of switching to a new production level. Formulate a linear programming 
 &amp; I_i=I_{i-1}+x_i-d_i\quad\forall i\\
 &amp; I_{i-1}\leq d_{i}\quad\forall i \quad\text{(inventory should be delivered at the end of a subsequent month)}\\
 &amp;I_i\geq 0\quad\forall i\\
-&amp;x_i\geq 0\quad\forall i
+&amp;x_i\geq 0\quad\forall i.
 \end{align}
 \end{split}\]</div>
 </section>
 <section id="exercise-1-11-optimal-currency-conversion">
-<h2>Exercise 1.11 (Optimal currency conversion)<a class="headerlink" href="#exercise-1-11-optimal-currency-conversion" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 1.11 (Optimal currency conversion)<a class="headerlink" href="#exercise-1-11-optimal-currency-conversion" title="Link to this heading">#</a></h2>
 <p>Suppose that there are <span class="math notranslate nohighlight">\(N\)</span> available currencies, and assume that one unit of currency <span class="math notranslate nohighlight">\(i\)</span> can be exchanged for <span class="math notranslate nohighlight">\(r_{ij}\)</span> units of currency <span class="math notranslate nohighlight">\(j\)</span>. (Naturally, we assume that <span class="math notranslate nohighlight">\(r_{ij} &gt; 0\)</span>.) There also certain regulations that impose a limit <span class="math notranslate nohighlight">\(U_i\)</span> on the total amount of currency <span class="math notranslate nohighlight">\(i\)</span> that can be exchanged on any given day. Suppose that we start with <span class="math notranslate nohighlight">\(B\)</span> units of currency 1 and that we would like to maximize the number of units of currency <span class="math notranslate nohighlight">\(N\)</span> that we end up with at the end of the day, through a sequence of currency transactions. Provide a linear programming formulation of this problem. Assume that for any sequence <span class="math notranslate nohighlight">\(i_1, \dots, i_k\)</span> of currencies, we have <span class="math notranslate nohighlight">\(r_{i_1i_2}r_{i_2i_3}\dots r_{i_{k - 1}i_k}r_{i_ki_1} \leq 1\)</span>, which means that wealth cannot be multiplied by going through a cycle of currencies.</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p>Let <span class="math notranslate nohighlight">\(x_{ij}\)</span> be the amount of currency <span class="math notranslate nohighlight">\(i\)</span> that exchanges for currency <span class="math notranslate nohighlight">\(j\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\max\quad&amp;\sum_{i=1}^{N-1}r_{iN}x_{iN}\\
+\text{s.t.}\quad&amp;\sum_{j=2}^N x_{1j}\leq B\\
+&amp; \sum_{j\neq i}^Nx_{ij}\leq U_i\quad\forall i\\
+&amp;\sum_{j\neq i}^Nr_{ji}x_{ji}\geq \sum_{i\neq j}^Nx_{ij}\quad \forall i\\
+&amp; x_{i1}=0\quad i=2,\dots, N\\
+&amp;x_{Ni}=0\quad i=1,\dots,N-1\\
+&amp;x_{ij}\geq 0.
+\end{align}
+\end{split}\]</div>
+</section>
+<section id="exercise-1-12-chebychev-center">
+<h2>Exercise 1.12 (Chebychev center)<a class="headerlink" href="#exercise-1-12-chebychev-center" title="Link to this heading">#</a></h2>
+<p>Consider a set <span class="math notranslate nohighlight">\(P\)</span> described by linear inequality constraints, that is, <span class="math notranslate nohighlight">\(P =\{\mathbf{x} \in \mathcal{R}^n\mid \mathbf{a'x} \leq b_i , i = 1,\dots,m\}\)</span>. A ball with center <span class="math notranslate nohighlight">\(\mathbf{y}\)</span> and radius <span class="math notranslate nohighlight">\(r\)</span> is defined as the set of all points within (Euclidean) distance <span class="math notranslate nohighlight">\(r\)</span> from <span class="math notranslate nohighlight">\(\mathbf{y}\)</span>. We are interested in finding a ball with the largest possible radius, which is entirely contained within the set <span class="math notranslate nohighlight">\(P\)</span>. (The center of such a ball is called the <em>Chebychev center</em> of <span class="math notranslate nohighlight">\(P\)</span>.) Provide a linear programming formulation of this problem.</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p>For a center point <span class="math notranslate nohighlight">\(\mathbf{y}\)</span>, the ball with radius <span class="math notranslate nohighlight">\(r\)</span> can be represented as:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+\|\mathbf{x-y}\|\leq r.
+\end{equation}
+\]</div>
+<p>However, the above formula is not linear. We need to find a smart way to describe the ball inside the polyhedron by linear constraints.</p>
+<p>For a  ball centered at <span class="math notranslate nohighlight">\(y\)</span> with radius <span class="math notranslate nohighlight">\(r\)</span>, it can also be represented by the following set:</p>
+<div class="math notranslate nohighlight">
+\[
+\{\mathbf{y+v} \mid \|\mathbf{v}\|\leq r\},
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> is a random vector. The ball should be also in the polyhedron set. Hence,</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+\mathbf{a'(y+v)}\leq b_i\quad\forall i.
+\end{align}
+\]</div>
+<p>The above formula should be hold for any <span class="math notranslate nohighlight">\(\mathbf v\)</span> that satifies <span class="math notranslate nohighlight">\(\|\mathbf{v}\|\leq r\)</span>. By Cauchy-Schwarz inequality,</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{a'v}\leq \mathbf{\|a'\|\|v\|}=r\mathbf{\|a'\|}.
+\]</div>
+<p>Therefore, the ball in the polyhedron set should satisfy the following linear constraint:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{a'y}+r\mathbf{\|a'\|}\leq b_i.
+\]</div>
+<p>Finally, the liner programming model can be formulated below:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\max\quad &amp; r\\
+\text{s.t.}\quad &amp; \mathbf{a'y}+r\mathbf{\|a'\|}\leq b_i\quad \forall i.
+\end{align}
+\end{split}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This exercise is not trivial!</p>
+</div>
+</section>
+<section id="exercise-1-13-linear-fractional-programming">
+<h2>Exercise 1.13 (Linear fractional programming)<a class="headerlink" href="#exercise-1-13-linear-fractional-programming" title="Link to this heading">#</a></h2>
+<p>Consider the problem</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\min\quad &amp;\frac{\mathbf{c'x}+d}{\mathbf{f'x}+g}\\
+\text{s.t.}\quad &amp;\mathbf{Ax \leq b}\\
+&amp;\mathbf{f'x}+g &gt; 0.
+\end{align}
+\end{split}\]</div>
+<p>Suppose that we have some prior knowledge that the optimal cost belongs to an interval <span class="math notranslate nohighlight">\([K, L]\)</span>. Provide a procedure, that uses linear programming as a subroutine, and that allows us to compute the optimal cost within any desired accuracy. Hint: Consider the problem of deciding whether the optimal cost is less than or equal to a certain number.</p>
 <hr class="docutils" />
 <script src="https://giscus.app/client.js"
         data-repo="robinchen121/book-Python-Data-Science"
@@ -789,11 +890,10 @@ the cost of switching to a new production level. Formulate a linear programming 
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="intro.html"
@@ -813,10 +913,7 @@ the cost of switching to a new production level. Formulate a linear programming 
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -824,6 +921,7 @@ the cost of switching to a new production level. Formulate a linear programming 
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -842,6 +940,8 @@ the cost of switching to a new production level. Formulate a linear programming 
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-9">Exercise 1.9</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-10-production-and-inventory-planning">Exercise 1.10 (Production and inventory planning)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-11-optimal-currency-conversion">Exercise 1.11 (Optimal currency conversion)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-12-chebychev-center">Exercise 1.12 (Chebychev center)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-13-linear-fractional-programming">Exercise 1.13 (Linear fractional programming)</a></li>
 </ul>
   </nav></div>
 
@@ -863,6 +963,7 @@ By Zhen Chen
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2023.
@@ -889,8 +990,8 @@ By Zhen Chen
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
 
   <footer class="bd-footer">
   </footer>
