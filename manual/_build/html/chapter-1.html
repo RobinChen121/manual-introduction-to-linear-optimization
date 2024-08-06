@@ -34,6 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css?v=ca93fcec" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="_static/myfile.css?v=564be945" />
   
@@ -848,7 +849,36 @@ the cost of switching to a new production level. Formulate a linear programming 
 \end{split}\]</div>
 <p>Suppose that we have some prior knowledge that the optimal cost belongs to an interval <span class="math notranslate nohighlight">\([K, L]\)</span>. Provide a procedure, that uses linear programming as a subroutine, and that allows us to compute the optimal cost within any desired accuracy. Hint: Consider the problem of deciding whether the optimal cost is less than or equal to a certain number.</p>
 <hr class="docutils" />
-<script src="https://giscus.app/client.js"
+<p><strong>Solution:</strong></p>
+<p>Let <span class="math notranslate nohighlight">\(\frac{\mathbf{c'x}+d}{\mathbf{f'x}+g}=\alpha\)</span> and reformulate the model below:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\min\quad &amp;\alpha\\
+\text{s.t.}\quad &amp;\mathbf{Ax \leq b}\\
+&amp;\mathbf{f'x}+g &gt; 0\\
+&amp; \mathbf{c'x}+d=\alpha(\mathbf{f'x}+g)
+\end{align}
+\end{split}\]</div>
+<p>The above model is not linear because of the last constraint. However, for a given value of <span class="math notranslate nohighlight">\(\alpha\)</span>, it is linear. From the exercise stem we know that <span class="math notranslate nohighlight">\(\alpha\)</span> is in the interval <span class="math notranslate nohighlight">\([K, L]\)</span>. The question now is how to search the value of <span class="math notranslate nohighlight">\(\alpha\)</span> in the interval <span class="math notranslate nohighlight">\([K, L]\)</span>.</p>
+<p>We can use some linear search method like binary search <a class="reference internal" href="#binary-search-linear-fractional">Algorithm 1</a> to get the value of <span class="math notranslate nohighlight">\(\alpha\)</span> in the interval <span class="math notranslate nohighlight">\([K, L]\)</span>.</p>
+<div class="proof algorithm admonition" id="binary-search-linear-fractional">
+<p class="admonition-title"><span class="caption-number">Algorithm 1 </span> (Binary search algorithm for linear fractional programming)</p>
+<section class="algorithm-content" id="proof-content">
+<p><strong>Inputs</strong> Given a desired accuracy <span class="math notranslate nohighlight">\(\epsilon\)</span></p>
+<p><strong>Output</strong> The value of <span class="math notranslate nohighlight">\(\alpha\)</span> within accuracy <span class="math notranslate nohighlight">\(\epsilon\)</span></p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(k \leftarrow K\)</span>, <span class="math notranslate nohighlight">\(l\leftarrow L\)</span></p></li>
+<li><p>While <span class="math notranslate nohighlight">\(l-k&gt;\epsilon\)</span>:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\alpha=\frac{l-k}{2}\)</span></p></li>
+<li><p>Solve the linear programming model and let <span class="math notranslate nohighlight">\(\alpha_0\leftarrow \frac{\mathbf{c'x}+d}{\mathbf{f'x}+g}\)</span></p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\alpha_0&gt;\alpha\)</span>, <span class="math notranslate nohighlight">\(k\leftarrow \alpha\)</span>; else <span class="math notranslate nohighlight">\(l\leftarrow \alpha\)</span></p></li>
+</ol>
+</li>
+</ol>
+</section>
+</div><script src="https://giscus.app/client.js"
         data-repo="robinchen121/book-Python-Data-Science"
         data-repo-id="R_kgDOKFdyOw"
         data-category="Announcements"
