@@ -1020,7 +1020,7 @@ the cost of switching to a new production level. Formulate a linear programming 
 <p>Show that the vectors in a given finite collection are linearly independent if and only if none of the vectors can be expressed as a linear combination of the others.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
-<p><em>Proof</em></p>
+<p><em>Proof.</em></p>
 <p>Let those vectors be <span class="math notranslate nohighlight">\(\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n\)</span>.</p>
 <p>(1) We first prove that “the vectors in a given finite collection are linearly independent” <span class="math notranslate nohighlight">\(\Rightarrow\)</span> “none of the vectors can be expressed as a linear combination of the others”.</p>
 <p>We prove by contradiction. If there exists one vector <span class="math notranslate nohighlight">\(v_k\)</span> that can be expressed as a linear combination of others, then there exists not all zero scalers <span class="math notranslate nohighlight">\(a_i (i\neq k)\)</span>:</p>
@@ -1081,7 +1081,7 @@ V = \{\mathbf{y} \mid \mathbf{a_i'y} = b_i, i = 1, \dots, n - m\}.
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
 <p>(a)</p>
-<p><em>Proof</em></p>
+<p><em>Proof.</em></p>
 <p>For two scalers <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, when <span class="math notranslate nohighlight">\(\mathbf{x}, \mathbf{y}\in\mathcal{R}^n\)</span>, <span class="math notranslate nohighlight">\(a\mathbf{x}+b\mathbf{y}\in\mathcal{R}^n\)</span>. Therefore, if <span class="math notranslate nohighlight">\(\mathbf{x}, \mathbf{y}\in S\)</span>, by the definition of <span class="math notranslate nohighlight">\(S\)</span>, <span class="math notranslate nohighlight">\(\mathbf{A(ax+by)}\in S\)</span>, i.e,. <span class="math notranslate nohighlight">\(S\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span>.</p>
 <p><span class="math notranslate nohighlight">\(\Box\)</span></p>
 <div class="proof definition admonition" id="subspace-definition">
@@ -1090,7 +1090,7 @@ V = \{\mathbf{y} \mid \mathbf{a_i'y} = b_i, i = 1, \dots, n - m\}.
 <p>A nonempty subset <span class="math notranslate nohighlight">\(S\)</span> of <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span> is called a subspace of <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span> if <span class="math notranslate nohighlight">\(a\mathbf{x} + b\mathbf{y} \in S\)</span> for every <span class="math notranslate nohighlight">\(\mathbf{x}, \mathbf{y} \in S\)</span> and every <span class="math notranslate nohighlight">\(a, b \in \mathcal{R}\)</span>.</p>
 </section>
 </div><p>(b)</p>
-<p><em>Proof</em></p>
+<p><em>Proof.</em></p>
 <p>Since <span class="math notranslate nohighlight">\(S\)</span> is a proper subspace of <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span>, assume the dimension of <span class="math notranslate nohighlight">\(S\)</span> is <span class="math notranslate nohighlight">\(m\)</span>, then <span class="math notranslate nohighlight">\(m&lt;n\)</span>. We can find <span class="math notranslate nohighlight">\(n-m\)</span> vectors that are orthogonal to each other and orthogonal to <span class="math notranslate nohighlight">\(S\)</span>. Let <span class="math notranslate nohighlight">\(\mathbf{v}_1,\dots,\mathbf{v}_{n-m}\)</span> be ones of those vectors. Then, matrix <span class="math notranslate nohighlight">\(\mathbf{B}\)</span> can be:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1100,7 +1100,7 @@ V = \{\mathbf{y} \mid \mathbf{a_i'y} = b_i, i = 1, \dots, n - m\}.
 <p>Next we show that for any <span class="math notranslate nohighlight">\(\mathbf{y}\notin S, \mathbf{y}\in \mathcal{R}^n\)</span>, <span class="math notranslate nohighlight">\(\mathbf{By}\neq 0\)</span>. If <span class="math notranslate nohighlight">\(\mathbf{y}\notin S\)</span>, then <span class="math notranslate nohighlight">\(\mathbf{y}\)</span> is independent of any vector in <span class="math notranslate nohighlight">\(S\)</span>. <span class="math notranslate nohighlight">\(\mathbf{y}\)</span> should be dependent on the vectors in <span class="math notranslate nohighlight">\(\mathbf{B}\)</span>. If this is not the case, <span class="math notranslate nohighlight">\(\mathbf{y}\)</span> is both independent on <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(S\)</span>. then the dimension of the set <span class="math notranslate nohighlight">\(\{S, B, y\}\)</span> exceeds <span class="math notranslate nohighlight">\(n\)</span>. As <span class="math notranslate nohighlight">\(\mathbf{y}\)</span> is dependent on the vector in <span class="math notranslate nohighlight">\(\mathbf{B}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{B}y\neq 0\)</span>.</p>
 <p>Based on the above two situations, <span class="math notranslate nohighlight">\(S = \{\mathbf{y} \in \mathcal{R}^n \mid \mathbf{By = 0}\}\)</span>.</p>
 <p>(c)</p>
-<p><em>Proof</em></p>
+<p><em>Proof.</em></p>
 <p>Since <span class="math notranslate nohighlight">\(S\)</span> is a affine subspace, then there exists a linear subspace <span class="math notranslate nohighlight">\(S_0\)</span> and a vector <span class="math notranslate nohighlight">\(\mathbf{x}_0\)</span> that</p>
 <div class="math notranslate nohighlight">
 \[
