@@ -328,6 +328,9 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-15">Exercise 2.15</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-16">Exercise 2.16</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-17">Exercise 2.17</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-18">Exercise 2.18</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-19">Exercise 2.19*</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-20">Exercise 2.20 *</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-30">Exercise 2.30</a></li>
 </ul>
             </nav>
@@ -866,6 +869,87 @@ A\begin{bmatrix}
 <section id="exercise-2-17">
 <h2>Exercise 2.17<a class="headerlink" href="#exercise-2-17" title="Permalink to this heading">#</a></h2>
 <p>Consider the polyhedron <span class="math notranslate nohighlight">\(\{\mathbf{x} \in \mathcal{R}^n \mid \mathbf{Ax \leq b, x \geq 0}\}\)</span> and a nondegenerate basic feasible solution <span class="math notranslate nohighlight">\(\mathbf{x}^*\)</span> . We introduce slack variables <span class="math notranslate nohighlight">\(\mathbf{z}\)</span> and construct a corresponding polyhedron <span class="math notranslate nohighlight">\(\{\mathbf{(x, z)\mid Ax + z = b, x \geq 0, z \geq 0}\}\)</span> in standard form. Show that <span class="math notranslate nohighlight">\((\mathbf{x^* , b-Ax^*})\)</span> is a nondegenerate basic feasible solution for the new polyhedron.</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p><em>Proof.</em></p>
+<p>Assume there are <span class="math notranslate nohighlight">\(m\)</span> rows in <span class="math notranslate nohighlight">\(\mathbf{A}\)</span>. We represent the original polyhedron as <span class="math notranslate nohighlight">\(P_0\)</span> and the new polyhedron as <span class="math notranslate nohighlight">\(P_1\)</span>.</p>
+<p>(1) Apprently, <span class="math notranslate nohighlight">\((\mathbf{x^* , b-Ax^*})\)</span> is feasible for <span class="math notranslate nohighlight">\(P_1\)</span>.</p>
+<p>(2) Next, we show that it is a baisc solution for <span class="math notranslate nohighlight">\(P_1\)</span>. To do so, we must show there are <span class="math notranslate nohighlight">\(m+n\)</span> independent constraints that are active in <span class="math notranslate nohighlight">\((\mathbf{x^* , b-Ax^*})\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(\mathbf{x}^\ast\)</span> is a nondegenerate basic feasible solution, there are <span class="math notranslate nohighlight">\(n\)</span> independent active constraints in the polyhedron <span class="math notranslate nohighlight">\(\{\mathbf{x} \in \mathcal{R}^n \mid \mathbf{Ax \leq b, x \geq 0}\}\)</span>. Without loss of generality, we assume there are <span class="math notranslate nohighlight">\(k\)</span> constraints in <span class="math notranslate nohighlight">\(\mathbf{Ax\leq b}\)</span> and <span class="math notranslate nohighlight">\(l\)</span> constraints in <span class="math notranslate nohighlight">\(\mathbf{x}\geq 0\)</span> that are independent active (<span class="math notranslate nohighlight">\(k+l=n, k\leq m\)</span>).</p>
+<ul>
+<li><p>Those original <span class="math notranslate nohighlight">\(n\)</span> constraints in <span class="math notranslate nohighlight">\(P_0 \)</span> are also independent active in <span class="math notranslate nohighlight">\(P_1\)</span>. For the <span class="math notranslate nohighlight">\(k\)</span> active constraints in <span class="math notranslate nohighlight">\(\mathbf{Ax\leq b}\)</span> of <span class="math notranslate nohighlight">\(P_0\)</span>, in <span class="math notranslate nohighlight">\(P_1\)</span> they becomes <span class="math notranslate nohighlight">\(\mathbf{Ax+0=b}\)</span>, i.e., there are <span class="math notranslate nohighlight">\(k\)</span> components of <span class="math notranslate nohighlight">\(\mathbf{z}\)</span> that are 0. That is, there are <span class="math notranslate nohighlight">\(k\)</span> independent active constraints in <span class="math notranslate nohighlight">\(\mathbf{z}\geq 0\)</span> of <span class="math notranslate nohighlight">\(P_1\)</span>. Now we already have <span class="math notranslate nohighlight">\(k+n\)</span> independent active constarints in <span class="math notranslate nohighlight">\(P_1\)</span>.</p></li>
+<li><p>For the remnant <span class="math notranslate nohighlight">\(m-k\)</span> constraints in <span class="math notranslate nohighlight">\(\mathbf{Ax\leq b}\)</span> of <span class="math notranslate nohighlight">\(P_0\)</span>, they may be non active or dependent with the <span class="math notranslate nohighlight">\(k\)</span> active constraints.</p>
+<ul class="simple">
+<li><p>For those that are non active in <span class="math notranslate nohighlight">\(P_0\)</span>, i.e., <span class="math notranslate nohighlight">\(\mathbf{Ax&lt;b}\)</span>, the corresponding constraints <span class="math notranslate nohighlight">\(\mathbf{Ax+z=b}\)</span> in <span class="math notranslate nohighlight">\(P_1\)</span> are independent active.</p></li>
+<li><p>For those that are dependent on the <span class="math notranslate nohighlight">\(k\)</span> active constraints, their corresponding constraints in <span class="math notranslate nohighlight">\(P_1\)</span> results in <span class="math notranslate nohighlight">\(\mathbf{z}=0\)</span>, which are also independent active.</p></li>
+</ul>
+<p>For either of the two above situation, it results in <span class="math notranslate nohighlight">\(m-k\)</span> independet active constraints.
+In total, we have <span class="math notranslate nohighlight">\(m-k+k+n=m+n\)</span> independent active constraints in <span class="math notranslate nohighlight">\((\mathbf{x^* , b-Ax^*})\)</span>. Now, we have proved it is a basic feasible solution for <span class="math notranslate nohighlight">\(P_1\)</span>.</p>
+</li>
+</ul>
+<p>(3) Last, we show that it is nondegenerate. We do it by using contradiction.</p>
+<p>If <span class="math notranslate nohighlight">\((\mathbf{x^* , b-Ax^*})\)</span> is a degenerate basic feasible solution for <span class="math notranslate nohighlight">\(P_1\)</span>, there are more than <span class="math notranslate nohighlight">\(m+n\)</span> independent active constraints.</p>
+<p>By the proof of (2), there are <span class="math notranslate nohighlight">\(m+n\)</span> independent active constraints in <span class="math notranslate nohighlight">\(\mathbf{Ax\leq b}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{z\geq 0}\)</span> and part of <span class="math notranslate nohighlight">\(\mathbf{x}\geq 0\)</span>. So if we want to have more than <span class="math notranslate nohighlight">\(m+n\)</span> independent active constraints, we must find it in <span class="math notranslate nohighlight">\(\mathbf{x}\geq 0\)</span>. But this will result more than <span class="math notranslate nohighlight">\(n\)</span> indepedent active constraints in <span class="math notranslate nohighlight">\(P_0\)</span>, which contradicts with the argument that <span class="math notranslate nohighlight">\(\mathbf{x}^\ast\)</span> is a nondegenerate basic feasible solution of <span class="math notranslate nohighlight">\(P_0\)</span>.</p>
+</section>
+<section id="exercise-2-18">
+<h2>Exercise 2.18<a class="headerlink" href="#exercise-2-18" title="Permalink to this heading">#</a></h2>
+<p>Consider a polyhedron <span class="math notranslate nohighlight">\(P = \{\mathbf{x \mid Ax \leq b}\}\)</span>. Given any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>,show that there exists some <span class="math notranslate nohighlight">\(\overline{\mathbf{b}}\)</span> with the following two properties:</p>
+<p>(a) The absolute value of every component of <span class="math notranslate nohighlight">\(\mathbf{b - \overline{b}}\)</span> is bounded by <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p>
+<p>(b) Every basic feasible solution in the polyhedron <span class="math notranslate nohighlight">\(P = \{\mathbf{x \mid Ax \leq \overline{b}}\}\)</span> is nondegenerate</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p><em>Proof.</em></p>
+<p>(a) for any element of <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>, since <span class="math notranslate nohighlight">\(b_i\)</span> is a real number, there exists a <span class="math notranslate nohighlight">\(\epsilon\)</span> neighborhood, i.e., for any <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span>, the <span class="math notranslate nohighlight">\(\epsilon\)</span> neighborhood of <span class="math notranslate nohighlight">\(b_i\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[
+V_i=\{x\in\mathcal{R}\mid |b_i-x|&lt;\epsilon\}.
+\]</div>
+<p>Hence, we can find <span class="math notranslate nohighlight">\(\overline{b}_i\)</span> in the neighbourhood <span class="math notranslate nohighlight">\(V_i\)</span> for any elements in <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> to satisfy the requirement.</p>
+<p>(b) for any feasible solution <span class="math notranslate nohighlight">\(\mathbf{x}^\ast\)</span>, if this solution is degenerate in <span class="math notranslate nohighlight">\(P\)</span>, it means that there are excessive active constraints at <span class="math notranslate nohighlight">\(\mathbf{x}^\ast\)</span>. For any excessive active constraint <span class="math notranslate nohighlight">\(\mathbf{a'x^\ast}\leq b_i\)</span>, we an change the value of <span class="math notranslate nohighlight">\(b_i\)</span> a little bit by select one value from its <span class="math notranslate nohighlight">\(\epsilon\)</span> neighborhood to make this constraint nonactive at <span class="math notranslate nohighlight">\(\mathbf{x}^\ast\)</span>. Repeat this procedure, we can make all the excessive constraint unactive at <span class="math notranslate nohighlight">\(\mathbf{x}^\ast\)</span>. Hence, we can find the values of <span class="math notranslate nohighlight">\(\mathbf{\overline{b}}\)</span> to make every basic feasible solution in the polyhedron nondegenerate.</p>
+<p><span class="math notranslate nohighlight">\(\Box\)</span></p>
+</section>
+<section id="exercise-2-19">
+<h2>Exercise 2.19*<a class="headerlink" href="#exercise-2-19" title="Permalink to this heading">#</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(P\in R^n\)</span> be a polyhedron in standard form whose definition involves <span class="math notranslate nohighlight">\(m\)</span> linearly independent equality constraints. Its dimension is defined as the smallest integer <span class="math notranslate nohighlight">\(k\)</span> such that <span class="math notranslate nohighlight">\(P\)</span> is contained in some k-dimensional affine subspace of <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span>.</p>
+<p>(a) Explain why the dimension of <span class="math notranslate nohighlight">\(P\)</span> is at most <span class="math notranslate nohighlight">\(n - m\)</span>.</p>
+<p>(b) Suppose that <span class="math notranslate nohighlight">\(P\)</span> has a nondegenerate basic feasible solution. Show that the dimension of <span class="math notranslate nohighlight">\(P\)</span> is equal to <span class="math notranslate nohighlight">\(n - m\)</span>.</p>
+<p>(c) Suppose that <span class="math notranslate nohighlight">\(\mathbf x\)</span> is a degenerate basic feasible solution. Show that <span class="math notranslate nohighlight">\(\mathbf x\)</span> is degenerate under every standard form representation of the same polyhedron (in the same space <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span>) . Hint: Using parts (a) and (b) , compare the number of
+equality constraints in two representations of <span class="math notranslate nohighlight">\(P\)</span> under which <span class="math notranslate nohighlight">\(\mathbf x\)</span> is degenerate and nondegenerate, respectively. Then, count active constraints.</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p>(a)</p>
+<p>If there is no feasible solutions in <span class="math notranslate nohighlight">\(P\)</span>, i.e., <span class="math notranslate nohighlight">\(P\)</span> is empty, then the dimension of <span class="math notranslate nohighlight">\(P\)</span> is 0.</p>
+<p>If there exists a feasible soltion, without loss of generality, we assume <span class="math notranslate nohighlight">\(P=\{\mathbf{x\mid Ax=b}\}\)</span> and the feasible solution is <span class="math notranslate nohighlight">\(\mathbf{x}_0\)</span>.</p>
+<p>Hence, <span class="math notranslate nohighlight">\(\mathbf{Ax_0=b}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{A(x-x_0)=0}\)</span>. The dimension of <span class="math notranslate nohighlight">\(P\)</span> is the dimension of the null space of <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> in the set of equations <span class="math notranslate nohighlight">\(\mathbf{A(x-x_0)=0}\)</span>.</p>
+<p>By the <code class="docutils literal notranslate"><span class="pre">Rank</span> <span class="pre">Theoreom</span></code>,</p>
+<div class="math notranslate nohighlight">
+\[
+\text{rank}(\mathbf{A})+\text{dim}(\text{Nul}(A))=n \tag{1}.
+\]</div>
+<p>Since <span class="math notranslate nohighlight">\(P\)</span> involves <span class="math notranslate nohighlight">\(m\)</span> linear independent equality constraints, <span class="math notranslate nohighlight">\(\text{rank}(\mathbf{A})\geq m\)</span> (or else there is no feasible solution for <span class="math notranslate nohighlight">\(P\)</span> and its dimension is 0), <span class="math notranslate nohighlight">\(\text{dim}(\text{Nul}(A))\leq n-m\)</span>.</p>
+<p>Therefore, bases on the two above situations, the dimension of <span class="math notranslate nohighlight">\(P\)</span> is at most <span class="math notranslate nohighlight">\(n-m\)</span>.</p>
+<p>(b) If <span class="math notranslate nohighlight">\(P\)</span> has a nondegerate basic feasible solution, there are exactly <span class="math notranslate nohighlight">\(m\)</span> linear independent active constraints at this feasible solution and <span class="math notranslate nohighlight">\(\text{rank}(A)=m\)</span>. By the equation (1), the dimension of <span class="math notranslate nohighlight">\(P\)</span> is equal to <span class="math notranslate nohighlight">\(n-m\)</span>.</p>
+<p>(c) For two standard form representations of <span class="math notranslate nohighlight">\(P\)</span>, <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> is a degenerate basic feasible solution for representation one. Hence, there are more than <span class="math notranslate nohighlight">\(m\)</span> independent active constraints at <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> and the dimension of <span class="math notranslate nohighlight">\(P\)</span> is at larger than <span class="math notranslate nohighlight">\(n-m\)</span>. If <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> is nondegerate for representation two, there is a contradiction that the dimension of <span class="math notranslate nohighlight">\(P\)</span> is equal to <span class="math notranslate nohighlight">\(n-m\)</span> by the conclusion of (b).</p>
+<p>Therefore, <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> is degenerate under every stand form representation.</p>
+</section>
+<section id="exercise-2-20">
+<h2>Exercise 2.20 *<a class="headerlink" href="#exercise-2-20" title="Permalink to this heading">#</a></h2>
+<p>Consider the Fourier-Motzkin elimination algorithm.</p>
+<p>(a) Suppose that the number <span class="math notranslate nohighlight">\(m\)</span> of constraints defining a polyhedron <span class="math notranslate nohighlight">\(P\)</span> is even. Show, by means of an example, that the elimination algorithm may produce a description of the polyhedron <span class="math notranslate nohighlight">\(\Pi_{n-1}(P)\)</span> involving as many as <span class="math notranslate nohighlight">\(m^2/4\)</span> linear
+constraints, but no more than that.</p>
+<p>(b) Show that the elimination algorithm produces a description of the onedimensional polyhedron <span class="math notranslate nohighlight">\(\Pi_1(P)\)</span> involving no more than <span class="math notranslate nohighlight">\(m^{2^n-1}/2^{2^n-2}\)</span> constraints.</p>
+<p>(c) Let <span class="math notranslate nohighlight">\(n = 2^P +p+ 2\)</span>, where <span class="math notranslate nohighlight">\(p\)</span> is a nonnegative integer. Consider a polyhedron
+in <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span> defined by the <span class="math notranslate nohighlight">\(8 {n \choose 3}\)</span> constraints</p>
+<div class="math notranslate nohighlight">
+\[
+\pm x_i\pm x_j\pm x_k\leq 1, \quad i &lt; j &lt; k \leq n,
+\]</div>
+<p>where all possible combinations are present. Show that after <span class="math notranslate nohighlight">\(p\)</span> eliminations, we have at least</p>
+<div class="math notranslate nohighlight">
+\[
+2^{2^P+2}
+\]</div>
+<p>constraints. (Note that this number increases exponentially with <span class="math notranslate nohighlight">\(n\)</span>.)</p>
 </section>
 <section id="exercise-2-30">
 <h2>Exercise 2.30<a class="headerlink" href="#exercise-2-30" title="Permalink to this heading">#</a></h2>
@@ -1071,6 +1155,9 @@ f(1)-f(0)\leq \frac{K+f(3)-f(1)}{2}
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-15">Exercise 2.15</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-16">Exercise 2.16</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-17">Exercise 2.17</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-18">Exercise 2.18</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-19">Exercise 2.19*</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-20">Exercise 2.20 *</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-30">Exercise 2.30</a></li>
 </ul>
   </nav></div>
