@@ -58,6 +58,8 @@ This is a manual of possible solutions to the exercises in the book `Introductio
 
 Most of the solutions are collected from the internet and some are given by me. 
 
+Author:&nbsp; Dr. Zhen Chen [(personal website)](https://robinchen121.github.io/)
+
 ```{image} images/cover.jpeg
 :alt: cover
 :class: bg-primary mb-1

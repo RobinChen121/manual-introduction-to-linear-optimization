@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Chapter 2 &#8212; Manual of Introduction to Linear Optimization</title>
   
@@ -15,55 +14,52 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="_static/myfile.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="_static/myfile.css?v=564be945" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter-2';</script>
@@ -80,19 +76,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -114,12 +114,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -134,9 +142,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="intro.html">
+  
   
   
   
@@ -146,12 +156,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Manual of Introduction to Linear Optimization - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Manual of Introduction to Linear Optimization - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -180,7 +201,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -189,7 +210,7 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
@@ -271,20 +292,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -331,6 +354,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-18">Exercise 2.18</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-19">Exercise 2.19*</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-20">Exercise 2.20 *</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-21">Exercise 2.21</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-30">Exercise 2.30</a></li>
 </ul>
             </nav>
@@ -341,7 +365,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <!-- Toogle google translation -->
 <div id="google_translate_element"></div>
@@ -393,9 +417,9 @@ layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_transla
       src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
 ></script>
 <br><section class="tex2jax_ignore mathjax_ignore" id="chapter-2">
-<h1>Chapter 2<a class="headerlink" href="#chapter-2" title="Permalink to this heading">#</a></h1>
+<h1>Chapter 2<a class="headerlink" href="#chapter-2" title="Link to this heading">#</a></h1>
 <section id="exercise-2-1">
-<h2>Exercise 2.1<a class="headerlink" href="#exercise-2-1" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.1<a class="headerlink" href="#exercise-2-1" title="Link to this heading">#</a></h2>
 <p>For each one of the following sets, determine whether it is a polyhedron.</p>
 <p>(a) The set of all <span class="math notranslate nohighlight">\((x, y)\in \mathcal{R}^2\)</span> satisfying the constraints:</p>
 <div class="math notranslate nohighlight">
@@ -421,7 +445,7 @@ y&amp;\geq 0.
 </div>
 </section>
 <section id="exercise-2-2">
-<h2>Exercise 2.2<a class="headerlink" href="#exercise-2-2" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.2<a class="headerlink" href="#exercise-2-2" title="Link to this heading">#</a></h2>
 <p>Let <span class="math notranslate nohighlight">\(f:\mathcal{R}^n\rightarrow\mathcal{R}\)</span> be a convex function and let <span class="math notranslate nohighlight">\(c\)</span> be some constant. Show that the set <span class="math notranslate nohighlight">\(S = \{\bf{x} \in \mathcal{R}^n\mid f(\bf{x}) \leq c\}\)</span> is convex.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
@@ -459,7 +483,7 @@ f(\theta x_1+(1-\theta)x_2)\leq c
 <p>Therefore, the set <span class="math notranslate nohighlight">\(S\)</span> is convex. <span class="math notranslate nohighlight">\(\Box\)</span></p>
 </section>
 <section id="exercise-2-3">
-<h2>Exercise 2.3<a class="headerlink" href="#exercise-2-3" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.3<a class="headerlink" href="#exercise-2-3" title="Link to this heading">#</a></h2>
 <p><strong>(Basic feasible solutions in standard form polyhedra with upper bounds)</strong> Consider a polyhedron defined by the constraints <span class="math notranslate nohighlight">\(\bf Ax = b\)</span> and <span class="math notranslate nohighlight">\(\bf 0\leq x\leq u\)</span>, and assume that the matrix <span class="math notranslate nohighlight">\(\bf A\)</span> has linearly independent rows. Provide a procedure analogous to the one in Section 2.3 for constructing basic solutions, and prove an analog of Theorem 2.4.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
@@ -490,7 +514,7 @@ f(\theta x_1+(1-\theta)x_2)\leq c
 </div>
 </section>
 <section id="exercise-2-4">
-<h2>Exercise 2.4<a class="headerlink" href="#exercise-2-4" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.4<a class="headerlink" href="#exercise-2-4" title="Link to this heading">#</a></h2>
 <p>We know that every linear programming problem can be converted to an equivalent problem in standard form. We also know that nonempty polyhedra in standard form have at least one extreme point. We are then tempted to conclude that every nonempty polyhedron has at least one extreme point. Explain what is wrong with this argument.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
@@ -501,7 +525,7 @@ f(\theta x_1+(1-\theta)x_2)\leq c
 </div>
 </section>
 <section id="exercise-2-5">
-<h2>Exercise 2.5<a class="headerlink" href="#exercise-2-5" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.5<a class="headerlink" href="#exercise-2-5" title="Link to this heading">#</a></h2>
 <p><strong>(ExtreIne points of isoInorphic polyhedra)</strong> A mapping <span class="math notranslate nohighlight">\(f\)</span> is called affine if it is of the form <span class="math notranslate nohighlight">\(f(\bf x) = Ax + b\)</span>, where <span class="math notranslate nohighlight">\(\bf A\)</span> is a matrix and <span class="math notranslate nohighlight">\(\bf b\)</span> is a vector. Let <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> be polyhedra in <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span> and <span class="math notranslate nohighlight">\(\mathcal{R}^m\)</span> , respectively. We say that <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> are isomorphic if there exist affine mappings <span class="math notranslate nohighlight">\(f: P\rightarrow Q\)</span> and <span class="math notranslate nohighlight">\(g: Q\rightarrow P\)</span> such that <span class="math notranslate nohighlight">\(g(f(\bf x) = x\)</span> for all <span class="math notranslate nohighlight">\(\mathbf{x} \in P\)</span>, and <span class="math notranslate nohighlight">\(f(g(\bf y)) = y\)</span> for all <span class="math notranslate nohighlight">\(\mathbf{y} \in Q.\)</span> (Intuitively, isomorphic polyhedra have the same shape.)</p>
 <p>(a) If <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> are isomorphic, show that there exists a one-to-one correspondence between their extreme points. In particular, if <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are as above, show that <span class="math notranslate nohighlight">\(\bf x\)</span> is an extreme point of <span class="math notranslate nohighlight">\(P\)</span> if and only if <span class="math notranslate nohighlight">\(f(\bf x)\)</span> is an extreme point of <span class="math notranslate nohighlight">\(Q\)</span>.</p>
 <p>(b) <strong>(Introducing slack variables leads to an isoInorphic polyhedron)</strong> Let <span class="math notranslate nohighlight">\(P = \{\mathbf{x} \in \mathcal{R}^n \mid \bf Ax \geq b, x\geq 0\}\)</span>, where <span class="math notranslate nohighlight">\(\bf A\)</span> is a matrix of dimensions <span class="math notranslate nohighlight">\(k\times n\)</span>. Let <span class="math notranslate nohighlight">\(Q = \{\bf (x, z) \in \mathcal{R}^{n+k} \mid Ax - z = b, x \geq 0, z \geq 0\}\)</span>. Show that <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> are isomorphic.</p>
@@ -556,7 +580,7 @@ g=\bf (I, 0)\left(
 \end{split}\]</div>
 </section>
 <section id="exercise-2-6">
-<h2>Exercise 2.6<a class="headerlink" href="#exercise-2-6" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.6<a class="headerlink" href="#exercise-2-6" title="Link to this heading">#</a></h2>
 <p><strong>(Carath<span class="math notranslate nohighlight">\(\acute{\bf e}\)</span>odory’s theorem)</strong> Let <span class="math notranslate nohighlight">\(\bf A_1,\dots,A_n\)</span> be a collection of vectors in <span class="math notranslate nohighlight">\(\mathcal{R}^m\)</span>.</p>
 <p>(a) Let</p>
 <div class="math notranslate nohighlight">
@@ -607,14 +631,14 @@ P = \left\{
 </div>
 </section>
 <section id="exercise-2-7">
-<h2>Exercise 2.7<a class="headerlink" href="#exercise-2-7" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.7<a class="headerlink" href="#exercise-2-7" title="Link to this heading">#</a></h2>
 <p>Suppose that <span class="math notranslate nohighlight">\(\{\mathbf{x}\in \mathcal{R}^n\mid \mathbf{a'_ix\geq b_i, i=1,\dots,m}\}\)</span> and <span class="math notranslate nohighlight">\(\{\mathbf{x}\in \mathcal{R}^n\mid \mathbf{g'_ix\geq h_i, i=1,\dots,k}\}\)</span> are two representations of the same nonempty polyhedron. Suppose that the vectors <span class="math notranslate nohighlight">\(\mathbf{a_1,\dots, a_m}\)</span> span <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span>. Show that the same must be true for the vectors <span class="math notranslate nohighlight">\(\mathbf{g_1,\dots, g_k}\)</span>.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
 <p>Let the polyhedron be <span class="math notranslate nohighlight">\(P\)</span>. Suppose that <span class="math notranslate nohighlight">\(\mathbf{g}_1, \dots, \mathbf{g}_k\)</span> cannot generate <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span>. Then there exists a vector <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> in <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span> that is orthogonal to all of <span class="math notranslate nohighlight">\(\mathbf{g}_1, \dots, \mathbf{g}_k\)</span>. For any point <span class="math notranslate nohighlight">\(\mathbf{x}_0\)</span> that satisfies <span class="math notranslate nohighlight">\(\{\mathbf{x} \in \mathcal{R}^n \mid \mathbf{g}_i' \mathbf{x} \geq h_i, i = 1, \dots, k\}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{x}_0 + \mathbf{d}\)</span> is also inside <span class="math notranslate nohighlight">\(P\)</span>, meaning that <span class="math notranslate nohighlight">\(P\)</span> contains a line. However, since <span class="math notranslate nohighlight">\(\mathbf{a}_1, \dots, \mathbf{a}_m\)</span> can generate <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span>, there are <span class="math notranslate nohighlight">\(n\)</span> linearly independent vectors among <span class="math notranslate nohighlight">\(\mathbf{a}_1, \dots, \mathbf{a}_m\)</span>. According to Theorem 2.6, <span class="math notranslate nohighlight">\(P\)</span> cannot contain a line, which is a contradiction. Therefore, <span class="math notranslate nohighlight">\(\mathbf{g}_1, \dots, \mathbf{g}_k\)</span> must also generate <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span>.</p>
 </section>
 <section id="exercise-2-8">
-<h2>Exercise 2.8<a class="headerlink" href="#exercise-2-8" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.8<a class="headerlink" href="#exercise-2-8" title="Link to this heading">#</a></h2>
 <p>Consider the standard form polyhedron <span class="math notranslate nohighlight">\(\{\mathbf{x} \mid \mathbf{Ax = b}, \mathbf{x} \geq 0\}\)</span>, and assume that the rows of the matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> are linearly independent. Let <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> be a basic solution, and let <span class="math notranslate nohighlight">\(J = \{i \mid x_i \neq 0\}\)</span>. Show that a basis is associated with the basic solution <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> if and only if every column <span class="math notranslate nohighlight">\(\mathbf{A}_i, i \in J\)</span>, is in the basis.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
@@ -626,7 +650,7 @@ P = \left\{
 <p><span class="math notranslate nohighlight">\(\Box\)</span></p>
 </section>
 <section id="exercise-2-9">
-<h2>Exercise 2.9<a class="headerlink" href="#exercise-2-9" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.9<a class="headerlink" href="#exercise-2-9" title="Link to this heading">#</a></h2>
 <p>Consider the standard form polyhedron <span class="math notranslate nohighlight">\(\{\mathbf {x \mid Ax = b, x \geq 0}\}\)</span>, and assume that the rows of the matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> are linearly independent.</p>
 <p>(a) Suppose that two different bases lead to the same basic solution. Show that the basic solution is degenerate.</p>
 <p>(b) Consider a degenerate basic solution. Is it true that it corresponds to two or more distinct bases? Prove or give a counterexample.</p>
@@ -647,7 +671,7 @@ P = \left\{
 <p>Base <span class="math notranslate nohighlight">\(\{\mathbf A_1,\mathbf A_2\}\)</span> and<span class="math notranslate nohighlight">\(\{\mathbf A_2,\mathbf A_3\}\)</span>  all corresponds to a degenerate solution <span class="math notranslate nohighlight">\([0, 1, 0]\)</span>. But the solution <span class="math notranslate nohighlight">\([1, 0, 1]\)</span> of their adjacent bas <span class="math notranslate nohighlight">\(\{\mathbf A_1,\mathbf A_3\}\)</span> is not degenerate.</p>
 </section>
 <section id="exercise-2-10">
-<h2>Exercise 2.10<a class="headerlink" href="#exercise-2-10" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.10<a class="headerlink" href="#exercise-2-10" title="Link to this heading">#</a></h2>
 <p>Consider the standard form polyhedron <span class="math notranslate nohighlight">\(P = \{\bf x \mid Ax = b, x \geq 0\}\)</span>. Suppose that the matrix <span class="math notranslate nohighlight">\(\bf A\)</span> has dimensions <span class="math notranslate nohighlight">\(m \times n\)</span> and that its rows are linearly independent. For each one of the following statements, state whether it is true or false. If true, provide a proof, else, provide a counterexample.</p>
 <p>(a) If <span class="math notranslate nohighlight">\(n = m + 1\)</span>, then <span class="math notranslate nohighlight">\(P\)</span> has at most two basic feasible solutions.</p>
 <p>(b) The set of all optimal solutions is bounded.</p>
@@ -708,7 +732,7 @@ P = \left\{
 </div>
 </section>
 <section id="exercise-2-11">
-<h2>Exercise 2.11<a class="headerlink" href="#exercise-2-11" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.11<a class="headerlink" href="#exercise-2-11" title="Link to this heading">#</a></h2>
 <p>Let <span class="math notranslate nohighlight">\(P =\{x \in \mathcal{R}^n \mid \mathbf{Ax\geq b}\}\)</span>. Suppose that at a particular basic feasible solution, there are <span class="math notranslate nohighlight">\(k\)</span> active constraints, with <span class="math notranslate nohighlight">\(k &gt; n\)</span>. Is it true that there exist exactly <span class="math notranslate nohighlight">\(k\choose n\)</span> bases that lead to this basic feasible solution? Here <span class="math notranslate nohighlight">\({k\choose k} = k! / (n! (k - n) !)\)</span> is the number of ways that we can choose <span class="math notranslate nohighlight">\(n\)</span> out of <span class="math notranslate nohighlight">\(k\)</span> given items.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
@@ -723,7 +747,7 @@ x\geq 1\\
 <p>In this example, <span class="math notranslate nohighlight">\(k=2\)</span>, <span class="math notranslate nohighlight">\(n=1\)</span>. However, there is only 1 base that leads to the basic feasible solution.</p>
 </section>
 <section id="exercise-2-12">
-<h2>Exercise 2.12<a class="headerlink" href="#exercise-2-12" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.12<a class="headerlink" href="#exercise-2-12" title="Link to this heading">#</a></h2>
 <p>Consider a nonempty polyhedron <span class="math notranslate nohighlight">\(P\)</span> and suppose that for each variable <span class="math notranslate nohighlight">\(x_i\)</span> we have either the constraint <span class="math notranslate nohighlight">\(x_i\geq 0\)</span> or the constraint <span class="math notranslate nohighlight">\(x_i\leq 0\)</span>. Is it true that <span class="math notranslate nohighlight">\(P\)</span> has at least one basic feasible solution?</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
@@ -734,7 +758,7 @@ x\geq 1\\
 </div>
 </section>
 <section id="exercise-2-13">
-<h2>Exercise 2.13<a class="headerlink" href="#exercise-2-13" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.13<a class="headerlink" href="#exercise-2-13" title="Link to this heading">#</a></h2>
 <p>Consider the standard form polyhedron <span class="math notranslate nohighlight">\(P = \{\mathbf x \mid\mathbf Ax = \mathbf b, x \geq 0\}\)</span>. Suppose that the matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span>, of dimensions <span class="math notranslate nohighlight">\(m \times n\)</span>, has linearly independent rows, and that all basic feasible solutions are nondegenerate. Let x be an element of <span class="math notranslate nohighlight">\(P\)</span> that has exactly <span class="math notranslate nohighlight">\(m\)</span> positive components.</p>
 <p>(a) Show that x is a basic feasible solution.</p>
 <p>(b) Show that the result of part (a) is false if the nondegeneracy assumption is removed.</p>
@@ -781,7 +805,7 @@ x_1,x_2,x_3\geq 0
 <p>One solution (1,4,0) is not a basic feasible solution.</p>
 </section>
 <section id="exercise-2-14">
-<h2>Exercise 2.14<a class="headerlink" href="#exercise-2-14" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.14<a class="headerlink" href="#exercise-2-14" title="Link to this heading">#</a></h2>
 <p>Let <span class="math notranslate nohighlight">\(P\)</span> be a bounded polyhedron in <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span> , let <span class="math notranslate nohighlight">\(\mathbf a\)</span> be a vector in <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span> ,and let <span class="math notranslate nohighlight">\(b\)</span> be some scalar. We define</p>
 <div class="math notranslate nohighlight">
 \[
@@ -816,7 +840,7 @@ y=\mathbf{x}^\ast+\lambda\mathbf{d},
 <p>The above two figures shows the situation when <span class="math notranslate nohighlight">\(P\)</span> is a rectangular and <span class="math notranslate nohighlight">\(Q\)</span> is a line.</p>
 </section>
 <section id="exercise-2-15">
-<h2>Exercise 2.15<a class="headerlink" href="#exercise-2-15" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.15<a class="headerlink" href="#exercise-2-15" title="Link to this heading">#</a></h2>
 <p><strong>(Edges joining adjacent vertices)</strong> Consider the polyhedron <span class="math notranslate nohighlight">\(P = \{\mathbf{x} \in \mathcal{R}^n \mid \mathbf{a'_ix} \geq b_i, i = 1,\dots,  m\}\)</span> . Suppose that <span class="math notranslate nohighlight">\(\mathbf u\)</span> and <span class="math notranslate nohighlight">\(\mathbf v\)</span> are distinct basic feasible solutions that satisfy <span class="math notranslate nohighlight">\(\mathbf{a'_iu} = \mathbf{a'_iv} = b_i , i = 1, \dots, n - 1\)</span>, and that the vectors <span class="math notranslate nohighlight">\(\mathbf{a}_l,\dots, \mathbf{a}_{n- 1}\)</span> are linearly independent. (In particular, <span class="math notranslate nohighlight">\(\mathbf u\)</span> and <span class="math notranslate nohighlight">\(\mathbf v\)</span> are adjacent.) Let <span class="math notranslate nohighlight">\(L = \{\lambda\mathbf{u} + (1 - \lambda)\mathbf{v}\mid 0\leq\lambda\leq 1\}\)</span> be the segment that joins <span class="math notranslate nohighlight">\(\mathbf u\)</span> and <span class="math notranslate nohighlight">\(\mathbf v\)</span>. Prove that <span class="math notranslate nohighlight">\(L = \{\mathbf{z}\in P \mid \mathbf{a'}_iz = b_i , i = 1, \dots, n - 1\}\)</span> .</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
@@ -825,7 +849,7 @@ y=\mathbf{x}^\ast+\lambda\mathbf{d},
 <p><span class="math notranslate nohighlight">\(\Box\)</span></p>
 </section>
 <section id="exercise-2-16">
-<h2>Exercise 2.16<a class="headerlink" href="#exercise-2-16" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.16<a class="headerlink" href="#exercise-2-16" title="Link to this heading">#</a></h2>
 <p>Consider the set <span class="math notranslate nohighlight">\(\{\mathbf{x} \in \mathcal{R}^n \mid x_l = \dots = x_{n- l} = 0, 0\leq x_n\leq 1\}\)</span> .Could this be the feasible set of a problem in standard form?.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
@@ -867,7 +891,7 @@ A\begin{bmatrix}
 <p><span class="math notranslate nohighlight">\(\Box\)</span></p>
 </section>
 <section id="exercise-2-17">
-<h2>Exercise 2.17<a class="headerlink" href="#exercise-2-17" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.17<a class="headerlink" href="#exercise-2-17" title="Link to this heading">#</a></h2>
 <p>Consider the polyhedron <span class="math notranslate nohighlight">\(\{\mathbf{x} \in \mathcal{R}^n \mid \mathbf{Ax \leq b, x \geq 0}\}\)</span> and a nondegenerate basic feasible solution <span class="math notranslate nohighlight">\(\mathbf{x}^*\)</span> . We introduce slack variables <span class="math notranslate nohighlight">\(\mathbf{z}\)</span> and construct a corresponding polyhedron <span class="math notranslate nohighlight">\(\{\mathbf{(x, z)\mid Ax + z = b, x \geq 0, z \geq 0}\}\)</span> in standard form. Show that <span class="math notranslate nohighlight">\((\mathbf{x^* , b-Ax^*})\)</span> is a nondegenerate basic feasible solution for the new polyhedron.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
@@ -892,7 +916,7 @@ In total, we have <span class="math notranslate nohighlight">\(m-k+k+n=m+n\)</sp
 <p>By the proof of (2), there are <span class="math notranslate nohighlight">\(m+n\)</span> independent active constraints in <span class="math notranslate nohighlight">\(\mathbf{Ax\leq b}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{z\geq 0}\)</span> and part of <span class="math notranslate nohighlight">\(\mathbf{x}\geq 0\)</span>. So if we want to have more than <span class="math notranslate nohighlight">\(m+n\)</span> independent active constraints, we must find it in <span class="math notranslate nohighlight">\(\mathbf{x}\geq 0\)</span>. But this will result more than <span class="math notranslate nohighlight">\(n\)</span> indepedent active constraints in <span class="math notranslate nohighlight">\(P_0\)</span>, which contradicts with the argument that <span class="math notranslate nohighlight">\(\mathbf{x}^\ast\)</span> is a nondegenerate basic feasible solution of <span class="math notranslate nohighlight">\(P_0\)</span>.</p>
 </section>
 <section id="exercise-2-18">
-<h2>Exercise 2.18<a class="headerlink" href="#exercise-2-18" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.18<a class="headerlink" href="#exercise-2-18" title="Link to this heading">#</a></h2>
 <p>Consider a polyhedron <span class="math notranslate nohighlight">\(P = \{\mathbf{x \mid Ax \leq b}\}\)</span>. Given any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>,show that there exists some <span class="math notranslate nohighlight">\(\overline{\mathbf{b}}\)</span> with the following two properties:</p>
 <p>(a) The absolute value of every component of <span class="math notranslate nohighlight">\(\mathbf{b - \overline{b}}\)</span> is bounded by <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p>
 <p>(b) Every basic feasible solution in the polyhedron <span class="math notranslate nohighlight">\(P = \{\mathbf{x \mid Ax \leq \overline{b}}\}\)</span> is nondegenerate</p>
@@ -909,7 +933,7 @@ V_i=\{x\in\mathcal{R}\mid |b_i-x|&lt;\epsilon\}.
 <p><span class="math notranslate nohighlight">\(\Box\)</span></p>
 </section>
 <section id="exercise-2-19">
-<h2>Exercise 2.19*<a class="headerlink" href="#exercise-2-19" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.19*<a class="headerlink" href="#exercise-2-19" title="Link to this heading">#</a></h2>
 <p>Let <span class="math notranslate nohighlight">\(P\in R^n\)</span> be a polyhedron in standard form whose definition involves <span class="math notranslate nohighlight">\(m\)</span> linearly independent equality constraints. Its dimension is defined as the smallest integer <span class="math notranslate nohighlight">\(k\)</span> such that <span class="math notranslate nohighlight">\(P\)</span> is contained in some k-dimensional affine subspace of <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span>.</p>
 <p>(a) Explain why the dimension of <span class="math notranslate nohighlight">\(P\)</span> is at most <span class="math notranslate nohighlight">\(n - m\)</span>.</p>
 <p>(b) Suppose that <span class="math notranslate nohighlight">\(P\)</span> has a nondegenerate basic feasible solution. Show that the dimension of <span class="math notranslate nohighlight">\(P\)</span> is equal to <span class="math notranslate nohighlight">\(n - m\)</span>.</p>
@@ -933,11 +957,11 @@ equality constraints in two representations of <span class="math notranslate noh
 <p>Therefore, <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> is degenerate under every stand form representation.</p>
 </section>
 <section id="exercise-2-20">
-<h2>Exercise 2.20 *<a class="headerlink" href="#exercise-2-20" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.20 *<a class="headerlink" href="#exercise-2-20" title="Link to this heading">#</a></h2>
 <p>Consider the Fourier-Motzkin elimination algorithm.</p>
 <p>(a) Suppose that the number <span class="math notranslate nohighlight">\(m\)</span> of constraints defining a polyhedron <span class="math notranslate nohighlight">\(P\)</span> is even. Show, by means of an example, that the elimination algorithm may produce a description of the polyhedron <span class="math notranslate nohighlight">\(\Pi_{n-1}(P)\)</span> involving as many as <span class="math notranslate nohighlight">\(m^2/4\)</span> linear
 constraints, but no more than that.</p>
-<p>(b) Show that the elimination algorithm produces a description of the onedimensional polyhedron <span class="math notranslate nohighlight">\(\Pi_1(P)\)</span> involving no more than <span class="math notranslate nohighlight">\(m^{2^n-1}/2^{2^n-2}\)</span> constraints.</p>
+<p>(b) Show that the elimination algorithm produces a description of the one-dimensional polyhedron <span class="math notranslate nohighlight">\(\Pi_1(P)\)</span> involving no more than <span class="math notranslate nohighlight">\(m^{2^{n-1}}/2^{2^n-2}\)</span> constraints.</p>
 <p>(c) Let <span class="math notranslate nohighlight">\(n = 2^P +p+ 2\)</span>, where <span class="math notranslate nohighlight">\(p\)</span> is a nonnegative integer. Consider a polyhedron
 in <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span> defined by the <span class="math notranslate nohighlight">\(8 {n \choose 3}\)</span> constraints</p>
 <div class="math notranslate nohighlight">
@@ -950,9 +974,62 @@ in <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span> defined b
 2^{2^P+2}
 \]</div>
 <p>constraints. (Note that this number increases exponentially with <span class="math notranslate nohighlight">\(n\)</span>.)</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p><em>Proof.</em></p>
+<p>(a) If the number of constraints is even, in the elimination algorithm to produce the polyhedron <span class="math notranslate nohighlight">\(\Pi_{n-1}(P)\)</span>, the biggest number of invovled linear constraints happens when there are <span class="math notranslate nohighlight">\(m/2\)</span> constraints that the coefficient <span class="math notranslate nohighlight">\(a_{i,n}\)</span> for <span class="math notranslate nohighlight">\(x_n\)</span> is positive, while the other <span class="math notranslate nohighlight">\(m/2\)</span> constraints that <span class="math notranslate nohighlight">\(a_{i,n}\)</span> is negative (<span class="math notranslate nohighlight">\(i=1,\dots,m\)</span>). (If there are <span class="math notranslate nohighlight">\(k\)</span> constraints that <span class="math notranslate nohighlight">\(a_{i,n}\)</span> are positive and <span class="math notranslate nohighlight">\(m-k\)</span> other constraints that <span class="math notranslate nohighlight">\(a_{i,n}\)</span> are negative, then the total number of involved constraints is <span class="math notranslate nohighlight">\(k(m-k)\)</span>. By <code class="docutils literal notranslate"><span class="pre">GM-AM</span> <span class="pre">inequality</span></code>, <span class="math notranslate nohighlight">\(k(m-k)\leq (\frac{k+m-k}{2})^2=\frac{m^2}{4}\)</span>)</p>
+<p>Hence, there are at most <span class="math notranslate nohighlight">\(\frac{m}{2}\times\frac{m}{2}=\frac{m^2}{4}\)</span> involved constraints.</p>
+<p>(b) we prove it by intruduction.</p>
+<p><strong>Base case:</strong> When <span class="math notranslate nohighlight">\(n=2\)</span>, it is trivial that the production of the one-dimensional polyhedron invoving no more than</p>
+<p><span class="math notranslate nohighlight">\(m^{2^{n-1}}/2^{2^n-2}=m^2/4\)</span> constraints.</p>
+<p><strong>Induction step:</strong> Assume that when <span class="math notranslate nohighlight">\(n=k\)</span>, the production of one-dimensional polyhedron invovles no more than <span class="math notranslate nohighlight">\(m^{2^{k-1}}/2^{2^k-2}\)</span> constraints with <span class="math notranslate nohighlight">\(m\)</span> constraints in the <span class="math notranslate nohighlight">\(k\)</span> dimensional polyhedron. We now prove that the statement holds for <span class="math notranslate nohighlight">\(n=k+1\)</span>.</p>
+<p>When <span class="math notranslate nohighlight">\(n=k+1\)</span>, if the number of the constraints <span class="math notranslate nohighlight">\(m\)</span> is even, the elimination from <span class="math notranslate nohighlight">\(k+1\)</span> dimension to <span class="math notranslate nohighlight">\(k\)</span>-dimensional polyhedron involves <span class="math notranslate nohighlight">\(m^2/4\)</span> constraints. By the assumption, the number of involved constraints to eliminate the dimension from <span class="math notranslate nohighlight">\(k\)</span> to <span class="math notranslate nohighlight">\(1\)</span> involves:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{(m^2/4)^{2^{k-1}}}{2^{2^k-2}}=\frac{m^{2^k}}{4^{2^{k-1}}2^{2^k-2}}=\frac{m^{2^k}}{2^{2^{k+1}-2}}
+\]</div>
+<p>constraints, which meets the requirement; if <span class="math notranslate nohighlight">\(m\)</span> is old, the number of invovled constraints is no more than the situation when there are <span class="math notranslate nohighlight">\(m-1\)</span> constraints, which also meets the requirement. Now the proof is complete.</p>
+<p>(c) After <span class="math notranslate nohighlight">\(p\)</span> eliminations, we eliminate the dimension of the polyhedron <span class="math notranslate nohighlight">\(P\)</span> from <span class="math notranslate nohighlight">\(2^p+p+2\)</span> to <span class="math notranslate nohighlight">\(2^p+2\)</span> and there are still <span class="math notranslate nohighlight">\(2^p+2\)</span> variables left in the polyhedron. We first show that since <span class="math notranslate nohighlight">\(n=2^p+p+2\)</span>, if we eliminate one variable with minimum index  in the remnant variables one time (i.e., eliminate <span class="math notranslate nohighlight">\(x_1\)</span> in the first elimination, eliminate <span class="math notranslate nohighlight">\(x_2\)</span> in the second elimination, and so on), after <span class="math notranslate nohighlight">\(p\)</span> elimnations, we have at least some constraints of the following form:</p>
+<div class="math notranslate nohighlight">
+\[
+\pm x_{n-2^p-1}\dots\pm x_n\leq 2^p.\tag{1}
+\]</div>
+<p><strong>Base case:</strong> If <span class="math notranslate nohighlight">\(p=1\)</span>, <span class="math notranslate nohighlight">\(n=5\)</span>. There are constraints <span class="math notranslate nohighlight">\(\pm x_1\pm x_2 \pm x_3\leq 1\)</span>, <span class="math notranslate nohighlight">\(\pm x_1\pm x_4 \pm x_5\leq 1\)</span> (they only share one varible <span class="math notranslate nohighlight">\(x_1\)</span>) in the polyhedron. After eliminating <span class="math notranslate nohighlight">\(x_1\)</span> from the two sets of constraints, we can get:</p>
+<div class="math notranslate nohighlight">
+\[
+\pm x_2\pm x_3 \pm x_4 \pm x_5\leq 2,
+\]</div>
+<p>i.e, the base case hold.</p>
+<p><strong>Induction step:</strong> Assume after <span class="math notranslate nohighlight">\(k\)</span> eliminations, we have at least the following constraints (we replace <span class="math notranslate nohighlight">\(n\)</span> with <span class="math notranslate nohighlight">\(2^k+k+2\)</span> in the formula (1)):</p>
+<div class="math notranslate nohighlight">
+\[
+\pm x_{k+1}\pm x_{k+2}\dots\pm x_{2^k+k+2}\leq 2^k. \tag{2}
+\]</div>
+<p>Now we prove the situation after <span class="math notranslate nohighlight">\(k+1\)</span> eliminations. When <span class="math notranslate nohighlight">\(p=k+1\)</span>, there are <span class="math notranslate nohighlight">\(n=2^{k+1}+k+3\)</span> variables.</p>
+<p>Since we can find another set of constraints below after the <span class="math notranslate nohighlight">\(k_{\text{th}}\)</span> elimination (when we eliminate <span class="math notranslate nohighlight">\(k\)</span> times from the constraints with 3 variables in the set <span class="math notranslate nohighlight">\(x_1\)</span>, <span class="math notranslate nohighlight">\(x_2\)</span>, <span class="math notranslate nohighlight">\(\dots\)</span>, <span class="math notranslate nohighlight">\(x_{k+1}\)</span>, <span class="math notranslate nohighlight">\(x_{2^k+k+3}\)</span>, <span class="math notranslate nohighlight">\(\dots\)</span>, <span class="math notranslate nohighlight">\(x_{2^{k+1}+k+3}\)</span> from the original polyhedron. Recall that there are <span class="math notranslate nohighlight">\(2^k+k+2\)</span> variables in the above set),</p>
+<div class="math notranslate nohighlight">
+\[
+\pm x_{k+1}\pm x_{2^k+k+3}\dots\pm x_{2^{k+1}+k+3}\leq 2^k,\tag{3}
+\]</div>
+<p>which only share one variable with formula (2). By eliminating <span class="math notranslate nohighlight">\(x_{k+1}\)</span> from (2) and (3), we can get the following constraints:</p>
+<div class="math notranslate nohighlight">
+\[
+\pm x_{2^k+k+3}\dots\pm x_{2^{k+1}+k+3}\leq 2^k,
+\]</div>
+<p>which meets the requirement.</p>
+<p>Since formula (1) holds after <span class="math notranslate nohighlight">\(p\)</span> eliminations, there are actually <span class="math notranslate nohighlight">\(2^{2^p+2}\)</span> constraints in the formula (1).</p>
+<p><span class="math notranslate nohighlight">\(\Box\)</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>the proof for (c) is non-trivial!</p>
+</div>
+</section>
+<section id="exercise-2-21">
+<h2>Exercise 2.21<a class="headerlink" href="#exercise-2-21" title="Link to this heading">#</a></h2>
+<p>Suppose that Fourier-Motzkin elimination is used in the manner described at the end of Section 2.8 to find the optimal cost in a linear programming problem. Show how this approach can be augmented to obtain an optimal solution as well.</p>
 </section>
 <section id="exercise-2-30">
-<h2>Exercise 2.30<a class="headerlink" href="#exercise-2-30" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2.30<a class="headerlink" href="#exercise-2-30" title="Link to this heading">#</a></h2>
 <p>If <span class="math notranslate nohighlight">\(f\)</span> is K-convex, <span class="math notranslate nohighlight">\(\xi^x\)</span> follows a Binomial distribution <span class="math notranslate nohighlight">\(B(x, p)\)</span> and <span class="math notranslate nohighlight">\(|\mathbb{E}[f(x-\xi^x)]|&lt;\infty\)</span>, then <span class="math notranslate nohighlight">\(g(x)=\mathbb{E}[f(x-\xi^x)]\)</span> is also K-convex.</p>
 <hr class="docutils" />
 <p><em>Proof.</em></p>
@@ -1096,11 +1173,10 @@ f(1)-f(0)\leq \frac{K+f(3)-f(1)}{2}
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="chapter-1.html"
@@ -1120,10 +1196,7 @@ f(1)-f(0)\leq \frac{K+f(3)-f(1)}{2}
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1131,6 +1204,7 @@ f(1)-f(0)\leq \frac{K+f(3)-f(1)}{2}
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1158,6 +1232,7 @@ f(1)-f(0)\leq \frac{K+f(3)-f(1)}{2}
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-18">Exercise 2.18</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-19">Exercise 2.19*</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-20">Exercise 2.20 *</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-21">Exercise 2.21</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-30">Exercise 2.30</a></li>
 </ul>
   </nav></div>
@@ -1180,6 +1255,7 @@ By Zhen Chen
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2023.
@@ -1206,8 +1282,8 @@ By Zhen Chen
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
 
   <footer class="bd-footer">
   </footer>
