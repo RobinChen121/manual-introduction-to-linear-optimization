@@ -331,6 +331,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-18">Exercise 2.18</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-19">Exercise 2.19*</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-20">Exercise 2.20 *</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-21">Exercise 2.21</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-22">Exercise 2.22</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-30">Exercise 2.30</a></li>
 </ul>
             </nav>
@@ -937,7 +939,7 @@ equality constraints in two representations of <span class="math notranslate noh
 <p>Consider the Fourier-Motzkin elimination algorithm.</p>
 <p>(a) Suppose that the number <span class="math notranslate nohighlight">\(m\)</span> of constraints defining a polyhedron <span class="math notranslate nohighlight">\(P\)</span> is even. Show, by means of an example, that the elimination algorithm may produce a description of the polyhedron <span class="math notranslate nohighlight">\(\Pi_{n-1}(P)\)</span> involving as many as <span class="math notranslate nohighlight">\(m^2/4\)</span> linear
 constraints, but no more than that.</p>
-<p>(b) Show that the elimination algorithm produces a description of the onedimensional polyhedron <span class="math notranslate nohighlight">\(\Pi_1(P)\)</span> involving no more than <span class="math notranslate nohighlight">\(m^{2^n-1}/2^{2^n-2}\)</span> constraints.</p>
+<p>(b) Show that the elimination algorithm produces a description of the one-dimensional polyhedron <span class="math notranslate nohighlight">\(\Pi_1(P)\)</span> involving no more than <span class="math notranslate nohighlight">\(m^{2^{n-1}}/2^{2^n-2}\)</span> constraints.</p>
 <p>(c) Let <span class="math notranslate nohighlight">\(n = 2^P +p+ 2\)</span>, where <span class="math notranslate nohighlight">\(p\)</span> is a nonnegative integer. Consider a polyhedron
 in <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span> defined by the <span class="math notranslate nohighlight">\(8 {n \choose 3}\)</span> constraints</p>
 <div class="math notranslate nohighlight">
@@ -950,6 +952,105 @@ in <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span> defined b
 2^{2^P+2}
 \]</div>
 <p>constraints. (Note that this number increases exponentially with <span class="math notranslate nohighlight">\(n\)</span>.)</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p><em>Proof.</em></p>
+<p>(a) If the number of constraints is even, in the elimination algorithm to produce the polyhedron <span class="math notranslate nohighlight">\(\Pi_{n-1}(P)\)</span>, the biggest number of invovled linear constraints happens when there are <span class="math notranslate nohighlight">\(m/2\)</span> constraints that the coefficient <span class="math notranslate nohighlight">\(a_{i,n}\)</span> for <span class="math notranslate nohighlight">\(x_n\)</span> is positive, while the other <span class="math notranslate nohighlight">\(m/2\)</span> constraints that <span class="math notranslate nohighlight">\(a_{i,n}\)</span> is negative (<span class="math notranslate nohighlight">\(i=1,\dots,m\)</span>). (If there are <span class="math notranslate nohighlight">\(k\)</span> constraints that <span class="math notranslate nohighlight">\(a_{i,n}\)</span> are positive and <span class="math notranslate nohighlight">\(m-k\)</span> other constraints that <span class="math notranslate nohighlight">\(a_{i,n}\)</span> are negative, then the total number of involved constraints is <span class="math notranslate nohighlight">\(k(m-k)\)</span>. By <code class="docutils literal notranslate"><span class="pre">GM-AM</span> <span class="pre">inequality</span></code>, <span class="math notranslate nohighlight">\(k(m-k)\leq (\frac{k+m-k}{2})^2=\frac{m^2}{4}\)</span>)</p>
+<p>Hence, there are at most <span class="math notranslate nohighlight">\(\frac{m}{2}\times\frac{m}{2}=\frac{m^2}{4}\)</span> involved constraints.</p>
+<p>(b) we prove it by intruduction.</p>
+<p><strong>Base case:</strong> When <span class="math notranslate nohighlight">\(n=2\)</span>, it is trivial that the production of the one-dimensional polyhedron invoving no more than</p>
+<p><span class="math notranslate nohighlight">\(m^{2^{n-1}}/2^{2^n-2}=m^2/4\)</span> constraints.</p>
+<p><strong>Induction step:</strong> Assume that when <span class="math notranslate nohighlight">\(n=k\)</span>, the production of one-dimensional polyhedron invovles no more than <span class="math notranslate nohighlight">\(m^{2^{k-1}}/2^{2^k-2}\)</span> constraints with <span class="math notranslate nohighlight">\(m\)</span> constraints in the <span class="math notranslate nohighlight">\(k\)</span> dimensional polyhedron. We now prove that the statement holds for <span class="math notranslate nohighlight">\(n=k+1\)</span>.</p>
+<p>When <span class="math notranslate nohighlight">\(n=k+1\)</span>, if the number of the constraints <span class="math notranslate nohighlight">\(m\)</span> is even, the elimination from <span class="math notranslate nohighlight">\(k+1\)</span> dimension to <span class="math notranslate nohighlight">\(k\)</span>-dimensional polyhedron involves <span class="math notranslate nohighlight">\(m^2/4\)</span> constraints. By the assumption, the number of involved constraints to eliminate the dimension from <span class="math notranslate nohighlight">\(k\)</span> to <span class="math notranslate nohighlight">\(1\)</span> involves:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{(m^2/4)^{2^{k-1}}}{2^{2^k-2}}=\frac{m^{2^k}}{4^{2^{k-1}}2^{2^k-2}}=\frac{m^{2^k}}{2^{2^{k+1}-2}}
+\]</div>
+<p>constraints, which meets the requirement; if <span class="math notranslate nohighlight">\(m\)</span> is old, the number of invovled constraints is no more than the situation when there are <span class="math notranslate nohighlight">\(m-1\)</span> constraints, which also meets the requirement. Now the proof is complete.</p>
+<p>(c) After <span class="math notranslate nohighlight">\(p\)</span> eliminations, we eliminate the dimension of the polyhedron <span class="math notranslate nohighlight">\(P\)</span> from <span class="math notranslate nohighlight">\(2^p+p+2\)</span> to <span class="math notranslate nohighlight">\(2^p+2\)</span> and there are still <span class="math notranslate nohighlight">\(2^p+2\)</span> variables left in the polyhedron. We first show that since <span class="math notranslate nohighlight">\(n=2^p+p+2\)</span>, if we eliminate one variable with minimum index  in the remnant variables one time (i.e., eliminate <span class="math notranslate nohighlight">\(x_1\)</span> in the first elimination, eliminate <span class="math notranslate nohighlight">\(x_2\)</span> in the second elimination, and so on), after <span class="math notranslate nohighlight">\(p\)</span> elimnations, we have at least some constraints of the following form:</p>
+<div class="math notranslate nohighlight">
+\[
+\pm x_{n-2^p-1}\dots\pm x_n\leq 2^p.\tag{1}
+\]</div>
+<p><strong>Base case:</strong> If <span class="math notranslate nohighlight">\(p=1\)</span>, <span class="math notranslate nohighlight">\(n=5\)</span>. There are constraints <span class="math notranslate nohighlight">\(\pm x_1\pm x_2 \pm x_3\leq 1\)</span>, <span class="math notranslate nohighlight">\(\pm x_1\pm x_4 \pm x_5\leq 1\)</span> (they only share one varible <span class="math notranslate nohighlight">\(x_1\)</span>) in the polyhedron. After eliminating <span class="math notranslate nohighlight">\(x_1\)</span> from the two sets of constraints, we can get:</p>
+<div class="math notranslate nohighlight">
+\[
+\pm x_2\pm x_3 \pm x_4 \pm x_5\leq 2,
+\]</div>
+<p>i.e, the base case hold.</p>
+<p><strong>Induction step:</strong> Assume after <span class="math notranslate nohighlight">\(k\)</span> eliminations, we have at least the following constraints (we replace <span class="math notranslate nohighlight">\(n\)</span> with <span class="math notranslate nohighlight">\(2^k+k+2\)</span> in the formula (1)):</p>
+<div class="math notranslate nohighlight">
+\[
+\pm x_{k+1}\pm x_{k+2}\dots\pm x_{2^k+k+2}\leq 2^k. \tag{2}
+\]</div>
+<p>Now we prove the situation after <span class="math notranslate nohighlight">\(k+1\)</span> eliminations. When <span class="math notranslate nohighlight">\(p=k+1\)</span>, there are <span class="math notranslate nohighlight">\(n=2^{k+1}+k+3\)</span> variables.</p>
+<p>Since we can find another set of constraints below after the <span class="math notranslate nohighlight">\(k_{\text{th}}\)</span> elimination (when we eliminate <span class="math notranslate nohighlight">\(k\)</span> times from the constraints with 3 variables in the set <span class="math notranslate nohighlight">\(x_1\)</span>, <span class="math notranslate nohighlight">\(x_2\)</span>, <span class="math notranslate nohighlight">\(\dots\)</span>, <span class="math notranslate nohighlight">\(x_{k+1}\)</span>, <span class="math notranslate nohighlight">\(x_{2^k+k+3}\)</span>, <span class="math notranslate nohighlight">\(\dots\)</span>, <span class="math notranslate nohighlight">\(x_{2^{k+1}+k+3}\)</span> from the original polyhedron. Recall that there are <span class="math notranslate nohighlight">\(2^k+k+2\)</span> variables in the above set),</p>
+<div class="math notranslate nohighlight">
+\[
+\pm x_{k+1}\pm x_{2^k+k+3}\dots\pm x_{2^{k+1}+k+3}\leq 2^k,\tag{3}
+\]</div>
+<p>which only share one variable with formula (2). By eliminating <span class="math notranslate nohighlight">\(x_{k+1}\)</span> from (2) and (3), we can get the following constraints:</p>
+<div class="math notranslate nohighlight">
+\[
+\pm x_{2^k+k+3}\dots\pm x_{2^{k+1}+k+3}\leq 2^k,
+\]</div>
+<p>which meets the requirement.</p>
+<p>Since formula (1) holds after <span class="math notranslate nohighlight">\(p\)</span> eliminations, there are actually <span class="math notranslate nohighlight">\(2^{2^p+2}\)</span> constraints in the formula (1).</p>
+<p><span class="math notranslate nohighlight">\(\Box\)</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>the proof for (c) is non-trivial!</p>
+</div>
+</section>
+<section id="exercise-2-21">
+<h2>Exercise 2.21<a class="headerlink" href="#exercise-2-21" title="Permalink to this heading">#</a></h2>
+<p>Suppose that Fourier-Motzkin elimination is used in the manner described at the end of Section 2.8 to find the optimal cost in a linear programming problem. Show how this approach can be augmented to obtain an optimal solution as well.</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p>At page 74 in the text book, we know that by adding a new variabel <span class="math notranslate nohighlight">\(x_0\)</span> and making it euqal to the objective function, i.e., <span class="math notranslate nohighlight">\(x_0=c'x\)</span>, we can get the optimal cost after eliminating the polyhedron <span class="math notranslate nohighlight">\(n\)</span> times with only variable <span class="math notranslate nohighlight">\(x_0\)</span> in it.</p>
+<p>Let us find the solution by backtracking. We use the same notations as at Page 72 in the text book. After eliminating <span class="math notranslate nohighlight">\(n\)</span> times, there are only one variable <span class="math notranslate nohighlight">\(x_0\)</span> in the constraints in the following form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+d_j+f_j'x_0&amp;\geq d_i + f_i'x_0,\quad \text{if } a_{i,1}&gt;0 \text{ and } a_{j,1}&lt;0,\tag{1}\\
+0&amp;\geq d_k+f'_kx_0.\quad \text{if } a_{k,n}=0.
+\end{align}
+\end{split}\]</div>
+<p>From the process of eliminating <span class="math notranslate nohighlight">\(x_1\)</span> in the previous elimnation, we know that:</p>
+<div class="math notranslate nohighlight">
+\[
+d_j+f_j'x_0\geq x_1, \quad\forall a_{j,1}&lt;0,\tag{2}
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+d_i+f_i'x_0\leq x_1, \quad\forall a_{i,1}&gt;0.\tag{3}
+\]</div>
+<p>With the above two sets of constraints in which there is only one unknow variable <span class="math notranslate nohighlight">\(x_1\)</span> in them, we can get a value of <span class="math notranslate nohighlight">\(x_1\)</span> since two constraints among them will force one exact value for <span class="math notranslate nohighlight">\(x_1\)</span> (it is because that the smallest element of <span class="math notranslate nohighlight">\(x_0\)</span> happens at one constraint in (1) that the left hand side is equal to the right hand side, while that means the left hand side of one constraint from (2) is equal to the left hand side of another constraint from (3). This will force one value for <span class="math notranslate nohighlight">\(x_1\)</span>)</p>
+<p>Repeat this process, we can get all other values of the solution.</p>
+</section>
+<section id="exercise-2-22">
+<h2>Exercise 2.22<a class="headerlink" href="#exercise-2-22" title="Permalink to this heading">#</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> be polyhedra in <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span>. Let <span class="math notranslate nohighlight">\(P + Q = \{\mathbf{x + y} \mid x \in P, \mathbf{y} \in Q\}\)</span>.</p>
+<p>(a) Show that <span class="math notranslate nohighlight">\(P + Q\)</span> is a polyhedron.</p>
+<p>(b) Show that every extreme point of <span class="math notranslate nohighlight">\(P + Q\)</span> is the sum of an extreme point of <span class="math notranslate nohighlight">\(P\)</span> and an extreme point of <span class="math notranslate nohighlight">\(Q\)</span>.</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p><em>Proof.</em></p>
+<p>(a) Let <span class="math notranslate nohighlight">\(P=\{\mathbf{x\mid A_1x\geq b_1}\}\)</span> and <span class="math notranslate nohighlight">\(Q=\{\mathbf{y\mid A_2y\geq b_2}\}\)</span>. We can make another polyhedron <span class="math notranslate nohighlight">\(M\)</span> as follows</p>
+<div class="math notranslate nohighlight">
+\[
+M=\{\mathbf{(x,y,z)}\mid \ \mathbf{A_1x\geq b_1, A_2x\geq b_2, z=x+y}
+\}.
+\]</div>
+<p>Then we can use Fourier-Motzkin method to eliminate the variables <span class="math notranslate nohighlight">\(\mathbf{x, y}\)</span> and only keep <span class="math notranslate nohighlight">\(\mathbf{z}\)</span>. After the elimination, we get <span class="math notranslate nohighlight">\(P+Q\)</span>. In other words, <span class="math notranslate nohighlight">\(P+Q\)</span> is the projection of <span class="math notranslate nohighlight">\(M\)</span> to the <span class="math notranslate nohighlight">\(\mathbf{z}\)</span> coordinates.</p>
+<p>(b) We prove it by contradiction. If the extreme point <span class="math notranslate nohighlight">\(z_0\)</span> of <span class="math notranslate nohighlight">\(P+Q\)</span> is the sum of one non-extreme point <span class="math notranslate nohighlight">\(x_0\)</span> of <span class="math notranslate nohighlight">\(P\)</span> and another point <span class="math notranslate nohighlight">\(y_0\)</span> of <span class="math notranslate nohighlight">\(Q\)</span>, then we can find two other points <span class="math notranslate nohighlight">\(\mathbf{v_1, v_2}\)</span> in <span class="math notranslate nohighlight">\(P\)</span> that <span class="math notranslate nohighlight">\(\mathbf{x_0}=\lambda \mathbf{v_1}+(1-\lambda)\mathbf{v_2}\)</span>, in which <span class="math notranslate nohighlight">\(0\leq \lambda\leq 1\)</span>. Hence,</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{z_0=x_0+y_0}=\lambda \mathbf{v_1}+(1-\lambda)\mathbf{v_2}+\mathbf{y_0}=\lambda (\mathbf{v_1+y_0})+(1-\lambda)(\mathbf{v_2+y_0)}.
+\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\mathbf{v_1+y_0}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v_2+y_0}\)</span> are also in <span class="math notranslate nohighlight">\(P+Q\)</span>, it contradicts with the fact that <span class="math notranslate nohighlight">\(\mathbf{z_0}\)</span> is the extreme point of <span class="math notranslate nohighlight">\(P+Q\)</span>. Another point is the extreme point of <span class="math notranslate nohighlight">\(Q\)</span> follows similarly.</p>
+<p><span class="math notranslate nohighlight">\(\Box\)</span></p>
 </section>
 <section id="exercise-2-30">
 <h2>Exercise 2.30<a class="headerlink" href="#exercise-2-30" title="Permalink to this heading">#</a></h2>
@@ -1158,6 +1259,8 @@ f(1)-f(0)\leq \frac{K+f(3)-f(1)}{2}
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-18">Exercise 2.18</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-19">Exercise 2.19*</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-20">Exercise 2.20 *</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-21">Exercise 2.21</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-22">Exercise 2.22</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-30">Exercise 2.30</a></li>
 </ul>
   </nav></div>
